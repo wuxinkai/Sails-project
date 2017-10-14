@@ -1,0 +1,129 @@
+﻿<div class="alarmLogo clearfix">
+    <div class="BBS">
+        <div class="alert alert1" >
+            <radio-broadcast></radio-broadcast>
+            <button type="button" class="close" data-dismiss="alert">
+                <span>×</span>
+            </button>
+        </div>
+    </div>
+    <div class="logoLeft pull-left">
+        <a href=""><img src="./imgs/logo.png" alt=""></a>
+    </div>
+    <div class=" pull-left">
+        <div class="cd-nav">
+            <a href="javascript:;" class="cd-nav-trigger" ng-click="sidebarOpen()">
+                <span></span>
+            </a>
+        </div>
+
+    </div>
+    <div class="pull-left clearfix breadcrumbBox">
+        <div class="pull-left" >
+            <!--<img src="./imgs/index.png" style="display:block;float: left;width: 20px;height: 16px;margin-top: 9px;">-->
+          <div style="float: left;margin: 8px 0 0 20px;color: #fff">
+                当前位置：
+            </div>
+        </div>
+        <ol class="pull-left breadcrumb ">
+            <li class="breadcrumbList01">{{menu_One}}</li>
+            <li ng-show="menuTowShow" class="breadcrumbList02  am-active1">{{menu_Tow}}</li>
+            <li ng-show="menuThreeShow" class="am-active2" >{{menuThree}}</li>
+        </ol>
+    </div>
+    <div class="logoRight pull-right">
+        <div class="pull-left" style="position: relative">
+            <ul class="notifications">
+                <li>
+                    <a href="" class="notification-icon"><i class="topIcon02"></i> </a>
+                </li>
+                <li>
+                    <a href="" class="notification-icon"  data-toggle="dropdown"><i class="topIcon01"></i>  </a>
+                    <ul class="dropdown-menu menuSystem qrcodeContent1 menu-index" role="menu">
+                        <li ng-repeat="attr in AppItems"><a href="javascript:;" ng-click="appclick(attr.App_Id)">{{attr.App_Name}}</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="notification-icon"><i class="topIcon03"></i><span class="badge1">1</span>  </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="pull-left top-menu btn-group">
+            <a href="javascript:;" data-toggle="dropdown" class="dropdownA" >
+                <img src="./imgs/user-128x128.jpg" class="img-circle" alt="">
+                <i class="downIcon"></i>
+            </a>
+            <ul class="dropdown-menu qrcodeContent1">
+                <li>
+                    <a href="javascript:;"  class="btn  btn-rounded" data-toggle="modal" data-target="#modifyPwdModal" ng-click="openModal()">修改密码</a>
+                </li>
+                <li class="user-footer">
+                    <a href="index.html#/login" class="btn  btn-rounded">注销</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pull-right main-query" ng-hide="alarmSearch">
+        <div class="alarmSearch pull-left" id="alarmSearch">
+            <div class=""  style="width: 260px;height: 30px;border-radius: 20px;background: #fff;position: relative">
+                <input id="inputValue" type="text" class=" form-height" ng-blur="InputBlur()" ng-focus="InputFocus()" placeholder="输入查询关键字" ng-model="inputItem" ng-change="getNamesByInput(inputItem)" >
+                <span id="inputButton" class=" searchzGroup" style="right:10px;top:4px"><img src="./imgs/search.png" ng-click="getList(inputItem)" ></span>
+                <ul class="searchList" ng-show="isDown" ng-mouseleave="hides()" >
+                    <li ng-repeat="attr in nulist"><a href="javascript:;" ng-click="nuclick(attr)" title="{{attr.NAME}}">{{attr.NAME}}</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+ <left-menu ></left-menu>
+ <div id="alarmConRight"  class="alarmConRight sidebar-animate" >
+ <div style="width:100%;height: 100%" ui-view></div>
+ </div>
+
+<!--修改密码模态框-->
+<!-- Modal -->
+<div class="modal fade changePassModal" id="modifyPwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <h4 class="modal-title text-center" id="myModalLabel">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <!--<label for="oldPassword">Email address</label>-->
+                        <input type="password" class="form-control" id="oldPassword" placeholder="密码" ng-model="oldPwd">
+                    </div>
+                    <div class="form-group">
+                        <!--<label for="newPassword">Password</label>-->
+                        <input type="password" class="form-control" id="newPassword" placeholder="新密码" ng-model="newPwd">
+                    </div>
+                    <div class="form-group">
+                        <!--<label for="confirmPassword">Email address</label>-->
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="确认密码" ng-model="surePwd">
+                    </div>
+                    <button type="button" class="btn btn-default btn-block sureButton"  ng-click="changePwd()">确认修改</button>
+                    <button type="button" class="btn btn-default btn-block cancelButton" data-dismiss="modal">取消</button>
+                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                </form>
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+            <!--<button type="button" class="btn btn-primary">保存</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+ <!--<div id="container" class="page-content-wrapper ng-scope bg-all " style="width:100%;margin-bottom:10px;position:relative;overflow:hidden" ui-view>-->
+
+<!--</div>-->
+<!--<div class="footerContent tes-nav">泰合佳通信息有限公司 版权所有 Copyright ? 2006 - 2017 Tescomm.All Rights Reserved</div>-->
+
+<!--<div style="position: fixed;width: 500px;height: 50px;background: pink; left: 50%;top: 12%;margin-left: -250px;z-index: 9999">saddsadsds</div>-->

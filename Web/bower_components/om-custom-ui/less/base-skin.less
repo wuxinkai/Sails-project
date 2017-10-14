@@ -1,0 +1,85 @@
+//主题
+@tes-theme: #2a6aff;                                                  //主题颜色
+@tes-hover:#FFA500;                                                  //主题滑过颜色
+@tes-text: #666666;                                                     //默认背景色
+@tes-gray: #000;                                                     //默认字体颜色
+//各个模块相关变量
+//导航
+@tes-nav-bg:@tes-theme;                                              //导航背景颜色
+/*@tes-nav-bg1: darken(@tes-theme, 10%);                              //导航背景颜色*/
+@tes-nav-border:lighten(@tes-nav-bg, 5%);                            //导航边框颜色
+@tes-nav-hover:darken(@tes-hover, 5%);                               //导航菜单滑过背景颜色
+@tes-nav-dropdown-hover: lighten(@tes-hover, 20%);                   //鼠标滑过每一项背景
+//路径导航
+@tes-breadcrumb-bg:lighten(@tes-theme, 30%);                         //路径导航背景颜色
+//标签页
+@tes-tabs-border:lighten(@tes-theme, 30%);                           //标签边框颜色
+@tes-tabs-hover:darken(@tes-theme, 5%);                              //标签滑过背景颜色
+//表单
+@tes-form-border:lighten(@tes-theme, 40%);
+@tes-form-color:lighten(@tes-theme, 20%);                                       //表单字体颜色
+//下拉菜单
+@tes-dropdown-border: lighten(@tes-theme, 30.5%);                     //下拉框边框颜色
+@tes-dropdown-hover: lighten(@tes-theme, 20%);                       //鼠标滑过每一项背景颜色
+//列表组
+@tes-list-border: @tes-gray;                                         //列表组边框颜色
+@tes-list-hover:lighten(@tes-hover, 33.5%);                          //鼠标滑上列表背景颜色
+@tes-list-active-bg: lighten(@tes-theme, 5%);                        //选中背景颜色
+//表格
+@tes-table-border-color:lighten(@tes-theme, 20%);                    //表格的边框颜色
+@tes-thead-bg: lighten(@tes-theme, 20%);                             //表头背景
+@tes-tr-hover: lighten(@tes-hover, 33.5%);                           //表格滑过颜色
+//分页
+@tes-pagination-color:lighten(@tes-theme, 25.5%);                                       //分页字体颜色
+@tes-pagination-active-bg:lighten(@tes-theme, 20%);                  //分页选中背景颜色
+//面板
+@tes-panel-border: lighten(@tes-gray, 93.5%);                        //面板边框
+@tes-panel-head-color: @tes-text;                                    //板头字体颜色
+@tes-panel-head-bg: darken(@tes-theme, 5%);                          //板头背景颜色
+//按钮
+@tes-btn-color: @tes-text;                                           //按钮字体颜色
+@tes-btn-bg: @tes-theme;                                             //按钮背景颜色;
+@tes-btn-border:darken(@tes-btn-bg, 5%);                             //按钮边框颜色
+@tes-btn-hover:darken(@tes-btn-bg, 5%);                              //按钮滑上去的颜色
+//模态框
+@tes-modal-head-bg: lighten(@tes-theme, 20%);                        //模态框头背景颜色
+//默认选中
+@tes-active: lighten(@tes-theme, 10%);
+//字体样式  浅色变黑，暗色变白
+@tes-text-color: contrast(@tes-theme, #101010);
+
+
+/*
+相关的类名含义
+tes-nav                                                                头部导航
+tes-breadcrumb                                                         路径导航
+tes-tabs                                                               标签页
+tes-panel                                                              面板
+tes-list-group                                                         列表组
+tes-form                                                               表单
+tes-input                                                              输入框
+tes-dropdown                                                           下拉菜单
+tes-table                                                              表格
+tes-pagination                                                         分页
+tes-search                                                             搜索框
+tes-button                                                             按钮
+tes-label                                                              提示框
+tes-modal                                                              模态框
+*/
+/*
+  ji按钮控制器
+@tes-theme                                                             主题颜色
+@tes-breadcrumb-bg                                                     面包导航
+@tes-nav-bg                                                            头部导航
+@tes-dropdown-hover                                                    下拉菜单
+@tes-modal-head-bg                                                     摸态框
+@tes-form-border                                                       搜索框
+@tes-list-active-bg                                                    列表组
+@tes-btn-bg                                                             按钮
+@tes-pagination-active-bg                                               分页
+@tes-thead-bg                                                           表格
+@tes-panel-head-bg                                                      面板
+@tes-form-color                                                         表单
+
+
+*/

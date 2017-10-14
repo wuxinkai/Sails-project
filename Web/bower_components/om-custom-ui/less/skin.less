@@ -1,0 +1,155 @@
+@import "base-skin.less";
+
+////头部导航
+.tes-nav{
+  background:@tes-nav-bg !important;
+  border-color: @tes-nav-border;
+  .navbar-brand{
+    color: @tes-text;
+  }
+  .navbar-nav>li{
+    float:left;
+    >a{
+      color: @tes-text-color !important;
+      &:hover,&:focus{
+        color: @tes-text;
+        background-color: @tes-nav-hover;
+      }
+    }
+
+  }
+  .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{
+    color: @tes-text;
+    background-color: @tes-nav-dropdown-hover;
+  }
+
+}
+//路径导航
+.tes-breadcrumb{
+  background-color:@tes-breadcrumb-bg;
+  color:  @tes-text-color !important;
+}
+//标签页
+.tes-tabs{
+  border-bottom:1px solid @tes-tabs-border;
+  &.nav>li>a:hover, &.nav>li>a:focus {
+    background-color: @tes-tabs-hover;
+    color:@tes-text;
+  }
+  &.nav-tabs>li.active>a, &.nav-tabs>li.active>a:focus, &.nav-tabs>li.active>a:hover{
+    background-color:@tes-tabs-hover;
+    color:@tes-text;
+  }
+}
+
+//表单
+.tes-form {
+  color: @tes-form-color;
+}
+//输入框
+.tes-input{
+  border-color:@tes-form-border !important ;
+}
+//下拉菜单
+.tes-dropdown {
+    a{ color: @tes-text-color !important;}
+  .dropdown-menu {
+    border: 1px solid @tes-dropdown-border !important;
+    li a {
+      color: @tes-text-color !important;
+      &:hover,
+      &:focus {
+        color: @tes-text-color;
+        background-color: @tes-dropdown-hover !important;
+
+      }
+    }
+  }
+}
+
+//列表组
+
+.tes-list-group {
+  .list-group-item {
+    border: 1px solid @tes-list-border !important;
+    &:hover,
+    &:focus {
+      background-color: @tes-list-hover !important;
+    }
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      background-color: @tes-list-active-bg !important;
+      border-color: @tes-list-active-bg !important;
+    }
+  }
+}
+//表格
+.tes-table {
+  border: 1px solid @tes-table-border-color !important;
+  thead {
+    color: @tes-text-color !important;
+    background-color: @tes-thead-bg !important;
+  }
+  tr,
+  th {
+    text-align: center;
+  }
+  > tbody > tr:hover {
+    background-color: @tes-tr-hover;
+    //color:@tes-text;
+  }
+}
+
+//分页
+.tes-pagination {
+  .active a{
+    background-color: @tes-pagination-active-bg !important;
+    color:@tes-text-color ;
+    a, a:hover, a:focus {
+      color:@tes-text-color !important;
+      border-color: @tes-pagination-color;
+    }
+  }
+}
+.tes-pagination .active a:hover{
+  color:@tes-text-color !important ;
+}
+//面板
+.tes-panel {
+  border: 1px solid @tes-panel-border !important;
+  .panel-heading {
+    background-color: @tes-panel-head-bg !important;
+    a{
+      color: @tes-text-color !important;
+    }
+  }
+}
+//按钮
+.tes-button {
+  color: @tes-text-color !important;
+  background-color: @tes-btn-bg !important;
+  border: 1px solid @tes-btn-border !important;
+  &:hover {
+    color: @tes-text-color !important;
+    background: @tes-btn-hover !important;
+  }
+}
+//模态框
+.tes-modal {
+  .modal-header {
+    background-color: @tes-modal-head-bg;
+    color: @tes-text;
+  }
+}
+//默认选中
+.tes-active{
+  background: @tes-active;
+  color: @tes-text-color;
+}
+//logo
+.tes-log{
+  color: @tes-text-color !important;
+}
+
+

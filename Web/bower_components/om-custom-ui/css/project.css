@@ -1,0 +1,349 @@
+body {
+    background: #ECEFF3;
+}
+
+/*start----修改models*/
+/*@media screen and (min-width:1024px) {*/
+/*.modal-dialog{*/
+/*width:70%;*/
+/*}*/
+/*}*/
+/*.modal-title,.modal-header{*/
+/*text-align: center;*/
+/*background: #55A8FD;*/
+/*color:#fff;*/
+/*}*/
+/*end------修改models*/
+.rule-edit {
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -4px;
+}
+
+/*.rule-edit-active {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -25px -20px;*/
+/*}*/
+
+/*.rule-edit-disable {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -25px -50px;*/
+/*}*/
+
+/*.rule-delete-active {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -62px -20px;*/
+/*}*/
+
+/*.rule-delete-disable {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -62px -50px;*/
+/*}*/
+
+/*.rule-stop-active {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -100px -20px;*/
+/*}*/
+
+/*.rule-stop-disable {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -100px -50px;*/
+/*}*/
+
+/*.rule-link {*/
+    /*background: url(../../../imgs/btns.png) no-repeat -139px -20px;*/
+/*}*/
+
+.ruleStatus1 {
+    color: #FF3728;
+}
+
+.ruleStatus2 {
+    color: #4EC698;
+}
+
+.ruleStatus3 {
+    color: #BBBBBB;
+}
+
+.home, .jmeter {
+    padding: 10px;
+}
+
+.om-table {
+    background: #fff;
+    min-width: 1050px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: auto;
+}
+
+.om-container {
+    overflow-x: auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    background: #fff;
+}
+
+.om-table tr {
+    border: 1px solid #CFDBE6;
+    height: 30px !important;
+    line-height: 30px;
+}
+
+.om-table th, .om-table td {
+    text-align: center;
+    min-width: 87px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*特殊设置*/
+.om-table .table-td-al {
+    min-width: 120px;
+    min-width: 200px;
+}
+
+.om-table tbody td, .om-table tbody th {
+    border-bottom: 1px solid #CFDBE6;
+}
+
+.om-table thead tr {
+    background: #55A8FD;
+    color: #fff;
+}
+
+.caption {
+    /*background: #fff;*/
+    /*margin-bottom: 5px;*/
+    /*height: 45px;*/
+    /*line-height: 45px;*/
+}
+
+.om-table-count-group {
+    float: left;
+    margin-left: 15px;
+}
+
+.om-footer-div {
+    float: left;
+    height: 42px;
+
+}
+
+.om-footer {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    background: #fff;
+    border: 1px solid #CFDBE6;
+    margin-top: 6px;
+    overflow: hidden;
+    position: absolute !important;
+    bottom: 0;
+}
+
+.index-om-footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+
+.checkAll input {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 0px;
+    top: 3px
+}
+.om-btns{
+    height: 42px
+}
+.om-btns button {
+    margin-right: 8px;
+}
+
+.checkAll {
+    height:42px;
+    width: 70px;
+    position: relative;
+}
+
+.alarm-level-check {
+    display: inline-block;
+    line-height: 35px;
+    height: 35px;
+    width: 100px;
+    text-align: center;
+    margin-left:15px;
+}
+
+.tabContent {
+    padding: 10px;
+}
+
+/*分页插件*/
+.Pagination {
+    float: right;
+    margin-right: 5px
+}
+
+.Pagination ul {
+    padding: 0;
+    margin: 0;
+}
+
+.Pagination ul li {
+    list-style: none;
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    margin-right: 5px;
+}
+
+.om-input-page {
+    width: 30px;
+    height: 30px;
+    _margin-top: 20px;
+}
+
+.rightDataClass {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    padding-left: 5px;
+    position: relative;
+}
+
+.rightDataClass nobr{
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    display:block;
+    float: left;
+    max-width: 150px;
+    overflow: hidden;
+}
+.rightDataClass img{
+    display: block;
+    float: left;
+    margin-top: 9px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+.bomDataClass{
+
+}
+.selectsTow .gray a{ color: #aaa}
+.selectsTow li.gray a:hover{text-decoration: none; color: #aaa}
+.rightDataClass i {
+    float: right;
+    top: 6px !important;
+}
+
+.textareaInputTime {
+    width: 20%;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    border: 1px solid #cfdbe6;
+    background: #f5f8fb;
+    resize: none;
+    float: left;
+    overflow-y: hidden;
+}
+
+.textareaSpan {
+    display: inline-block;
+    height: 58px;
+    line-height: 58px;
+    width: 40px;
+    color: #55A8FD;
+    float: left;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.bootstrap-datetimepicker-widget ul {
+    padding: 0;
+}
+
+.btn-index-default {
+    background: #094892;
+    color: #fff;
+    border: .5px solid #fff;
+}
+
+.btn-index-default:hover, .btn-index-default:active, .btn-index-default:focus {
+    background: #1A5B92 !important;
+    color: #fff !important;
+    border: .5px solid #fff;
+}
+
+.fault-header {
+    width: 100%;
+    height: 40px;
+}
+
+.date-nav {
+    margin: 0;
+    padding: 0
+}
+
+.date-nav li a {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.date-nav li a:focus {
+    background: transparent;
+    color: #fff
+}
+
+.date-nav li a:hover, .date-nav li.current a {
+    background: none;
+    color: #12bee9;
+    border-bottom: 2px solid #12bee9;
+    padding-bottom: 13px
+}
+
+.fault-header {
+    border-bottom: 2px solid #697a9d;
+    padding: 5px;
+}
+
+.fault-header .navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.fault-header .navbar-nav > li {
+    width: 33.33%;
+}
+.wy-titleOne ,.wy-titleTow{text-align: center}
+.wy-box{line-height: 20px;}
+.wy-title{margin: 0 auto}
+.wy-title a  span{font-size:18px; color: #fff}
+.wy-title a .wy-color1{color: #FF6600}
+.wy-title a .wy-color2{color: #4ab3fd}
+
+.as-total i span{font-size: 16px;}
+.as-total i .orange{color: #fe5964;font-size: 18px;}
+.as-total i .blue,.ascroll-header .blue{color: #4ab3fd;font-size: 18px;}
+.as-total i .yellow,.ascroll-header .yellow{color: #fd964a;font-size: 18px;}
+.table-condensed  tbody tr td{border-top: 1px solid #6b81ac;}
+.table-condensed  tbody tr .deepBlue{color:#4ec2ff}
+/*.table-condensed tbody tr td{white-space:nowrap; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; }*/
+.table-condensed tbody tr .Scolor1{color: #ff1818}
+.table-condensed tbody tr .Scolor2{color: #ff9700}
+.table-condensed tbody tr .Scolor3{color: #f1bc05}
+.table-condensed tbody tr .Scolor4{color: #01b3f3}
+
+.fault-table-0 .table-condensed thead tr th,.table-condensed  tbody tr td{border-bottom: 1px solid #6b81ac !important;}
+.as-table-alarmscroll td {text-align: center !important;}

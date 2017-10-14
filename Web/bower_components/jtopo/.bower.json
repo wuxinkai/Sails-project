@@ -1,0 +1,13 @@
+{
+  "name": "jtopo",
+  "homepage": "https://github.com/darknessjs/jtopo-unit",
+  "_release": "395fb437c6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "395fb437c6a2db47ca3493602453ead7b396ee38"
+  },
+  "_source": "https://github.com/darknessjs/jtopo-unit.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/darknessjs/jtopo-unit.git"
+}

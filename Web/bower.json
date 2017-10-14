@@ -1,0 +1,48 @@
+{
+  "name": "WebFramework",
+  "version": "2.1.0",
+  "authors": [
+    "林俊杰 <manmamen@vip.qq.com>"
+  ],
+  "description": "Web前端框架主体结构和演示",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.6",
+    "angularAMD": "0.2.1",
+    "adminlte": "2.3.3",
+    "angular-leaflet": "0.10.0",
+    "angular-route": "1.4.6",
+    "angular-ui-notification": "0.2.0",
+    "ui-route": "0.3.0",
+    "bootstrap": "3.3.6",
+    "echarts": "2.2.7",
+    "font-awesome": "4.6.3",
+    "require-css": "0.1.8",
+    "leaflet": "0.7.7",
+    "requirejs": "2.1.22",
+    "jquery": "2.2.4",
+    "threejs": "*",
+    "csg.js": "https://github.com/evanw/csg.js.git",
+    "ThreeCSG": "https://github.com/chandlerprall/ThreeCSG.git",
+    "less": "2.7.2",
+    "jquery.cookie": "^1.4.1",
+    "daterangepicker": "^1.6.0",
+    "bootstrap-datetimepicker": "https://github.com/smalot/bootstrap-datetimepicker.git",
+    "jtopo": "https://github.com/darknessjs/jtopo-unit.git",
+    "bootstrap-daterangepicker": "^2.1.25",
+    "angular-bootstrap": "angular-ui-bootstrap-bower#^2.5.0",
+    "bootstrap-multiselect": "https://github.com/davidstutz/bootstrap-multiselect.git#^0.9.13",
+    "smooth-scrollbar": "^7.2.10",
+    "leaflet-draw": "^0.4.9",
+    "jquery.nicescroll": "^3.6.8",
+    "angular-breadcrumb": "^0.5.0"
+  }
+}

@@ -37,16 +37,32 @@
              showMsg("验证码不能为空");
              return;
              }*/
-            $(btn).text("登录中...");
-            $(btn).attr("disabled", "disabled");
+
+        //获取config.js的配置
+            console.log(window.tescomm.config.app.IndexHref);
+
+        //向后台取token后存储
             httpService.postRemote('Open','OAuth','Login',{
-                userName: uid.val(), password: pwd.val(), verificationCode: vc.val(), clientId: window.tescomm.config.app.Id
-                , callback: "/_authorizecallback?redirect_uri=/web/index.html#/main/simple"/*登录成功后显示的第一个页面，只需修改参数redirect_uri后对应的内容即可*/
+                userName: uid.val(),
+                password: pwd.val(),
+                verificationCode: vc.val(),
+                clientId: window.tescomm.config.app.Id,
+                callback: "/_authorizecallback?redirect_uri=/web/index.html#/main/simple"/*登录成功后显示的第一个页面，只需修改参数redirect_uri后对应的内容即可*/
             }).then(function (data) {
                 $scope.changeImg();
-                if (data.State) {
-                    if ($("#isRemember:checked").length > 0) {
 
+//有数据才走可放行
+//                 if (data.State) {
+                if (true) {
+//配置参数
+
+                    data.User_Name=uid.val();
+                    data.Access_Token='122B29D315FFDC473B4E55EED84654AA';
+                    data.User_ID='381047b726564578b89cd3dbf856d7f5';
+
+
+                    //记住密码是否勾选
+                    if ($("#isRemember:checked").length > 0) {
                         $.cookie('pe', data.Encrypt);
                         $.cookie('isRemember', "true");
                         $.cookie('User_Name', uid.val());
@@ -58,106 +74,50 @@
                         $.removeCookie('User_ID');
                         $.removeCookie('User_Name');
                     }
+
+//必须走这行代码
+
                     $.cookie('User_Name', uid.val());
                     $.cookie('User_ID', data.User_ID);
                     $.cookie('Tescomm_Access_Token', data.Access_Token);
-                    $.ajax(window.tescomm.config.system.AuthorizeService + 'Open/OAuth/GetRoleDataByToken', {
-                        type: 'POST', data: {
-                            token: data.Access_Token
-                            , callback: ""
-                        },dataType:'json',
-                        async:false,
-                        success: function (data, staus) {
-                            $.cookie('provids',data.proids);
-                            $.cookie('cityids',data.cityids);
-                            $.cookie('areaids',data.areaids);
-                        },
-                        error: function (xhr, status, error) {
-                        }
-                    });
 
+                    // 存储取回来的内容
+                    // $.ajax(window.tescomm.config.system.AuthorizeService + 'Open/OAuth/GetRoleDataByToken', {
+                    //     type: 'POST', data: {
+                    //         token: data.Access_Token
+                    //         , callback: ""
+                    //     },dataType:'json',
+                    //     async:false,
+                    //     success: function (data, staus) {
+                    //         $.cookie('provids',data.proids);
+                    //         $.cookie('cityids',data.cityids);
+                    //         $.cookie('areaids',data.areaids);
+                    //     },
+                    //     error: function (xhr, status, error) {
+                    //     }
+                    // });
+//页面跳转
                     $state.go(window.tescomm.config.app.IndexHref);
+
                     //location.href = '/web/index.html#/main/processing';
                     //location.href = '/web/index.html#/'+window.tescomm.config.app.IndexHref.replace(".","/");
                     // location.href = '/web/index.html#/main/topology';
                 } else {
                     showMsg(data.Description);
                 }
-                $(btn).text("登  录");
-                $(btn).removeAttr("disabled");
             },function(error){
-                //location.href = "/Web/index.html#/main/simple";
+ //走的是这个
+          alert('走的是这个')
+                $state.go(window.tescomm.config.app.IndexHref);
+
+
                 $scope.changeImg();
-
-                showMsg('请求错误，' + error);
-                $(btn).text("登  录");
-                $(btn).removeAttr("disabled");
+                // showMsg('请求错误，' + error);
             });
-/*
-            $.ajax(window.tescomm.config.system.AuthorizeService + 'Open/OAuth/Login', {
-                type: 'POST', data: {
-                    userName: uid.val(), password: pwd.val(), verificationCode: vc.val(), clientId: window.tescomm.config.app.Id
-                    , callback: "/_authorizecallback?redirect_uri=/web/index.html#/main/simple"/!*登录成功后显示的第一个页面，只需修改参数redirect_uri后对应的内容即可*!/
-                },dataType:'json',
-                async:false,
-                success: function (data, staus) {
-                    $scope.changeImg();
-                    if (data.State) {
-                        if ($("#isRemember:checked").length > 0) {
+        };
 
-                            $.cookie('pe', data.Encrypt);
-                            $.cookie('isRemember', "true");
-                            $.cookie('User_Name', uid.val());
-                            $.cookie('User_ID', data.User_ID);
-                        }
-                        else {
-                            $.removeCookie('pe');
-                            $.removeCookie('isRemember');
-                            $.removeCookie('User_ID');
-                            $.removeCookie('User_Name');
-                        }
-                        $.cookie('User_Name', uid.val());
-                        $.cookie('User_ID', data.User_ID);
-                        $.cookie('Tescomm_Access_Token', data.Access_Token);
-                        $.ajax(window.tescomm.config.system.AuthorizeService + 'Open/OAuth/GetRoleDataByToken', {
-                            type: 'POST', data: {
-                                token: data.Access_Token
-                                , callback: ""
-                            },dataType:'json',
-                            async:false,
-                            success: function (data, staus) {
-                                $.cookie('provids',data.proids);
-                                $.cookie('cityids',data.cityids);
-                                $.cookie('areaids',data.areaids);
-                            },
-                             error: function (xhr, status, error) {
-                                }
-                            });
-
-                         $state.go(window.tescomm.config.app.IndexHref);
-                        //location.href = '/web/index.html#/main/processing';
-                        //location.href = '/web/index.html#/'+window.tescomm.config.app.IndexHref.replace(".","/");
-                        // location.href = '/web/index.html#/main/topology';
-                    } else {
-                        showMsg(data.Description);
-                    }
-                    $(btn).text("登  录");
-                    $(btn).removeAttr("disabled");
-
-                }
-                , error: function (xhr, status, error) {
-                    //location.href = "/Web/index.html#/main/simple";
-                    $scope.changeImg();
-
-                        showMsg('请求错误，' + error);
-                    $(btn).text("登  录");
-                    $(btn).removeAttr("disabled");
-                }
-            });
-*/
-        }
+        //页面加载执行的房啊
         $(document).ready(function () {
-
             $scope.changeImg();
             if ($.cookie("isRemember") == "true") {
                 $("#isRemember").attr("checked", "checked");

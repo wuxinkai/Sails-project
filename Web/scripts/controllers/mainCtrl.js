@@ -8,14 +8,19 @@
 
  ******************************************************************/
 
-define(['cookie', 'scripts/services/authenticatedService', 'scripts/directives/radioBroadcastDirt', 'scripts/directives/leftMenuDirt', 'scripts/services/httpService', 'ngload!scripts/requireHelper/requireNotification',
-
+define(['cookie',
+    'scripts/services/authenticatedService',
+    'scripts/directives/radioBroadcastDirt',
+    'scripts/directives/leftMenuDirt',
+    'scripts/services/httpService',
+    'ngload!scripts/requireHelper/requireNotification',
     'angular-ui-grid'
 ], function () {
     return ['$scope', '$state', 'httpService', 'Notification', '$timeout', function ($scope, $state, httpService, Notification, $timeout) {
         $scope.User_ID = $.cookie('User_ID');
         $scope.User_Name = $.cookie('User_Name');
         $scope.Tescomm_Access_Token = $.cookie('Tescomm_Access_Token');
+
         var vm = this;
         $scope.sidebarOpen = function () {
             $(".alarmConLeft").toggleClass("sidebar-open");
@@ -81,7 +86,7 @@ define(['cookie', 'scripts/services/authenticatedService', 'scripts/directives/r
                     if(curpath.indexOf("main")>=0 && curpath.indexOf("main/")<0 )//第一次进入系统，不是刷新后进入系统
                     {
                         if ($scope.count > 0) {
-                            $state.go('main.topology', {neid: null});
+                            $state.go('main', {neid: null});
                         }
                         else {
                             $state.go('main.welcome');

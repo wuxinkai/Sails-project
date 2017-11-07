@@ -13,5 +13,11 @@ define([
         'ngload!ui-notification'
     ],
     function () {
+    /*
+        https://www.npmjs.com/package/angular-ui-notification  angular报错信息提示插件 文档说明
+
+
+   */
+
     })
 

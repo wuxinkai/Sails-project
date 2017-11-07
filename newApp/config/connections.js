@@ -41,21 +41,21 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   //（1）家里数据库创建连接
-  // someMysqlServer: {
-  //   adapter: 'sails-mysql', //驱动的名字
-  //   host: '127.0.0.1',
-  //   user: 'root', //optional
-  //   password: 'wxk123456', //optional
-  //   database: 'sails_data' //数据库的名字
-  // }
-  //(2)公司数据库
   someMysqlServer: {
-    adapter: 'sails-mysql',
-    host: '101.201.42.201',
+    adapter: 'sails-mysql', //驱动的名字
+    host: '127.0.0.1',
     user: 'root', //optional
-    password: 'mysql!@tescomm', //optional
-    database: 'zjxtoss_web', //optional
-  },
+    password: 'wxk123456', //optional
+    database: 'sails_data' //数据库的名字
+  }
+  //(2)公司数据库
+  // someMysqlServer: {
+  //   adapter: 'sails-mysql',
+  //   host: '101.201.42.201',
+  //   user: 'root', //optional
+  //   password: 'mysql!@tescomm', //optional
+  //   database: 'zjxtoss_web', //optional
+  // },
 
 
 

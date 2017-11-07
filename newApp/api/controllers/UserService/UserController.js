@@ -8,7 +8,14 @@
 //页面路由跳转
 
 //链接数据库的表引入进来
-User = require('../models/User'); //数据库的表字段都在models 文件夹 里
+
+//不用在在这里引用所有内容是全局性的，
+
+//访问内容  需要端口号     文件件名字   文件名  文件里的属性名
+// http://localhost:1337/UserService/User/zhuce
+
+
+// User = require('../../models/User'); //数据库的表字段都在models 文件夹 里
 
 module.exports = {
 
@@ -39,39 +46,31 @@ module.exports = {
     //   }
     // });
     //（3）删除
-    User.query('delete from user where uid=?',[6],function(err,results){
-      // console.log('错误:'+err);
-      console.log(results);
-    });
+    // User.query('delete from user where uid=?',[6],function(err,results){
+    //   // console.log('错误:'+err);
+    //   console.log(results);
+    // });
     //(4)查询
     //findOne 查询一条； 是对象
-    //find 查询结果集合 是个数组；
+    // User.findOne({email:'1'}).exec(function (err,updated){
+    //   if (err) {
+    //     console.log('出错:'+err) //这一行会报错。
+    //   }else{
+    //     res.send(200,{success:true,data:updated});
+    //
+    //   }
 
-    User.findOne({email:'1'}).exec(function (err,updated){
+    //find 查询结果集合
+    User.find({}).exec(function (err,updated){
       if (err) {
         console.log('出错:'+err) //这一行会报错。
       }else{
-        console.log(updated)
+        res.send(200,{success:true,data:updated});
       }
     });
 
-
-    res.send('成功');
-    // res.send('接收参数');
-    // res.send('注册界面');
   },
 
-
-  /**
-   * `UserController.login()`
-   */
-  login: function (req, res) {
-    // return res.json({
-    //   todo: 'login() is not implemented yet!'
-    // });
-
-
-  }
 };
 
 

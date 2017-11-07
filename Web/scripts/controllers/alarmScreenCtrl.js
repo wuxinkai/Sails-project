@@ -6,8 +6,7 @@ define(['cookie', 'scripts/requireHelper/requireNotification','bower_components/
         $scope.goHistory = function(){
 
         }
-        var BoxAnime = {
-            init: function (obj) {
+             init: function (obj) {
                 this.params = {};
                 this.params.rowNum = 3;
                 this.params.height = 500;

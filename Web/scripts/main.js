@@ -37,6 +37,9 @@ require.config({
 
         'jquery': 'bower_components/jquery/dist/jquery.min',
         'bootstrap': 'bower_components/bootstrap/dist/js/bootstrap.min',
+        //老版本ui-bootstrap
+        'ui.bootstrap': 'bower_components/ui-bootstrap-tpls/ui-bootstrap-tpls-0.13.2.min',
+        //
         'ui-bootstrap': 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min',
         'kendo-angular': 'bower_components/om-kendo/kendo.all.min',
         'kendo-czh': "bower_components/om-kendo/cultures/kendo.culture.zh-CN.min",
@@ -61,7 +64,10 @@ require.config({
         'bootstrap-daterangepicker':'bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min',
         'bootstrap-datetimepicker.zh-CN':'bower_components/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN',
         "daterangepicker":"bower_components/daterangepicker/lib/daterangepicker/daterangepicker",
-        "bootstrap-multiselect":"bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect"
+        "bootstrap-multiselect":"bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect",
+
+
+        'angular-confirm': 'bower_components/angular-confirm/angular-confirm', //确认弹出窗
     },
 
     map: {
@@ -97,6 +103,9 @@ require.config({
         },
         'ui-bootstrap': {
             deps: ['angular','bootstrap']
+        },
+        'ui.bootstrap': {
+            deps: ['angular']
         },
         'angular': {
             deps: ['jquery']

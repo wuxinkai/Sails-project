@@ -80,30 +80,33 @@ define(['cookie', //jquery cookie存储
 
         var mb = myBrowser();
 
-        //请求的左侧菜单
-        var promise = httpService.postRemote('Open', 'OAuth', 'GetUserRight', {token: httpService.getCookie("Tescomm_Access_Token"), app: window.tescomm.config.app.Id}).then(function (data) {
-            console.log(data)
-                $scope.userlists = data;
-                if (data.length > 0) {
-                    $scope.selectedMenu = $scope.userlists[0].Name;
-                    $scope.count = 0;
-                    initialMenu($scope.userlists);
-                    var curpath=window.location.href;
-                    //没有菜单就显示欢迎页
-                    if(curpath.indexOf("main")>=0 && curpath.indexOf("main/")<0 )//第一次进入系统，不是刷新后进入系统
-                    {
-                        if ($scope.count > 0) {
-                            $state.go('main', {neid: null});
-                        }
-                        else {
-                            $state.go('main.welcome');
-                        }
-                    }
-                }
-            },
-            function (errorMessage) {
-                Notification.error({message: errorMessage, delay: 5000});
-            });
+        //请求的左侧菜单 此方法是异步的，所以会后面加载
+        // var promise = httpService.postRemote('Open', 'OAuth', 'GetUserRight', {token: httpService.getCookie("Tescomm_Access_Token"), app: window.tescomm.config.app.Id}).then(function (data) {
+        //     console.log(data)
+        //         $scope.userlists = data;
+        //         if (data.length > 0) {
+        //             $scope.selectedMenu = $scope.userlists[0].Name;
+        //             $scope.count = 0;
+        //             initialMenu($scope.userlists);
+        //             var curpath=window.location.href;
+        //             //没有菜单就显示欢迎页
+        //             if(curpath.indexOf("main")>=0 && curpath.indexOf("main/")<0 )//第一次进入系统，不是刷新后进入系统
+        //             {
+        //                 if ($scope.count > 0) {
+        //                     $state.go('main', {neid: null});
+        //                 }
+        //                 else {
+        //                     $state.go('main.welcome');
+        //                 }
+        //             }
+        //         }
+        //     },
+        //     function (errorMessage) {
+        //         Notification.error({message: errorMessage, delay: 5000});
+        //     });
+        $scope.userlists=[
+            {Name:"uiGrid表格和弹出确认框框"}
+        ]
         //判断浏览器的 对a标签的机制
         function initialMenu(menuList) {
             if (menuList != null && menuList.length > 0) {

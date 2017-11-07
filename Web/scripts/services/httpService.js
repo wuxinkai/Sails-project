@@ -92,6 +92,7 @@
             };
 
             function handleError(response) {
+                console.log(response)
                 return ($q.reject(response.data.Message));
             }
 

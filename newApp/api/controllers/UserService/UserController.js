@@ -15,7 +15,7 @@
 // http://localhost:1337/UserService/User/zhuce
 
 
-// User = require('../../models/User'); //数据库的表字段都在models 文件夹 里
+ // User = require('../../models/User'); //数据库的表字段都在models 文件夹 里
 
 module.exports = {
 
@@ -54,16 +54,21 @@ module.exports = {
     //findOne 查询一条； 是对象
     // User.findOne({email:'1'}).exec(function (err,updated){
     //   if (err) {
-    //     console.log('出错:'+err) //这一行会报错。
-    //   }else{
-    //     res.send(200,{success:true,data:updated});
-    //
+    //     console.log('出错:'+err); //这一行会报错。
+    //   }else {
+    //     console.log(updated);
+    //     res.send(200, {success: true, data: updated});
     //   }
+    // });
 
     //find 查询结果集合
     User.find({}).exec(function (err,updated){
+      var params = _.extend(req.query || {}, req.params || {}, req.body || {});
+
+      console.log(params);
+
       if (err) {
-        console.log('出错:'+err) //这一行会报错。
+        console.log('出错:'+err); //这一行会报错。
       }else{
         res.send(200,{success:true,data:updated});
       }

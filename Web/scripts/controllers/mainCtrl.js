@@ -24,7 +24,6 @@ define(['cookie', //jquery cookie存储
 
         $scope.Tescomm_Access_Token = $.cookie('Tescomm_Access_Token');
 
-
         $scope.sidebarOpen = function () {
             $(".alarmConLeft").toggleClass("sidebar-open");
             $("#alarmConRight").toggleClass("sidebar-left");
@@ -166,11 +165,7 @@ define(['cookie', //jquery cookie存储
             $scope.menuTowShow = true;
             $scope.menuThreeShow = false;
             $scope.menuThree =false;
-
-
-
         };
-
 
         function emitClearTimer(url) {
             $scope.$broadcast('destroy',url);
@@ -262,6 +257,8 @@ define(['cookie', //jquery cookie存储
             $scope.surePwd = "";
         };
         //public dynamic UserChangePassword(string token, string password, string newpwd)
+
+
 
 
     }]

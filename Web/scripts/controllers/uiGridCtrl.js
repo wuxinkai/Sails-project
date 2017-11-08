@@ -13,15 +13,15 @@ define([
             showColumnFooter: true, // 统计
             enablePaginationControls: false, //自定义分页
             columnDefs: [
-                {field: 'MAINTYPE_NAME',name:'费用大类名称', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
-                {field: 'SUBTYPE_NAME',name:'费用细类名称', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
-                {field: 'AMOUNT',name:'费用细类金额/元', minWidth: 150,cellClass:'bodyBluy  ', headerCellClass:'headerAdd',enableColumnMenu:false},
-                {field: 'RATE',name:'增值税率', minWidth: 100,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false,cellTooltip: function( row, col ) {
+                {field: 'name1',name:'表格1', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                {field: 'name2',name:'表格2', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                {field: 'name3',name:'表格3', minWidth: 150,cellClass:'bodyBluy  ', headerCellClass:'headerAdd',enableColumnMenu:false},
+                {field: 'name4',name:'表格4', minWidth: 100,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false,cellTooltip: function( row, col ) {
                     return  row.entity.RATE;
                 }},
-                {field: 'ADDED_TAX',name:'增值税/元', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
-                {field: 'TAX_TOTAL',name:'含税总额/元', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
-                { field: 'ODF_JUMPER', name:'操作',minWidth: 70,cellClass:'bodyBluy', headerCellClass:'headerAdd', enableColumnMenu:false, cellTemplate: '<div class="optcell">' +
+                {field: 'name5',name:'表格5', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                {field: 'name6',name:'表格6', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                { field: 'name7', name:'操作',minWidth: 70,cellClass:'bodyBluy', headerCellClass:'headerAdd', enableColumnMenu:false, cellTemplate: '<div class="optcell">' +
                 '<button class="btnStyle table-td00" ng-click="grid.appScope.modify(row.entity)"></button> <button class="btnStyle table-td01" ng-click="grid.appScope.rowDelete(row.entity)"></button>' +
                 '</div>'}]
         };
@@ -63,23 +63,26 @@ define([
 
         $scope.gridOptions.data=[
             {
-                MAINTYPE_NAME:'1',
-                SUBTYPE_NAME:'1',
-                AMOUNT:'1',
-                RATE:'1',
-                ADDED_TAX:'1',
-                TAX_TOTAL:'1',
+                name1:'',
+                name2:'',
+                name3:'',
+                name4:'',
+                name5:'',
+                name6:'',
+                name7:'',
             }
         ];
-        $scope.condition={
-            a:1,
-            b:2,
-        };
+
      $scope.dataAll=function () {
-         //在api -- controller --UserService --  UserController --
-         // httpService.post("UserService", "User", "zhuce", {}).then(function (data) {
-         //        console.log(data);
-         // });
+         httpService.post("biaogeFolder","Biaoge","biaogeData",{condition:"12334"}).then(function (data) {
+             if (data.success == true) { //请求成功
+                 if (data.data != null && data.data.length > 0) {
+                     console.log(data)
+                     $scope.gridOptions.data=data.data;
+                 }
+             }
+
+         });
      };
 
      $scope.dataAll();

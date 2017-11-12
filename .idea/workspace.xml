@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92b114e6-2ffc-45d7-8d30-f9a2418b570e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web/scripts/controllers/alarmScreenCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web/views/alarmScreen.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/newApp/api/controllers/AlarmService/AlarmController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/newApp/api/controllers/UserName/AbcController.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiGridCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiGridCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newApp/api/controllers/UserService/UserController.js" afterPath="$PROJECT_DIR$/newApp/api/controllers/UserService/UserController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newApp/api/models/User.js" afterPath="$PROJECT_DIR$/newApp/api/models/User.js" />
-    </list>
+    <list default="true" id="92b114e6-2ffc-45d7-8d30-f9a2418b570e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -80,7 +69,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
+            <state relative-caret-position="-504">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -270,12 +259,12 @@
       <updated>1509687754250</updated>
       <workItem from="1509687758046" duration="7953000" />
       <workItem from="1510062400451" duration="4090000" />
-      <workItem from="1510145407544" duration="5120000" />
+      <workItem from="1510145407544" duration="5269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17163000" />
+    <option name="totallyTimeSpent" value="17312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="744" extended-state="6" />
@@ -687,7 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
+        <state relative-caret-position="-504">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

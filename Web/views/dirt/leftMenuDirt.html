@@ -1,4 +1,68 @@
 <!--中间内容-->
+<!--<div class="alarmConLeft sidebar-animate" >-->
+    <!--<div class="alarmConLeftIn">-->
+        <!--<div class="systemTitle">-->
+            <!--<h6>智能监控子系统</h6>-->
+        <!--</div>-->
+        <!--<ul class="mainMenu clearfix ">-->
+            <!--<li  ng-repeat="item1 in userlists" ng-click="btnClick($event,item1)" class="listOne" ng-class="{curStyle:menu_One == item1.Name}">-->
+                <!--<a ng-href="{{item1.Url}}" ng-hide="item1.Children==null">-->
+                    <!--<img ng-src="{{item1.Icon}}" class="img0">-->
+                    <!--<img ng-src="{{item1.Icon1}}" class="img1" >-->
+                    <!--<span>{{item1.Name}}</span>-->
+                    <!--<i class="triangleIcon1"></i>-->
+                <!--</a>-->
+                <!--<a ng-href="{{item1.Url}}"  ng-show="item1.Children==null">-->
+                    <!--<img ng-src="{{item1.Icon}}" class="img0">-->
+                    <!--<img ng-src="{{item1.Icon1}}" class="img1">-->
+                    <!--<span>{{item1.Name}}</span>-->
+                <!--</a>-->
+                <!--<ul class="ChildrenUl1">-->
+                    <!--<li ng-repeat="item2 in item1.Children" ng-click="btnSonClick($event,item2);$event.stopPropagation();"  ng-class="{curStyle:menu_Tow == item2.Name}">-->
+                        <!--<a ng-href="{{item2.Url}}" ng-hide="item2.Children==null">-->
+                            <!--<img ng-src="{{item2.Icon}}" class="sonImg0">-->
+                            <!--<img ng-src="{{item2.Icon1}}" class="sonImg1">-->
+                            <!--<span>{{item2.Name}}</span>-->
+                            <!--<i style="margin-left: 10px" class="glyphicon   triangleIcon2"></i>-->
+                        <!--</a>-->
+                        <!--<a ng-href="{{item2.Url}}" ng-show="item2.Children==null">-->
+                            <!--<img ng-src="{{item2.Icon}}" class="sonImg0">-->
+                            <!--<img ng-src="{{item2.Icon1}}" class="sonImg1">-->
+                            <!--<span>{{item2.Name}}</span>-->
+                        <!--</a>-->
+                        <!--<ul class="ChildrenUl2 ">-->
+                            <!--<li ng-repeat="item3 in item2.Children" ng-click="btnItemClick($event,item3);$event.stopPropagation();" ng-class="{curStyle:menu_Three == item3.Name}">-->
+                                <!--<a ng-href="{{item3.Url}}" ng-hide="item3.Children==null ">-->
+                                    <!--<img ng-src="{{item3.Icon}}" class="lastImg0">-->
+                                    <!--<img ng-src="{{item3.Icon1}}" class="lastImg2">-->
+                                    <!--<span>{{item3.Name}}</span>-->
+                                    <!--<i style="margin-left: 10px" class="glyphicon   triangleIcon3"></i>-->
+                                <!--</a>-->
+                                <!--<a ng-href="{{item3.Url}}" ng-show="item3.Children==null">-->
+                                    <!--<img ng-src="{{item3.Icon}}" class="lastImg0">-->
+                                    <!--<img ng-src="{{item3.Icon1}}" class="lastImg2">-->
+                                    <!--<span>{{item3.Name}}</span>-->
+                                <!--</a>-->
+                                <!--<ul class="ChildrenUl3">-->
+                                    <!--<li ng-repeat="item4 in item3.Children" ng-click="btnItemClickThree($event,item4);$event.stopPropagation();" ng-class="{curStyle:menu_Four == item4.Name}">-->
+                                        <!--<a ng-href="{{item4.Url}}" >-->
+                                            <!--<img ng-src="{{item4.Icon}}" class="lastImg0">-->
+                                            <!--<img ng-src="{{item4.Icon1}}" class="lastImg2">-->
+                                            <!--<span>{{item4.Name}}</span>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+        <!--</ul>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+
 <div class="alarmConLeft sidebar-animate" >
     <div class="alarmConLeftIn">
         <div class="systemTitle">
@@ -7,47 +71,40 @@
         <ul class="mainMenu clearfix ">
             <li  ng-repeat="item1 in userlists" ng-click="btnClick($event,item1)" class="listOne" ng-class="{curStyle:menu_One == item1.Name}">
                 <a ng-href="{{item1.Url}}" ng-hide="item1.Children==null">
-                    <img ng-src="{{item1.Icon}}" class="img0">
-                    <img ng-src="{{item1.Icon1}}" class="img1" >
+                    <i class="{{item1.Icon}}"></i>
                     <span>{{item1.Name}}</span>
                     <i class="triangleIcon1"></i>
                 </a>
                 <a ng-href="{{item1.Url}}"  ng-show="item1.Children==null">
-                    <img ng-src="{{item1.Icon}}" class="img0">
-                    <img ng-src="{{item1.Icon1}}" class="img1">
+                    <i class="{{item1.Icon}}"></i>
                     <span>{{item1.Name}}</span>
                 </a>
                 <ul class="ChildrenUl1">
                     <li ng-repeat="item2 in item1.Children" ng-click="btnSonClick($event,item2);$event.stopPropagation();"  ng-class="{curStyle:menu_Tow == item2.Name}">
                         <a ng-href="{{item2.Url}}" ng-hide="item2.Children==null">
-                            <img ng-src="{{item2.Icon}}" class="sonImg0">
-                            <img ng-src="{{item2.Icon1}}" class="sonImg1">
+                            <i class="{{item1.Icon}}"></i>
                             <span>{{item2.Name}}</span>
                             <i style="margin-left: 10px" class="glyphicon   triangleIcon2"></i>
                         </a>
                         <a ng-href="{{item2.Url}}" ng-show="item2.Children==null">
-                            <img ng-src="{{item2.Icon}}" class="sonImg0">
-                            <img ng-src="{{item2.Icon1}}" class="sonImg1">
+                            <i class="{{item1.Icon}}"></i>
                             <span>{{item2.Name}}</span>
                         </a>
                         <ul class="ChildrenUl2 ">
                             <li ng-repeat="item3 in item2.Children" ng-click="btnItemClick($event,item3);$event.stopPropagation();" ng-class="{curStyle:menu_Three == item3.Name}">
                                 <a ng-href="{{item3.Url}}" ng-hide="item3.Children==null ">
-                                    <img ng-src="{{item3.Icon}}" class="lastImg0">
-                                    <img ng-src="{{item3.Icon1}}" class="lastImg2">
+                                    <i class="{{item1.Icon}}"></i>
                                     <span>{{item3.Name}}</span>
                                     <i style="margin-left: 10px" class="glyphicon   triangleIcon3"></i>
                                 </a>
                                 <a ng-href="{{item3.Url}}" ng-show="item3.Children==null">
-                                    <img ng-src="{{item3.Icon}}" class="lastImg0">
-                                    <img ng-src="{{item3.Icon1}}" class="lastImg2">
+                                    <i class="{{item1.Icon}}"></i>
                                     <span>{{item3.Name}}</span>
                                 </a>
                                 <ul class="ChildrenUl3">
                                     <li ng-repeat="item4 in item3.Children" ng-click="btnItemClickThree($event,item4);$event.stopPropagation();" ng-class="{curStyle:menu_Four == item4.Name}">
                                         <a ng-href="{{item4.Url}}" >
-                                            <img ng-src="{{item4.Icon}}" class="lastImg0">
-                                            <img ng-src="{{item4.Icon1}}" class="lastImg2">
+                                            <i class="{{item1.Icon}}"></i>
                                             <span>{{item4.Name}}</span>
                                         </a>
                                     </li>

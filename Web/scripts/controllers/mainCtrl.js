@@ -14,7 +14,8 @@ define(['cookie', //jquery cookie存储
     'scripts/directives/leftMenuDirt',
     'scripts/services/httpService',
     'ngload!scripts/requireHelper/requireNotification', //报错提示插件
-    'ngload!angular-ui-grid' // 表格插件
+    'ngload!angular-ui-grid', // 表格插件
+    'bootstrap',
 ], function () {
     return ['$scope', '$state', 'httpService', 'Notification', '$timeout', function ($scope, $state, httpService, Notification, $timeout) {
         $scope.User_ID = $.cookie('User_ID');
@@ -104,7 +105,127 @@ define(['cookie', //jquery cookie存储
         //         Notification.error({message: errorMessage, delay: 5000});
         //     });
         $scope.userlists=[
-            {Name:"uiGrid表格和弹出确认框框"}
+            {Name:"uiGrid表格和弹出确认框框",Url:"#/main/uiGrid",Icon:"fa fa-users"},
+            {Name:"ECHARTS图",Url:"#",Icon:"fa fa-users",Children:[
+                {
+                    "Name": "折线图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartLine"
+                },
+                {
+                    "Name": "柱状图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartBar"
+                },
+                {
+                    "Name": "散点图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartScatter"
+                },
+                {
+                    "Name": "k图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartK"
+                },
+                {
+                    "Name": "饼图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartPie"
+                },
+                {
+                    "Name": "雷达图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartRadar"
+                },
+                {
+                    "Name": "仪表盘",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartGauge"
+                },
+                {
+                    "Name": "漏斗图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartFunnel"
+                },
+                {
+                    "Name": "地图",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/echartMap"
+                },
+            ]},
+            {Name:"谷歌地图",Url:"#/main/gis",Icon:"fa fa-users"},
+            {Name:"ui-bootstrap",Url:"#/main/uiBootstrap",Icon:"fa fa-users",Children:[
+                {
+                    "Name": "手风琴",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/accordion"
+                },
+                {
+                    "Name": "提示消息",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/alert"
+                },
+                {
+                    "Name": "按钮",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/buttons"
+                },
+                {
+                    "Name": "轮播的控件",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/carousel"
+                },
+                {
+                    "Name": "折叠控件",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/collapse"
+                },
+                {
+                    "Name": "时间控件",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/datepicker"
+                },
+                {
+                    "Name": "下拉菜单",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/dropdown"
+                },
+                {
+                    "Name": "模态框",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/model"
+                },
+                {
+                    "Name": "分页",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/pagination"
+                },
+                {
+                    "Name": "进度条",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/progressbar"
+                },
+                {
+                    "Name": "打分或排名的控件",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/rating"
+                },
+                {
+                    "Name": "tab切换栏",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/tabs"
+                },
+                {
+                    "Name": "提示信息",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/tooltip"
+                },
+                {
+                    "Name": "input下拉搜索",
+                    "Icon": "fa fa-users",
+                    "Url":"#/main/typeahead"
+                },
+            ]},
         ]
         //判断浏览器的 对a标签的机制
         function initialMenu(menuList) {

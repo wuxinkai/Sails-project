@@ -2,107 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92b114e6-2ffc-45d7-8d30-f9a2418b570e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/bower_components/om-custom-ui/css/window.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/gis/gisCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/accordionCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/alertCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/uiBootstrapCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartBar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartFunnel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartGauge.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartK.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartLine.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartPie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartRadar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/echarts/echartScatter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/gis/Gis.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/accordion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/alert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/carousel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/collapse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/datepicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/dropdown.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/model.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/pagination.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/progressbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/rating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/tabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/tooltip.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/typeahead.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/uiBootstrap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/json/menu.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCommonCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularFormCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/insideDirCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/outDirCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angular.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angularCommon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angularForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angularHttps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/insideDir.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/outDir.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower.json" afterPath="$PROJECT_DIR$/Web/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/.bower.json" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/.gitignore" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/.npmignore" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/HELP-US-OUT.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/bower.json" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/css/font-awesome.css.map" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/css/font-awesome.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/animated.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/bordered-pulled.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/core.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/fixed-width.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/icons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/larger.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/list.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/path.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/rotated-flipped.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/screen-reader.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/screen-reader.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/stacked.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_animated.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_core.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_fixed-width.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_larger.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_list.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_path.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_screen-reader.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_stacked.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/Web/bower_components/font-awesome/scss/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/index.html" afterPath="$PROJECT_DIR$/Web/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/README.md" afterPath="$PROJECT_DIR$/Web/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/app.js" afterPath="$PROJECT_DIR$/Web/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html" afterPath="$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -119,68 +57,58 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="130" column="77" lean-forward="false" selection-start-line="130" selection-start-column="77" selection-end-line="130" selection-end-column="77" />
+            <state relative-caret-position="375">
+              <caret line="151" column="73" lean-forward="false" selection-start-line="151" selection-start-column="73" selection-end-line="151" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/main.js">
+      <file leaf-file-name="angularCommonCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularCommonCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state relative-caret-position="189">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uiBootstrap.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/uiBootstrap.html">
+      <file leaf-file-name="angularCommon.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/views/angular/angularCommon.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alert.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/alert.html">
+      <file leaf-file-name="angularHttpsCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accordionCtrl.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/accordionCtrl.js">
+      <file leaf-file-name="angularFormCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularFormCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            <state relative-caret-position="189">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accordion.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/accordion.html">
+      <file leaf-file-name="angularForm.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/views/angular/angularForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="45" column="54" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -189,19 +117,42 @@
       <file leaf-file-name="mainCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="567">
+              <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/index.html">
+      <file leaf-file-name="angularCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="189">
+              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Web/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="513">
+                <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -232,9 +183,9 @@
       <find>addAlert</find>
       <find>oneAtATime</find>
       <find>bootstrap</find>
-      <find>uibAccordionHeading</find>
       <find>ui.bootstrap</find>
       <find>status2</find>
+      <find>uibAccordionHeading</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,57 +194,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartFunnel.html" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartGauge.html" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartK.html" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartMap.html" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartPie.html" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartRadar.html" />
-        <option value="$PROJECT_DIR$/Web/views/echarts/echartScatter.html" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/git/uiGisCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/gis/uiGisCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/views/gis/Gis.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/uiBootstrapCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/gis/gisCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.html" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtlr.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbar.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/app.js" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/carousel.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/collapse.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/datepicker.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/dropdown.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/model.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/pagination.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/progressbar.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/rating.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/tabs.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/tooltip.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/typeahead.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/uiBootstrap.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/alert.html" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/uiBootstrapCtrl.js" />
         <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/alertCtrl.js" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/accordion.html" />
         <option value="$PROJECT_DIR$/Web/bower.json" />
         <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/accordionCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
         <option value="$PROJECT_DIR$/Web/scripts/main.js" />
         <option value="$PROJECT_DIR$/Web/index.html" />
+        <option value="$PROJECT_DIR$/Web/views/angular/angular.html" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/views/angular/outDir.html" />
+        <option value="$PROJECT_DIR$/Web/views/angular/insideDir.html" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/insideDirCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/outDirCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/uiBootstrapCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/angularFormCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/views/angular/angularHttps.html" />
+        <option value="$PROJECT_DIR$/Web/views/angular/angularForm.html" />
+        <option value="$PROJECT_DIR$/Web/json/menu.json" />
+        <option value="$PROJECT_DIR$/Web/views/angular/angularCommon.html" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCommonCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/app.js" />
+        <option value="$PROJECT_DIR$/Web/README.md" />
       </list>
     </option>
   </component>
@@ -315,7 +266,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="1927" />
+    <option name="width" value="1926" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -366,7 +317,7 @@
               <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="bower_components" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
@@ -380,6 +331,14 @@
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="angular" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
@@ -400,7 +359,7 @@
               <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="uiBootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="angular" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -465,12 +424,14 @@
       <workItem from="1510062400451" duration="4090000" />
       <workItem from="1510145407544" duration="5120000" />
       <workItem from="1510192495087" duration="6438000" />
-      <workItem from="1510471469338" duration="9617000" />
+      <workItem from="1510471469338" duration="10078000" />
+      <workItem from="1510543715602" duration="1252000" />
+      <workItem from="1510550322213" duration="1132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33218000" />
+    <option name="totallyTimeSpent" value="36063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -479,20 +440,38 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17774262" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26361656" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26361656" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17774262" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -505,289 +484,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartGauge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartK.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartLine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartPie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartRadar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/echarts/echartScatter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/git/uiGisCtrl.js" />
-    <entry file="file://$PROJECT_DIR$/Web/views/gis/Gis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/uiBootstrapCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/topologyCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="760" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/collapse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/datepicker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/dropdown.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/pagination.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/progressbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/rating.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/tabs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/tooltip.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,39 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/gis/gisCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/uiBootstrapCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/alertCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="130" column="77" lean-forward="false" selection-start-line="130" selection-start-column="77" selection-end-line="130" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,7 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,62 +516,377 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1510192304908" expanded="true" signature="246207:246214" ph="×" />
-            <marker date="1510192304908" expanded="true" signature="264902:264908" ph=" " />
-            <marker date="1510192304908" expanded="true" signature="265231:265237" ph=" " />
-            <marker date="1510192304908" expanded="true" signature="267642:267648" ph=" " />
-            <marker date="1510192304908" expanded="true" signature="267973:267979" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="618">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/accordion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="45" column="54" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="54" />
+        <state relative-caret-position="612">
+          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/angular/angular.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/angular/outDir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/angular/insideDir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/insideDirCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/outDirCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/gis/gisCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/accordionCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="486">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/alertCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/uiBootstrapCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/angular/angularHttps.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/angular/angularForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularFormCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/angular/angularCommon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularCommonCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="151" column="73" lean-forward="false" selection-start-line="151" selection-start-column="73" selection-end-line="151" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="513">
+            <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

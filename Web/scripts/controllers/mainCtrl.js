@@ -17,7 +17,7 @@ define(['cookie', //jquery cookie存储
     'ngload!angular-ui-grid', // 表格插件
     'bootstrap',
 ], function () {
-    return ['$scope', '$state', 'httpService', 'Notification', '$timeout', function ($scope, $state, httpService, Notification, $timeout) {
+    return ['$scope','$http','$state', 'httpService', 'Notification', '$timeout', function ($scope,$http,$state, httpService, Notification, $timeout) {
         $scope.User_ID = $.cookie('User_ID');
         $scope.User_Name = $.cookie('User_Name');
         //存储 cookie ；
@@ -41,7 +41,7 @@ define(['cookie', //jquery cookie存储
         });
         $scope.userPhoto = "./imgs/user-128x128.jpg";
 
-        //远程git请求用postRemote 方法（postRemote 远程邮递）
+// 远程git请求用postRemote 方法（postRemote 远程邮递） 请求的是登录者的信息
         httpService.postRemote('Open', 'OAuth', 'GetUserInfo', {token: $.cookie("Tescomm_Access_Token")}).then(function (data) {
                 if (data != [] && data.Photo != null)
                     $scope.userPhoto = window.tescomm.config.system.AuthorizeService + "Open/FileService/Download?fileId=" + data.Photo;
@@ -63,8 +63,9 @@ define(['cookie', //jquery cookie存储
                 Notification.error({message: errorMessage, delay: 5000});
             });
 
+//取得浏览器的userAgent字符串
         function myBrowser() {
-            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var userAgent = navigator.userAgent;
             var isOpera = userAgent.indexOf("Opera") > -1;
             if (userAgent.indexOf("Firefox") > -1) {
                 return "FF";
@@ -77,157 +78,20 @@ define(['cookie', //jquery cookie存储
             }
             ; //判断是否IE浏览器
         }
-
         var mb = myBrowser();
 
-        //请求的左侧菜单 此方法是异步的，所以会后面加载
-        // var promise = httpService.postRemote('Open', 'OAuth', 'GetUserRight', {token: httpService.getCookie("Tescomm_Access_Token"), app: window.tescomm.config.app.Id}).then(function (data) {
-        //     console.log(data)
-        //         $scope.userlists = data;
-        //         if (data.length > 0) {
-        //             $scope.selectedMenu = $scope.userlists[0].Name;
-        //             $scope.count = 0;
-        //             initialMenu($scope.userlists);
-        //             var curpath=window.location.href;
-        //             //没有菜单就显示欢迎页
-        //             if(curpath.indexOf("main")>=0 && curpath.indexOf("main/")<0 )//第一次进入系统，不是刷新后进入系统
-        //             {
-        //                 if ($scope.count > 0) {
-        //                     $state.go('main', {neid: null});
-        //                 }
-        //                 else {
-        //                     $state.go('main.welcome');
-        //                 }
-        //             }
-        //         }
-        //     },
-        //     function (errorMessage) {
-        //         Notification.error({message: errorMessage, delay: 5000});
-        //     });
-        $scope.userlists=[
-            {Name:"uiGrid表格和弹出确认框框",Url:"#/main/uiGrid",Icon:"fa fa-users"},
-            {Name:"ECHARTS图",Url:"#",Icon:"fa fa-users",Children:[
-                {
-                    "Name": "折线图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartLine"
-                },
-                {
-                    "Name": "柱状图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartBar"
-                },
-                {
-                    "Name": "散点图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartScatter"
-                },
-                {
-                    "Name": "k图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartK"
-                },
-                {
-                    "Name": "饼图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartPie"
-                },
-                {
-                    "Name": "雷达图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartRadar"
-                },
-                {
-                    "Name": "仪表盘",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartGauge"
-                },
-                {
-                    "Name": "漏斗图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartFunnel"
-                },
-                {
-                    "Name": "地图",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/echartMap"
-                },
-            ]},
-            {Name:"谷歌地图",Url:"#/main/gis",Icon:"fa fa-users"},
-            {Name:"ui-bootstrap",Url:"#/main/uiBootstrap",Icon:"fa fa-users",Children:[
-                {
-                    "Name": "手风琴",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/accordion"
-                },
-                {
-                    "Name": "提示消息",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/alert"
-                },
-                {
-                    "Name": "按钮",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/buttons"
-                },
-                {
-                    "Name": "轮播的控件",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/carousel"
-                },
-                {
-                    "Name": "折叠控件",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/collapse"
-                },
-                {
-                    "Name": "时间控件",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/datepicker"
-                },
-                {
-                    "Name": "下拉菜单",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/dropdown"
-                },
-                {
-                    "Name": "模态框",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/model"
-                },
-                {
-                    "Name": "分页",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/pagination"
-                },
-                {
-                    "Name": "进度条",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/progressbar"
-                },
-                {
-                    "Name": "打分或排名的控件",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/rating"
-                },
-                {
-                    "Name": "tab切换栏",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/tabs"
-                },
-                {
-                    "Name": "提示信息",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/tooltip"
-                },
-                {
-                    "Name": "input下拉搜索",
-                    "Icon": "fa fa-users",
-                    "Url":"#/main/typeahead"
-                },
-            ]},
-        ]
-        //判断浏览器的 对a标签的机制
+//请求的左侧菜单 此方法是异步的，所以会后面加载
+        $http({
+            url: 'json/menu.json',
+            method: 'GET',
+            contentType: "application/json; charset=utf-8"
+        }).success(function (data, header, config, status) {
+            $scope.userlists=data
+        }).error(function (data, header, config, status) {
+            //处理响应失败
+        });
+
+
         function initialMenu(menuList) {
             if (menuList != null && menuList.length > 0) {
                 for (var i = 0; i < menuList.length; i++) {

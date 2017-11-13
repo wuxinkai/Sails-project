@@ -1,0 +1,49 @@
+<p>uib-accordion的属性:</p>
+<p>close-others 默认true 展开一个面板时是否关闭其他面板</p>
+<br>
+<p>uib-accordion-group的属性:</p>
+<p>heading 默认值none 面板头部的标题</p>
+<p>is-disabled 默认值false 面板是否禁用</p>
+<p>is-open 默认值false 面板是否展开</p>
+<p>panel-class 默认值panel-default 可以使用Bootstrap的样式,如panel-primary, panel-success, panel-info,panel-warning,panel-danger等。必须为字符串。</p>
+<p>
+    <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">切换最后一个面板</button>
+    <button type="button" class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">启用/禁用第一个面板</button>
+</p>
+<div class="checkbox">
+    <label>
+        <input type="checkbox" ng-model="oneAtATime"> 一次只打开一个 Open only one at a time
+    </label>
+</div>
+<uib-accordion close-others="oneAtATime">
+    <uib-accordion-group heading="静态头，最初扩展" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+        此内容在模板中是直接的。
+    </uib-accordion-group>
+    <!--循环每一组内容-->
+    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+        {{group.content}}
+    </uib-accordion-group>
+
+    <uib-accordion-group heading="动态内容" panel-class="{{status.panelClass}}">
+        <p>由手风琴组的身体变</p>
+        <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">添加内容 Item</button>
+        <div ng-repeat="item in items">{{item}}</div>
+    </uib-accordion-group>
+    <uib-accordion-group heading="删除账户" panel-class="panel-danger">
+        <p>请删除您的帐户，点击下面的按钮</p>
+        <button class="btn btn-danger">删除</button>
+    </uib-accordion-group>
+    <uib-accordion-group is-open="status.open">
+        <uib-accordion-heading>
+            我也可以有标记! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        </uib-accordion-heading>
+        这只是一些内容来说明花哨标题。
+    </uib-accordion-group>
+</uib-accordion>
+
+
+<uib-accordion close-others="oneAtATime">
+    <uib-accordion-group heading="标题" is-open="status2.isFirstOpen" is-disabled="status2.isFirstDisabled" panel-class="{{status2.panelClass}}">
+        内容...
+    </uib-accordion-group>
+</uib-accordion>

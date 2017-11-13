@@ -1,0 +1,25 @@
+<p>alert指令可以使用的属性有：</p>
+<p>close 提示消息关闭时所触发的函数。如果有这个属性，提示消息的右侧会添加一个关闭按钮</p>
+<p>dismiss-on-timeout 默认值none 在有close属性的前提下，设置一个自动关闭提示消息的时间（毫秒）</p>
+<p>template-url 	默认值uib/template/alert/alert.html</p>
+<p>type 默认值warning 提示消息的类型。可配置的值有：danger，warning，info，success </p>
+<br>
+
+<div uib-alert ng-repeat="alert in alerts" class="alert" ng-class=" 'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+
+<div uib-alert template-url="alert.html" class="alert   alert-warning" dismiss-on-timeout='100' >3快乐警报</div>
+
+<button type="button" class='btn btn-default' ng-click="addAlert()">添加alert</button>
+
+<br>
+<br>
+
+
+
+<!--模板-->
+<script type="text/ng-template" id="alert.html">
+    <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
+        这是模板
+        <div ng-transclude></div>
+    </div>
+</script>

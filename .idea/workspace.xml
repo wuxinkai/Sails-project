@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92b114e6-2ffc-45d7-8d30-f9a2418b570e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/json/menu.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCommonCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularFormCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/insideDirCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/angular/outDirCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angular.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angularCommon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angularForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/angularHttps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/insideDir.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web/views/angular/outDir.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/README.md" afterPath="$PROJECT_DIR$/Web/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/app.js" afterPath="$PROJECT_DIR$/Web/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartBarCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartFunnelCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartGaugeCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartKCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartLineCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartMapCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartPieCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartRadarCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/echarts/echartScatterCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/carouselCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/collapseCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/datepickerCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/dropdownCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/modelCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/paginationCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/popoverCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/progressbarCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/ratingCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tabsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/tooltipCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html" afterPath="$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/views/main.html" afterPath="$PROJECT_DIR$/Web/views/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,16 +38,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angularCommon.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/angular/angularCommon.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="angularHttpsCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,31 +48,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angularFormCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularFormCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angularForm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/angular/angularForm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mainCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+            <state relative-caret-position="621">
+              <caret line="109" column="61" lean-forward="false" selection-start-line="109" selection-start-column="61" selection-end-line="109" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Web/views/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="38" column="95" lean-forward="false" selection-start-line="38" selection-start-column="95" selection-end-line="38" selection-end-column="95" />
+              <folding>
+                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#2;n#div#4;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leftMenuDirt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1398">
+              <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="75" column="34" lean-forward="true" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -144,7 +116,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -186,6 +158,11 @@
       <find>ui.bootstrap</find>
       <find>status2</find>
       <find>uibAccordionHeading</find>
+      <find>dropdown</find>
+      <find>pull-left clearfix breadcrumbBox</find>
+      <find>智能监控子系统</find>
+      <find>loginUser</find>
+      <find>loginInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/rating.html" />
-        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/tabs.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/tooltip.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/typeahead.html" />
         <option value="$PROJECT_DIR$/Web/views/uiBootstrap/uiBootstrap.html" />
@@ -207,7 +182,6 @@
         <option value="$PROJECT_DIR$/Web/scripts/main.js" />
         <option value="$PROJECT_DIR$/Web/index.html" />
         <option value="$PROJECT_DIR$/Web/views/angular/angular.html" />
-        <option value="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
         <option value="$PROJECT_DIR$/Web/views/angular/outDir.html" />
         <option value="$PROJECT_DIR$/Web/views/angular/insideDir.html" />
         <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js" />
@@ -245,6 +219,9 @@
         <option value="$PROJECT_DIR$/Web/scripts/controllers/angular/angularCommonCtrl.js" />
         <option value="$PROJECT_DIR$/Web/scripts/app.js" />
         <option value="$PROJECT_DIR$/Web/README.md" />
+        <option value="$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/views/main.html" />
       </list>
     </option>
   </component>
@@ -266,7 +243,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="1926" />
+    <option name="width" value="1927" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -361,6 +338,13 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="angular" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dirt" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -426,12 +410,12 @@
       <workItem from="1510192495087" duration="6438000" />
       <workItem from="1510471469338" duration="10078000" />
       <workItem from="1510543715602" duration="1252000" />
-      <workItem from="1510550322213" duration="1132000" />
+      <workItem from="1510550322213" duration="6388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36063000" />
+    <option name="totallyTimeSpent" value="41319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -440,6 +424,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17774262" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -451,7 +436,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -484,20 +468,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/tooltip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/typeahead.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/alert.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -547,14 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -823,14 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/views/angular/angularCommon.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -855,26 +809,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -887,6 +825,62 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="75" column="34" lean-forward="true" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/dirt/leftMenuDirt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1398">
+          <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/mainCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="109" column="61" lean-forward="false" selection-start-line="109" selection-start-column="61" selection-end-line="109" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="38" column="95" lean-forward="false" selection-start-line="38" selection-start-column="95" selection-end-line="38" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#2;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

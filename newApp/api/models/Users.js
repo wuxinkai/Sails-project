@@ -1,10 +1,10 @@
 module.exports = {
-  tableName: 'biaoge',
+  tableName: 'users',
   adapter: 'mysql',
   autoid:false,
   autoCreatedAt: false,
   autoUpdatedAt: false,
   attributes: {
-    id:{},name1:{},name2:{},name3:{},name4:{},name5:{},name6:{},name7:{},
+    id:{},userName:{},password:{},
   }
 };

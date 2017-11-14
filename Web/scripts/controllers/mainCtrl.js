@@ -18,13 +18,10 @@ define(['cookie', //jquery cookie存储
     'bootstrap',
 ], function () {
     return ['$scope','$http','$state', 'httpService', 'Notification', '$timeout', function ($scope,$http,$state, httpService, Notification, $timeout) {
-        $scope.User_ID = $.cookie('User_ID');
-        $scope.User_Name = $.cookie('User_Name');
         //存储 cookie ；
         $.cookie('Tescomm_Access_Token', 'B2A63B67DB6A29B98F834A7B34C64D8A');
 
         $scope.Tescomm_Access_Token = $.cookie('Tescomm_Access_Token');
-
         $scope.sidebarOpen = function () {
             $(".alarmConLeft").toggleClass("sidebar-open");
             $("#alarmConRight").toggleClass("sidebar-left");
@@ -32,6 +29,7 @@ define(['cookie', //jquery cookie存储
             $(".cd-nav-trigger").toggleClass("cd-nav-right");
             $scope.$broadcast('to-topology', "data");
         };
+
         initStyle();
         function initStyle() {
             $('#alarmConRight').css({"height": ($(window).height() - 65) + 'px'});
@@ -51,7 +49,6 @@ define(['cookie', //jquery cookie存储
             function (errorMessage) {
                 Notification.error({message: errorMessage, delay: 5000});
             });
-
         var promise = httpService.postRemote('Open', 'OAuth', 'GetUserApps', {
             token: $.cookie("Tescomm_Access_Token"),
             appid: window.tescomm.config.app.Id
@@ -91,14 +88,13 @@ define(['cookie', //jquery cookie存储
             //处理响应失败
         });
 
-//session存储localStorage存储和cookie存储
+//localStorage存储 sessionStorage存储和cookie存储
         localStorage.localInfo='{"msg":"登录成功！","success":true,"displayName":"localStorage存储"}';
         sessionStorage.sessionInfo='{"msg":"登录成功！","success":true,"displayName":"sessionStorage存储"}';
         var cookie = $.cookie("attr","cookie存储"); //存储
 
         var loginInfo = localStorage.localInfo || sessionStorage.localInfo;
         var sessionInfo = localStorage.sessionInfo || sessionStorage.sessionInfo;
-
 
         if(loginInfo != undefined){
             $('#localUser').html(JSON.parse(loginInfo).displayName);//ocalStorage存储在页面显示
@@ -109,11 +105,8 @@ define(['cookie', //jquery cookie存储
         if(cookie != undefined){
             $('#cookieUser').html($.cookie('attr')); //cookie读取内容
         }
-//cookie存储
-//
 
-
-
+//判断浏览器
         function initialMenu(menuList) {
             if (menuList != null && menuList.length > 0) {
                 for (var i = 0; i < menuList.length; i++) {
@@ -151,7 +144,6 @@ define(['cookie', //jquery cookie存储
             }
 
         }
-
         //一级
         $scope.btnClick = function (event, item) {
             emitClearTimer(item.Url);
@@ -160,8 +152,6 @@ define(['cookie', //jquery cookie存储
             $scope.menu_One = item.Name;
             $scope.menuThreeShow = false;
             $scope.menuTowShow = false;
-
-            $('#inputValue').val('');
         };
         //二级
         $scope.btnSonClick = function (event, item) {
@@ -173,7 +163,6 @@ define(['cookie', //jquery cookie存储
             $scope.menuThreeShow = false;
             $scope.menuThree =false;
         };
-
         function emitClearTimer(url) {
             $scope.$broadcast('destroy',url);
         }
@@ -197,40 +186,25 @@ define(['cookie', //jquery cookie存储
         }
 
 
-
-
-        //选中某条数据查询
-        $scope.appclick = function (appid) {
-            for (var i = 0; i < $scope.AppItems.length; i++) {
-                if ($scope.AppItems[i].App_Id == appid) {
-                    var item = $scope.AppItems[i];
-                    var url = item.RELEASEIP + "/" + item.DEFAULTROUTE + "?token=" + $.cookie("Tescomm_Access_Token");
-                    //window.open(url);
-                    location.href = url;
-                }
-            }
-            //  Notification.error({message: appid, delay: 5000});
-        }
-        //选中某条数据查询
+ //选中某条数据查询
         $scope.nuclick = function (id) {
             $scope.$broadcast('to-single', id);
             $scope.isDown = false;
         };
-        //检测输入框变化
+//检测输入框变化
         $scope.getNamesByInput = function (item) {
             if (item != "")
                 $scope.$broadcast('to-inputchange', item);
             else
                 $scope.isDown = false;
         }
-        //模糊查询
+//模糊查询
         $scope.getList = function (item) {
             $scope.isDown = false;
             $scope.$broadcast('to-name', item);
         }
 
-
-        //修改密码
+//修改密码
         $scope.changePwd = function () {
             if (!$scope.newPwd) {
                 Notification.error({message: "新密码不能为空", delay: 5000});
@@ -263,10 +237,6 @@ define(['cookie', //jquery cookie存储
             $scope.newPwd = "";
             $scope.surePwd = "";
         };
-        //public dynamic UserChangePassword(string token, string password, string newpwd)
-
-
-
 
     }]
 });

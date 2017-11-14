@@ -148,19 +148,14 @@ define(['cookie', //jquery cookie存储
         }
         //一级
         $scope.btnClick = function (event, item) {
-            emitClearTimer(item.Url);
-            $scope.nulist=[];
+            $scope.menu_One=item.Name;
             getCss(event);
         };
         //二级
         $scope.btnSonClick = function (event, item) {
-            emitClearTimer(item.Url);
-            $scope.nulist=[];
-            getCss(event);
+            $scope.menu_Tow=item.Name;
         };
-        function emitClearTimer(url) {
-            $scope.$broadcast('destroy',url);
-        }
+
         //三级菜单
         function getCss(event) {
             var _this = event.srcElement || event.target;

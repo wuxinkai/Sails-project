@@ -2,7 +2,7 @@ define([
     'cookie',  //
     'ui.bootstrap',
     'scripts/requireHelper/requireNotification',//插件消息提示
-    'angular-confirm', //确认消息提示框
+    'bower_components/angular-confirm/angular-confirm', //确认消息提示框
 ], function () {
     return ['$scope','$confirm','Notification','httpService','i18nService', function ($scope,$confirm,Notification,httpService,i18nService) {
         //（1）语言设置
@@ -22,7 +22,7 @@ define([
                 {field: 'name5',name:'表格5', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
                 {field: 'name6',name:'表格6', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
                 { field: 'name7', name:'操作',minWidth: 70,cellClass:'bodyBluy', headerCellClass:'headerAdd', enableColumnMenu:false, cellTemplate: '<div class="optcell">' +
-                '<button class="btnStyle table-td00" ng-click="grid.appScope.modify(row.entity)"></button> <button class="btnStyle table-td01" ng-click="grid.appScope.rowDelete(row.entity)"></button>' +
+                '<button class="btnStyle table-td00" ng-click="grid.appScope.modify(row.entity)"></button> <button class="btnStyle table-td01" ng-click="grid.appScope.rowDelete(row.entity)"></button><a class="btnStyle " ng-click="grid.appScope.Notification(row.entity)">1</a>' +
                 '</div>'}]
         };
 //头部hover效果
@@ -30,8 +30,25 @@ define([
 //获取没一行的内容
         $scope.result = "初始化";
         $scope.gridOptions.appScopeProvider= {
-            rowHover: function(row, show) {
-
+            Notification: function(data) {
+                var number = data.id
+                if(number==1){
+                    Notification.success('成功的通知');
+                }else if(number==2){
+                     Notification.error({message: '删除', delay: 5000});
+                }else if(number==3){
+                    Notification({message: '警告通知'}, 'warning');
+                }else if(number==4){
+                    Notification({message: '原发性通知', title: '有表头'});
+                }else if(number==5){
+                    Notification.error({message: '错误通知1s', delay: 1000});
+                }else if(number==6){
+                        Notification.success({message: 'Success notification<br>Some other <b>content</b><br><a href="https://github.com/alexcrack/angular-ui-notification">This is a link</a><br><img src="https://angularjs.org/img/AngularJS-small.png">', title: '可以实现页面跳转'});
+                }else if(number==7){
+                    Notification.error({message: '从底部弹出', positionY: 'bottom', positionX: 'right'});
+                }else{
+                    Notification.error({message: '错误通知1s', replaceMessage: true});//取代的消息
+                }
             },
             modify: function(id) {
                 $confirm({ text: '这是个自定义确认框，是否确认。' })
@@ -43,21 +60,6 @@ define([
             },
             rowDelete: function(id) {
                 $scope.dataAll();
-                // Notification.success('成功的通知');
-                // Notification.error({message: '删除', delay: 5000});
-                // Notification({message: '警告通知'}, 'warning');
-                // Notification({message: '原发性通知', title: '有表头'});
-                // Notification.error({message: '错误通知1s', delay: 1000});
-
-                // Notification.success({message: 'Success notification<br>Some other <b>content</b><br><a href="https://github.com/alexcrack/angular-ui-notification">This is a link</a><br><img src="https://angularjs.org/img/AngularJS-small.png">', title: '可以实现页面跳转'});
-
-                // Notification.error({message: '从底部弹出', positionY: 'bottom', positionX: 'right'});
-
-                Notification.error({message: '错误通知1s', replaceMessage: true});//取代的消息
-
-
-
-
             }
         };
 
@@ -78,6 +80,7 @@ define([
              if (data.success == true) { //请求成功
                  if (data.data != null && data.data.length > 0) {
                      $scope.gridOptions.data=data.data;
+
                  }
              }
 

@@ -146,5 +146,6 @@
       "Icon": "fa fa-users",
       "Url":"#/main/angularCommon"
     }
-  ]}
+  ]},
+  {"Name":"常用组件","Url":"#/main/assembly","Icon":"fa fa-users"}
 ]

@@ -77,7 +77,6 @@ define([
          httpService.post("biaogeFolder","Biaoge","biaogeData",{condition:"12334"}).then(function (data) {
              if (data.success == true) { //请求成功
                  if (data.data != null && data.data.length > 0) {
-                     console.log(data)
                      $scope.gridOptions.data=data.data;
                  }
              }

@@ -88,6 +88,7 @@ define(['cookie', //jquery cookie存储
             //处理响应失败
         });
 
+
 //localStorage存储 sessionStorage存储和cookie存储
         localStorage.localInfo='{"msg":"登录成功！","success":true,"displayName":"localStorage存储"}';
         sessionStorage.sessionInfo='{"msg":"登录成功！","success":true,"displayName":"sessionStorage存储"}';
@@ -105,6 +106,7 @@ define(['cookie', //jquery cookie存储
         if(cookie != undefined){
             $('#cookieUser').html($.cookie('attr')); //cookie读取内容
         }
+
 
 //判断浏览器
         function initialMenu(menuList) {
@@ -149,19 +151,12 @@ define(['cookie', //jquery cookie存储
             emitClearTimer(item.Url);
             $scope.nulist=[];
             getCss(event);
-            $scope.menu_One = item.Name;
-            $scope.menuThreeShow = false;
-            $scope.menuTowShow = false;
         };
         //二级
         $scope.btnSonClick = function (event, item) {
             emitClearTimer(item.Url);
             $scope.nulist=[];
             getCss(event);
-            $scope.menu_Tow = item.Name;
-            $scope.menuTowShow = true;
-            $scope.menuThreeShow = false;
-            $scope.menuThree =false;
         };
         function emitClearTimer(url) {
             $scope.$broadcast('destroy',url);

@@ -10,7 +10,6 @@ module.exports = {
   login: function (req, res) {
     var params = _.extend(req.query || {}, req.params || {}, req.body || {});
     Users.findOne({userName:params.userName,password:params.password}).exec(function (err,data){
-      console.log(err)
       if (err) {
         console.log('出错:'+err); //这一行会报错。
       }else{

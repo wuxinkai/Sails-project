@@ -50,7 +50,10 @@ define([
                 }},
                 {field: 'name5',name:'表格5', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
                 {field: 'name6',name:'表格6', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
-                { field: 'name7', name:'操作',minWidth: 70,cellClass:'bodyBluy', headerCellClass:'headerAdd', enableColumnMenu:false, cellTemplate: '<div class="optcell">' +
+                {field: 'name7',name:'表格7', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                {field: 'name8',name:'表格8', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                {field: 'name9',name:'表格9', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
+                { field: 'name9', name:'操作',minWidth: 70,cellClass:'bodyBluy', headerCellClass:'headerAdd', enableColumnMenu:false, cellTemplate: '<div class="optcell">' +
                 '<button class="btnStyle table-td00" ng-click="grid.appScope.modify(row.entity)"></button> <button class="btnStyle table-td01" ng-click="grid.appScope.rowDelete(row.entity)"></button><a class="btnStyle " ng-click="grid.appScope.Notification(row.entity)">1</a>' +
                 '</div>'}]
         };
@@ -104,7 +107,7 @@ define([
             }
         ];
 
-     var searchData = {};  //查询的条件
+
  //获取列表数据
      $scope.dataAll=function (type) {
          if(type == 1){
@@ -124,6 +127,16 @@ define([
      };
      $scope.dataAll();
 
+        //插入内容
+        var searchData = {};  //查询的条件
+        function InsertTable() {
+            httpService.post("biaogeFolder","Biaoge","biaogeInsert",{condition: searchData}).then(function (data) {
+                if (success) { //请求成功
+                    $scope.dataAll();
+                }
+
+            });
+        }
 //三级联动
         $scope.error = {};
         $scope.list = [];
@@ -161,8 +174,7 @@ define([
             $scope.error.city = $scope.condition.a5 ? false : true;
             $scope.error.area = $scope.condition.a6 ? false : true;
         };
-//弹窗查询功能
-        searchData = $scope.condition; //存值的集合 打包传送给数据库
+
         // $scope.condition={
         //     a1:'',
         //     a2:'',
@@ -185,7 +197,11 @@ define([
                    $scope.condition.a5 = $scope.condition.a5.name ? $scope.condition.a5.name : '';
                    $scope.condition.a6 = $scope.condition.a6.value ?  $scope.condition.a6.value : '';
                }
-               console.log( $scope.condition)
+//弹窗查询功能
+                searchData = $scope.condition; //存值的集合 打包传送给数据库
+                InsertTable()
+                $("#myModal").modal('hide');
+                $scope.dataAll();
             }else {
                 Notification({message: '请选择数据'}, 'warning');
             }
@@ -207,5 +223,7 @@ define([
         $scope.reset = function () {  //点击重置
             reset();
         }
+
+
     }]
 });

@@ -1,4 +1,173 @@
 <div  ui-i18n="{{lang}}">
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">查询条件</button>
     <div id="grid" ui-grid="gridOptions" class="grid gridHeight grid-border "  ui-grid-selection ui-grid-auto-resize ui-grid-resize-columns  ui-grid-pinning></div>
 </div>
 生成的结果是---- {{result}}
+<style type="text/css">
+    .modalHeader{
+        height: 50px;
+        background: #39597a;
+        color: #fff;
+        text-align: center;
+    }
+    .closeColor {
+        color: #fff;
+        opacity: 1;
+        font-size: 26px;
+        background: url("images/close.png") no-repeat !important;
+        width: 22px;
+        height: 26px;
+    }
+    .strategyHeight {
+        margin: 10px 0;
+    }
+    .modalBodyIn{ overflow: hidden;}
+    .strategyMane {
+        background: #fff;
+        margin: 3px 0;
+    }
+    .form-control {
+        border-radius: 0;
+        box-shadow: none;
+        border-color: #d2d6de;
+
+    }
+    .marginBottom{
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .marginBottom i{position: absolute; right: 0;top: 8px;}
+    .btn-select{display:inline-block;width:15%;height:30px;margin-left:2%;font-size:12px;padding:0;}
+    .typing-input{display:inline-block;width:80%}
+    .control-label{font-size: 14px; white-space: nowrap;}
+
+    /*时间控件*/
+    .datetime{position: relative;}
+    .datetime .add-on{  position: absolute; right: 20px;top: 5px;}
+    /*三级联动样式*/
+    .error {
+        color: #f00;
+
+    }
+</style>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close closeColor" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    模态框（Modal）标题
+                </h4>
+            </div>
+            <div id="window-body" class="modal-body">
+                <div class="modalBodyIn">
+                    <div class="col-md-12 strategyMane">
+                        <div class="row strategyHeight" style="margin-top:8px;">
+                            <div class=" form-horizontal" >
+                                <div class="row">
+                                    <div>
+                                        <label class="col-md-2  control-label">表格1：</label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control  input-sm typing-input"   ng-model="condition.a1" />
+                                            <button type="button" class="btn btn-default" ng-disabled="!fibersNumObj.isDisabled" style="display:inline-block;width:15%;height:30px;margin-left:2%;font-size:12px;padding:0;" ng-click="editFibersNum()">编辑</button>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label">表格2：</label>
+                                        <div class="col-md-4 marginBottom" >
+                                            <input type="text" class="form-control  input-sm typing-input" ng-model="condition.a2" />
+                                            <button type="button" class="btn btn-default btn-select"  ng-click="selectFiberClick()">选择</button>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label" >表格3：</label>
+                                        <div class="col-md-4 marginBottom " >
+                                            <input type="text"
+                                                   class="form-control  input-sm typing-input"
+                                                   ng-model="condition.a3"
+                                            />
+                                            <button type="button"
+                                                    class="btn btn-default btn-select"
+                                                    ng-click="selectTransferClick(1)">选择
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label " >省：</label>
+                                        <div class="col-md-4 marginBottom">
+                                            <select class="form-control input-sm"
+                                                    style="width: 98%"
+                                                    ng-options="s.name for s in list"
+                                                    ng-change="c()"
+                                                    ng-model="condition.a4"><option value="">--请选择--</option>
+                                            </select>
+                                            <i class="glyphicon glyphicon-asterisk error"  ng-hide="error.province" ></i>
+                                        </div>
+                                    </div>
+
+                                    <div >
+                                        <label class="col-md-2 control-label" >市:</label>
+                                        <div class="col-md-4 marginBottom">
+                                            <select class="form-control input-sm"
+                                                    style="width: 98%"
+                                                    ng-options="sh.name for sh in condition.a4.child"
+                                                    ng-change="c2()"
+                                                    ng-model="condition.a5"><option value="">--请选择--</option>
+                                            </select>
+                                            <i class="glyphicon glyphicon-asterisk error" ng-hide="error.city" ></i>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label">县:</label>
+                                        <div class="col-md-4 marginBottom">
+                                            <select class="form-control input-sm"
+                                                    style="width: 98%"
+                                                    ng-options="x.value for x in condition.a5.child"
+                                                    ng-change="c3()"
+                                                    ng-model="condition.a6">
+                                                <option value="">--请选择--</option>
+                                            </select>
+                                            <i  class="glyphicon glyphicon-asterisk error" ng-hide="error.area"></i>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label">开始时间:</label>
+                                        <div id="startDate" class="col-md-4 marginBottom date datetime ">
+                                            <input class="form-control input-sm "  id="START_TIME" ng-model="condition.a7">
+                                            <span class="add-on"><i class="fa fa-calendar " data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label">结束时间:</label>
+                                        <div id="endDate" class="col-md-4 marginBottom date datetime ">
+                                            <input class="form-control input-sm "  id="END_TIME" ng-model="condition.a8">
+                                            <span class="add-on"><i class="fa fa-calendar " data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <label class="col-md-2 control-label">
+                                            输入年龄:
+                                        </label>
+                                        <div class="col-md-4 marginBottom">
+                                            <input type="text" class="form-control  input-sm"
+                                                   ng-model="condition.a9"
+                                                   ng-change="inputChange(item)"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" >重置</button>
+                <button type="button" class="btn btn-primary" ng-click="Query()">提交更改</button>
+            </div>
+        </div>
+    </div>
+</div>

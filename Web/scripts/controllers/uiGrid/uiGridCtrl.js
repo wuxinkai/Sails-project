@@ -3,9 +3,38 @@ define([
     'ui.bootstrap',
     'scripts/requireHelper/requireNotification',//插件消息提示
     'bower_components/angular-confirm/angular-confirm', //确认消息提示框
+
+    'css!bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min',
+    'ngload!bootstrap-datetimepicker.zh-CN',
+
 ], function () {
-    return ['$scope','$confirm','Notification','httpService','i18nService', function ($scope,$confirm,Notification,httpService,i18nService) {
-        //（1）语言设置
+    return ['$scope','$http','$confirm','Notification','httpService','i18nService', function ($scope,$http,$confirm,Notification,httpService,i18nService) {
+ //初始化日期
+        function initDate() {
+            $('#startDate').datetimepicker({
+                format: 'yyyy-mm-dd hh:00:00',
+                language: 'zh-CN',
+                minView: 1,
+                maxView: 2,
+                autoclose: true,
+                pickerPosition:'bottom-left'
+            });
+            $('#endDate').datetimepicker({
+                format: 'yyyy-mm-dd hh:00:00',
+                language: 'zh-CN',
+                minView: 1,
+                maxView: 2,
+                autoclose: true,
+               pickerPosition:'bottom-left'
+            });
+
+            $('#START_TIME').removeAttr("disabled");
+            $('#END_TIME').removeAttr("disabled");
+        }
+        initDate();
+
+
+//（1）ui-grid语言设置
         $scope.langs = i18nService.getAllLangs();
         $scope.lang = 'zh-cn';
 
@@ -75,18 +104,108 @@ define([
             }
         ];
 
-     $scope.dataAll=function () {
-         httpService.post("biaogeFolder","Biaoge","biaogeData",{condition:"12334"}).then(function (data) {
+     var searchData = {};  //查询的条件
+ //获取列表数据
+     $scope.dataAll=function (type) {
+         if(type == 1){
+             $scope.condition.a1='1';
+         };
+
+         httpService.post("biaogeFolder","Biaoge","biaogeData",{condition: searchData}).then(function (data) {
              if (data.success == true) { //请求成功
                  if (data.data != null && data.data.length > 0) {
                      $scope.gridOptions.data=data.data;
-
+                 }else {
+                     Notification({message: '没有数据'}, 'warning');
                  }
              }
 
          });
      };
-
      $scope.dataAll();
+
+//三级联动
+        $scope.error = {};
+        $scope.list = [];
+        $http({
+            url: 'json/linkage.json',
+            method: 'GET',
+            contentType: "application/json; charset=utf-8"
+        }).success(function (data, header, config, status) {
+            $scope.list = data;
+        }).error(function (data, header, config, status) {
+            Notification({message: 'json没有请求到'}, 'warning');
+        });
+
+        $scope.c = function () {
+            $scope.error.province = true;
+            $scope.error.city = false;
+            $scope.error.area = false;
+
+            $scope.condition.a5 = "";
+            $scope.condition.a6 = "";
+        };
+
+        $scope.c2 = function () {
+            $scope.error.city = true;
+            $scope.error.area = false;
+            $scope.condition.a6 = "";
+        };
+
+        $scope.c3 = function () {
+            $scope.error.area = true;
+        };
+
+        $scope.submit = function () {
+            $scope.error.province = $scope.condition.a4 ? false : true;
+            $scope.error.city = $scope.condition.a5 ? false : true;
+            $scope.error.area = $scope.condition.a6 ? false : true;
+        };
+//弹窗查询功能
+        searchData = $scope.condition; //存值的集合 打包传送给数据库
+        // $scope.condition={
+        //     a1:'',
+        //     a2:'',
+        //     a3:'',
+        //     a4:'',
+        //     a5:'',
+        //     a6:'',
+        //     a7:'',
+        //     a8:'',
+        //     a9:''
+        // }
+
+        $scope.Query = function () {
+            //判断是否为空
+            if($scope.condition){
+                //把得到的集合从新赋值给 这个属性
+               if($scope.condition.a4){ //查看省是否有值
+                    //如果实现没有值 是undefined  所以我们给空字符串
+                   $scope.condition.a4 = $scope.condition.a4.name ?  $scope.condition.a4.name : '';
+                   $scope.condition.a5 = $scope.condition.a5.name ? $scope.condition.a5.name : '';
+                   $scope.condition.a6 = $scope.condition.a6.value ?  $scope.condition.a6.value : '';
+               }
+               console.log( $scope.condition)
+            }else {
+                Notification({message: '请选择数据'}, 'warning');
+            }
+
+
+        };
+// 重置
+        function reset() {
+            $scope.condition.a1 = '';
+            $scope.condition.a2 = '';
+            $scope.condition.a3 = '';
+            $scope.condition.a4 = '';
+            $scope.condition.a5 = '';
+            $scope.condition.a6 = '';
+            $scope.condition.a7 = '';
+            $scope.condition.a8 = '';
+            $scope.condition.a9 = '';
+        }
+        $scope.reset = function () {  //点击重置
+            reset();
+        }
     }]
 });

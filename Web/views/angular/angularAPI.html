@@ -47,13 +47,22 @@
         color: #fff;
         background: darkcyan;
     }
+
+    /*ng-if*/
+    .fade{width: 200px; height: 200px;background:green ;}
+    .fade{  transition: all linear 1.5s;}
+    .fade.ng-enter{opacity: 0}
+    .fade.ng-enter.ng-enter-active{opacity:1}
+    .fade.ng-leave{opacity: 1}
+    .fade.ng-leave.ng-leave-active{opacity: 0}
+    .fade.ng-scope{background: red;opacity: 1}
 </style>
 <div class="bg">
 
 <form name="myForm" class="my-form">
     <div>
         <div>
-            <h1>input[text]</h1>
+            <h1>input[text] 和textarea</h1>
             <table class="table theadBg">
                 <thead>
                 <tr>
@@ -97,7 +106,13 @@
             ng-dirty （脏的）.<br/>
             ng-submitted （提交的）. </p>
     </div>
+    <br>
+    <br>
+    <div>
+        textarea
 
+
+    </div>
     <div>
        <div>
            <h1>input[number]</h1>
@@ -213,7 +228,6 @@
     </div>
 
     <div >
-
         <div>
             <h1>ng-class 或 ng-class-odd 或 ng-class-even</h1>
         </div>
@@ -270,6 +284,48 @@
 
     <div >
         <div>
+            <h1>ng-if 和 ng-show和ng-hide 和ng-style</h1>
+        </div>
+        <div>
+            <p>为false是该dom元素将被删除，反之为true加入该dom元素。</p>
+            <p>ng-if和 ng-show的区别是 ng-if在dom中删除，ng-show在dom隐藏 </p>
+            <p>ngstyle指令允许你设置CSS样式的HTML元素的条件</p>
+        </div>
+        <div>
+            <div>
+                Click me: <input type="checkbox" ng-model="checked" ng-init="checked=true" /><br />
+                当检查显示:<span ng-if="checked" class="animate-if">这是清除复选框被选中时</span>
+            </div>
+            <div>
+                <button class="btn btn-info" ng-click="show=!show">切换</button> <div ng-if="show" class="fade"></div>
+            </div>
+
+            <div>
+                点击ng-show 和ng-hide
+                <input type="checkbox" ng-model="checked2" class="ng-valid ng-dirty ng-touched">
+                <div class="check-element animate-show" ng-show="checked2">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    显示ng-show 是true
+                </div>
+                <div class="check-element animate-show " ng-hide="checked2">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    显示ng-hide为false
+                </div>
+            </div>
+
+            <div>
+                <input type="button" class="btn btn-info" value="set color" ng-click="myStyle={color:'red'}">
+                <input type="button" class="btn btn-info" value="set background" ng-click="myStyle={'background-color':'blue'}">
+                <input type="button" class="btn btn-info" value="clear" ng-click="myStyle={}">
+                <br />
+                <span ng-style="myStyle">要被改变的样式</span>
+                <pre>myStyle={{myStyle}}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div >
+        <div>
             <h1>ng-list</h1>
         </div>
         <div>
@@ -305,6 +361,201 @@
 
            </div>
             <pre>{{ list | json }}</pre>
+        </div>
+    </div>
+
+
+
+    <div >
+        <div>
+            <h1>ng-non-bindable</h1>
+        </div>
+        <div>
+            <p>ngnonbindable指令告诉angular不编译或结合当前的DOM元素的含量。这是有用的，如果该元素包含什么angular指令和绑定，但应该忽略angular。可能如果你有一个网站，显示的代码片段是这样的。</p>
+        </div>
+        <div>
+            <div>转译后的结果: {{1 + 2}}</div>
+            <div ng-non-bindable>不专译的结果: {{1 + 2}}</div>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>ng-pluralize</h1>
+        </div>
+        <div>
+            <p>ngpluralize指令通过规则判断显示相应的字符串（只能判断数字）。ngPluralize配置：ngpluralize配置提供2个属性：count 和 when，您还可以提供一个可选属性，offset。 when属性是判断不同的值时显示对应的字符串。 ngPluralize配置offset属性：偏移属性允许多元文本进一步定制，从而更好的用户体验。例如，而不是“4人正在查看这个文件”，你可能会显示“翰，凯特和2人正在查看本文件”。偏移属性可以减去任意偏移值。</p>
+            <table class="table theadBg">
+                <thead>
+                <tr>
+                    <th>参数名称</th>
+                    <th>参数类型</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="a in ngpluralize">
+                    <td class="w25">{{a.name}}</td>
+                    <td class="w15">{{a.type}}</td>
+                    <td class="w60">{{a.describe}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            姓名 1:<input type="text" ng-model="person1" value="刘德华" /><br />
+            姓名 2:<input type="text" ng-model="person2" value="杨幂" /><br />
+            请输入数字:<input type="text" ng-model="personCount" value="1" /><br />
+            <!--- Example with simple pluralization rules for en locale --->
+            观看人员个数:
+            <ng-pluralize count="personCount"
+                          when="{'0': '没有人观看 .',
+                       'one': '1 人观看.',
+                       'other': '{} 人们观看.'}">
+            </ng-pluralize><br>
+            <!--- Example with offset --->
+            观看人员名字:
+            <ng-pluralize count="personCount" offset=2
+                          when="{'0': '没有人观看.',
+                       '1': '{{person1}} 观看.',
+                       '2': '{{person1}} 和 {{person2}}观看.',
+                       'one': '{{person1}}, {{person2}} 和 {} 人正在观看.',
+                       'other': '{{person1}}, {{person2}} 和 {} 其他人正在观看.'}">
+            </ng-pluralize>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>ng-readonly 和ng-disabled</h1>
+        </div>
+        <div>
+            <p>ng-readonly勾选checkbox就不能在文本框输入内容</p>
+            <p>ng-disabled 是true按钮将无法选中</p>
+
+
+        </div>
+        <div>
+            <div>
+                点击后不能选中: <input type="checkbox" ng-model="checked"><br />
+                <button class="btn  btn-warning" ng-model="button" ng-disabled="checked">Button</button>
+            </div>
+            <br /><br />
+            <div>
+                检查我做文本只读: <input type="checkbox"  ng-model="checkedInput"><br />
+                <input type="text" ng-readonly="checkedInput" value="默认内容" />
+            </div>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>ng-repeat和 筛选</h1>
+        </div>
+        <div>
+         <p>指令的ngrepeat实例化一个模板集合中的每项。每个模板实例都有其自己的scope，其中给定的循环变量设置为当前集合项目，并将$index为项目索引。 就是循环。 特殊属性在每个模板实例的局部范围内暴露.循环的开始和结束位置：循环的元素不只是一个dom元素，ngrepeat支持多个dom元素一起循环从ng-repeat-start起始位置开始到ng-repeat-end为结束位置。</p>
+
+            <table class="table theadBg">
+                <thead>
+                <tr>
+                    <th>参数名称</th>
+                    <th>参数类型</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="a in ngrepeat">
+                    <td class="w25">{{a.name}}</td>
+                    <td class="w15">{{a.type}}</td>
+                    <td class="w60">{{a.describe}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div>
+                我有朋友。他们是 :
+                <input type="search" ng-model="q" placeholder="筛选姓名" />
+                <ul class="example-animate-container">
+                    <li class="animate-repeat" ng-repeat="friend in friends | filter:q as results">
+                        [{{$index + 1}}] {{friend.name}} 年龄 {{friend.age}}岁
+                    </li>
+
+                    <li class="animate-repeat" ng-if="results.length == 0">
+                        <strong>未发现结果...</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>提交表单</h1>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <form  >
+                输入文字并回车:
+                <input type="text" ng-model="text" name="text" />
+                <input type="submit" id="submit" value="提交" ng-click="submit()" />
+                <pre>list={{list}}</pre>
+            </form>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>ng-switch-when 和ng-srcset</h1>
+        </div>
+        <div>
+            <p>ngSwitch指令包含ng-switch on、ng-switch-when、ng-switch-default功能类似switch，ng-switch on指要判断的值，ng-switch-when指条件条件符合将显示这个dom元素， ng-switch-default指条件都不符合默认显示的元素。 </p>
+        </div>
+        <div>
+            <select ng-model="selection" ng-options="item for item in items"></select>
+            <tt>selection={{selection}}</tt>
+            <hr />
+            <div class="animate-switch-container"
+                 ng-switch on="selection">
+                <div class="animate-switch" ng-switch-when="settings">Settings Div</div>
+                <div class="animate-switch" ng-switch-when="home">Home Span</div>
+                <div class="animate-switch" ng-switch-default>default</div>
+            </div>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1> ng-value</h1>
+        </div>
+        <div>
+            <p>对option或input[radio]绑定表达式的值，所以当选中元素，该元素的值就会赋值到绑定的ngmodel中。ngValue支持option，但用ngValue只能赋值字符串给ngmodel，要用到对象用ngoptions。</p>
+        </div>
+        <div>
+            <h2>选择要输出的内容?</h2>
+            <label ng-repeat="name in names2" for="{{name}}">
+                {{name}}
+                <input type="radio"
+                       ng-model="my.favorite"
+                       ng-value="name"
+                       id="{{name}}"
+                       name="favorite">
+            </label>
+            <div>要输出的内容 {{my.favorite}}</div>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>指令模板ng-transclude</h1>
+        </div>
+        <div>
+            <p>在自定义指令中嵌入指的的dom内容。有时候我我们要嵌入指令元素本身，而不仅仅是它的内容。在这种情况下，我们需要使用 transclude:’element’。它和 transclude:true 不同，它将标记了 ng-transclude 指令的元素一起包含到了指令模板中。使用transclusion，你的link函数会获得一个名叫 transclude 的链接函数，这个函数绑定了正确的指令scope，并且传入了另一个拥有被嵌入DOM元素拷贝的函数。你可以在这个 transclude 函数中执行比如修改元素拷贝或者将它添加到DOM上等操作。 类似 ng-repeat 这样的指令使用这种方式来重复DOM元素。</p>
+        </div>
+        <div>
+
         </div>
     </div>
 </form>

@@ -78,6 +78,56 @@ define([
             {name:'ngList',type:'string',describe:'分隔符'},
         ];
 
+//（7）ngpluralize
+        $scope.person1 = '刘德华';
+        $scope.person2 = '杨幂';
+        $scope.personCount = 1;
+        $scope.ngpluralize=[
+            {name:'count',type:'expression||string',describe:'绑定判断的值。'},
+            {name:'when',type:'string',describe:'判断语句。'},
+            {name:'offset (optional)',type:'number',describe:'偏移量。'},
+        ];
 
+//ngrepeat
+        $scope.ngrepeat=[
+            {name:'$index',type:'number',describe:'循环的索引值'},
+            {name:'$first',type:'boolean',describe:'是否第一次循环'},
+            {name:'$middle',type:'boolean',describe:'是否第一次和最后一次循环之间的循环'},
+            {name:'$last',type:'boolean',describe:'是否最后一次循环'},
+            {name:'$even',type:'boolean',describe:'是否循环的次数$index为偶数'},
+            {name:'$odd',type:'boolean',describe:'是否循环的次数$index为奇数'},
+
+        ];
+        $scope.friends = [
+            {name:'周杰伦', age:25, gender:'男'},
+            {name:'桂纶镁', age:30, gender:'女'},
+            {name:'李嘉欣', age:28, gender:'女'},
+            {name:'林俊杰', age:15, gender:'男'},
+            {name:'钟丽缇', age:28, gender:'女'},
+            {name:'任港秀', age:95, gender:'女'},
+            {name:'周渝民', age:50, gender:'男'},
+            {name:'范文芳', age:27, gender:'女'},
+            {name:'甄子丹', age:40, gender:'男'},
+            {name:'翁美玲', age:60, gender:'女'}
+        ];
+
+//ng-click
+        $scope.list = [];
+        $scope.text = '默认提交内容';
+        $scope.submit = function () {
+            console.log($scope.text)
+            if ($scope.text) {
+                $scope.list.push(this.text);
+                $scope.text = '';
+            }
+        };
+
+//  ng-switch-when 和ng-srcset
+        $scope.items = ['settings', 'home', 'other'];
+        $scope.selection = $scope.items[0];
+
+//ng-value
+        $scope.names2 = ['选项1', '选项2', '选项3'];
+        $scope.my = { favorite: '---默认项' };
     }];
 });

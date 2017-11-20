@@ -122,6 +122,11 @@
   ]},
   {"Name":"Angular常用案例","Url":"#/main/angular","Icon":"fa fa-users","Children":[
     {
+      "Name": "angularAPI",
+      "Icon": "fa fa-users",
+      "Url":"#/main/angularAPI"
+    },
+    {
       "Name": "内置指令",
       "Icon": "fa fa-users",
       "Url":"#/main/insideDir"

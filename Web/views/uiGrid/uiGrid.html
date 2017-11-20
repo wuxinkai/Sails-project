@@ -1,8 +1,25 @@
 <div  ui-i18n="{{lang}}">
-    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">查询条件</button>
+    <div class="">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">查询条件</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(1)">success提示</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(2)">delay: 5000提示2</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(3)">warning 提示3</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(4)">title 提示4</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(5)"> delay error提示5</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(6)">模板 提示6</button>
+        <button class="btn btn-warning " ng-click="btnPrompt(7)">从底部弹出 提示7</button>
+        <button class="btn btn-warning " ng-click="btnPrompt()">取代的消息</button>
+        <button class="btn btn-danger " ng-click="btnPrompt2()">自定义 提示</button>
+        <span>自定义提示的结果是---- {{result}}</span>
+    </div>
+<!--表格-->
     <div id="grid" ui-grid="gridOptions" class="grid gridHeight grid-border "  ui-grid-selection ui-grid-auto-resize ui-grid-resize-columns  ui-grid-pinning></div>
+<!--分页-->
+    <index-footer-pagination></index-footer-pagination>
 </div>
-生成的结果是---- {{result}}
+
+
+
 <style type="text/css">
     .modalHeader{
         height: 50px;

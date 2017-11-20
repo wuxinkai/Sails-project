@@ -1,0 +1,38 @@
+<div class="col-md-12 om-footer" style="min-width: 815px;">
+    <div class="checkAll om-footer-div" >
+        <input ng-model="rowCheckStatus" type="checkbox" class="isDisabled">全选
+    </div>
+    <div class="om-footer-div om-btns">
+        <button  class="btn  btn-cor-red" ng-disabled="NoSelectAll" ng-click="delete(null,true)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>删除</button>
+        <button  ng-click="export()"  class="btn btn-default"><span class="glyphicon glyphicon-open" aria-hidden="true"></span>导出</button>
+        <button  class="btn  btn-bg-blue"  ng-disabled="NoSelectAll" ng-click="newClick()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新建</button>
+    </div>
+    <div class="total om-footer-div" ng-show="totalBtnShow">
+        共<span>{{totalCount}}</span>个
+    </div>
+    <div class="Pagination">
+        <ul>
+            <li>
+                <button ng-click="shadoweClick(1)" class="btn btn-default">首页</button>
+            </li>
+            <li>
+                <button class="btn btn-default" ng-click="prevClick()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</button>
+            </li>
+            <li>
+                <button class="btn btn-default" ng-click="nextClick()">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+            </li>
+            <li>
+                <button ng-click="shadoweClick(Allcount)" class="btn btn-default">尾页</button>
+            </li>
+            <li>
+                <input type="text" class="om-input-page" ng-model="inputCurrentPage">
+            </li>
+            <li>
+                <button ng-click="skipClick()" class="btn btn-default">跳转</button>
+            </li>
+            <li>
+                共{{Allcount}}页／{{prossingData.currentPage}}页
+            </li>
+        </ul>
+    </div>
+</div>

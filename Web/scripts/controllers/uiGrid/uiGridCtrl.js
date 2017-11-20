@@ -7,9 +7,13 @@ define([
     'css!bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min',
     'ngload!bootstrap-datetimepicker.zh-CN',
 
+    //分页指令
+    'ngload!scripts/directives/indexPaginationDirt',
 ], function () {
     return ['$scope','$http','$confirm','Notification','httpService','i18nService', function ($scope,$http,$confirm,Notification,httpService,i18nService) {
- //初始化日期
+        $scope.deletes={};//删除数据初始化
+
+//初始化日期
         function initDate() {
             $('#startDate').datetimepicker({
                 format: 'yyyy-mm-dd hh:00:00',
@@ -37,7 +41,6 @@ define([
 //（1）ui-grid语言设置
         $scope.langs = i18nService.getAllLangs();
         $scope.lang = 'zh-cn';
-
         $scope.gridOptions ={
             showColumnFooter: true, // 统计
             enablePaginationControls: false, //自定义分页
@@ -54,44 +57,39 @@ define([
                 {field: 'name8',name:'表格8', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
                 {field: 'name9',name:'表格9', minWidth: 130,cellClass:'bodyBluy', headerCellClass:'headerAdd',enableColumnMenu:false},
                 { field: 'name9', name:'操作',minWidth: 70,cellClass:'bodyBluy', headerCellClass:'headerAdd', enableColumnMenu:false, cellTemplate: '<div class="optcell">' +
-                '<button class="btnStyle table-td00" ng-click="grid.appScope.modify(row.entity)"></button> <button class="btnStyle table-td01" ng-click="grid.appScope.rowDelete(row.entity)"></button><a class="btnStyle " ng-click="grid.appScope.Notification(row.entity)">1</a>' +
+                '<button class="btnStyle table-td00" ng-click="grid.appScope.modify(row.entity)"></button>' +
+                ' <button class="btnStyle table-td01" ng-click="grid.appScope.rowDelete(row.entity)"></button><a class="btnStyle " ng-click="grid.appScope.Notification(row.entity)"></a>' +
                 '</div>'}]
         };
 //头部hover效果
         $scope.gridOptions.rowTemplate = '<div ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.uid" ng-mouseover="grid.appScope.hoveredIndex = rowRenderIndex" ng-mouseleave="grid.appScope.hoveredIndex = null" ui-grid-one-bind-id-grid="rowRenderIndex + \'-\' + col.uid + \'-cell\'" class="ui-grid-cell" ng-class="{\'ui-grid-row-header-cell\': col.isRowHeader, \'your-hover-class\': grid.appScope.hoveredIndex === rowRenderIndex}" role="{{col.isRowHeader ? \'rowheader\' : \'gridcell\'}}" ui-grid-cell></div>';
-//获取没一行的内容
-        $scope.result = "初始化";
+
         $scope.gridOptions.appScopeProvider= {
             Notification: function(data) {
-                var number = data.id
-                if(number==1){
-                    Notification.success('成功的通知');
-                }else if(number==2){
-                     Notification.error({message: '删除', delay: 5000});
-                }else if(number==3){
-                    Notification({message: '警告通知'}, 'warning');
-                }else if(number==4){
-                    Notification({message: '原发性通知', title: '有表头'});
-                }else if(number==5){
-                    Notification.error({message: '错误通知1s', delay: 1000});
-                }else if(number==6){
-                        Notification.success({message: 'Success notification<br>Some other <b>content</b><br><a href="https://github.com/alexcrack/angular-ui-notification">This is a link</a><br><img src="https://angularjs.org/img/AngularJS-small.png">', title: '可以实现页面跳转'});
-                }else if(number==7){
-                    Notification.error({message: '从底部弹出', positionY: 'bottom', positionX: 'right'});
-                }else{
-                    Notification.error({message: '错误通知1s', replaceMessage: true});//取代的消息
-                }
+                var number = data.id;
             },
             modify: function(id) {
-                $confirm({ text: '这是个自定义确认框，是否确认。' })
+
+            },
+            rowDelete: function(data) {
+                $confirm({ text: '确定要删除吗？' })
                     .then(function () {
+                        $scope.deletes.id = data.id;
+                        httpService.post("biaogeFolder","Biaoge","biaogeDelete",{condition:$scope.deletes}).then(function (data) {
+                            if (data.success == true) { //请求成功
+                                $scope.dataAll(); //调用一下查询方法
+                                Notification.error({message: '删除成功', delay: 5000});
+                            }else {
+                                Notification({message: '删除失败'}, 'warning');
+                            }
+                        });
                         $scope.result = "确认";
                     }, function () {
+                        Notification({message: '取消删除'}, 'warning');
                         $scope.result = "取消";
-                    })
-            },
-            rowDelete: function(id) {
-                $scope.dataAll();
+                    });
+
+
             }
         };
 
@@ -107,13 +105,11 @@ define([
             }
         ];
 
-
  //获取列表数据
      $scope.dataAll=function (type) {
          if(type == 1){
              $scope.condition.a1='1';
          };
-
          httpService.post("biaogeFolder","Biaoge","biaogeData",{condition: searchData}).then(function (data) {
              if (data.success == true) { //请求成功
                  if (data.data != null && data.data.length > 0) {
@@ -122,7 +118,6 @@ define([
                      Notification({message: '没有数据'}, 'warning');
                  }
              }
-
          });
      };
      $scope.dataAll();
@@ -130,13 +125,48 @@ define([
         //插入内容
         var searchData = {};  //查询的条件
         function InsertTable() {
+
             httpService.post("biaogeFolder","Biaoge","biaogeInsert",{condition: searchData}).then(function (data) {
-                if (success) { //请求成功
+
+                if (data.success) { //请求成功
                     $scope.dataAll();
                 }
 
             });
         }
+
+//提示插件
+        $scope.btnPrompt = function (number) {
+            if(number==1){
+                Notification.success('成功的通知');
+            }else if(number==2){
+                Notification.error({message: '删除', delay: 5000});
+            }else if(number==3){
+                Notification({message: '警告通知'}, 'warning');
+            }else if(number==4){
+                Notification({message: '原发性通知', title: '有表头'});
+            }else if(number==5){
+                Notification.error({message: '错误通知1s', delay: 1000});
+            }else if(number==6){
+                Notification.success({message: 'Success notification<br>Some other <b>content</b><br><a href="https://github.com/alexcrack/angular-ui-notification">This is a link</a><br><img src="https://angularjs.org/img/AngularJS-small.png">', title: '可以实现页面跳转'});
+            }else if(number==7){
+                Notification.error({message: '从底部弹出', positionY: 'bottom', positionX: 'right'});
+            }else{
+                Notification.error({message: '错误通知1s', replaceMessage: true});//取代的消息
+            }
+        };
+//自定义提示插件
+        $scope.result = "初始化";
+        $scope.btnPrompt2 = function (number) {
+            $confirm({ text: '这是个自定义确认框，是否确认。' })
+                .then(function () {
+                    $scope.result = "确认";
+                }, function () {
+                    $scope.result = "取消";
+            });
+        };
+
+
 //三级联动
         $scope.error = {};
         $scope.list = [];

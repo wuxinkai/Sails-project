@@ -45,7 +45,9 @@
 //                 clientId: window.tescomm.config.app.Id,
 //                 callback: "/_authorizecallback?redirect_uri=/web/index.html#/main/simple"/*登录成功后显示的第一个页面，只需修改参数redirect_uri后对应的内容即可*/
 //             }).then(function (data) {
+
 //                 // $scope.changeImg();
+
 // // 配置后才
 //                 data.User_Name=uid.val();
 //                 data.Access_Token='122B29D315FFDC473B4E55EED84654AA';
@@ -73,7 +75,9 @@
 //                     showMsg('data.State不是true');
 //                 }
 //             },function(error){
+
 //                 // $scope.changeImg();
+
 //                 // showMsg('请求错误，' + error);
 //             });
 //         };

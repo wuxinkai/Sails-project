@@ -1,0 +1,312 @@
+<style type="text/css" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    .bg{background: #fff;overflow: hidden;}
+    h1{border-bottom: 1px dashed #666;overflow: hidden;background: green;color: #fff}
+    .theadBg thead tr th{background: #eef1f6}
+    .theadBg tbody tr td.w15{width: 15%}
+    .theadBg tbody tr td.w25{width: 25%}
+    .theadBg tbody tr td.w60{width: 60%}
+
+    .my-form {
+        -webkit-transition: all linear 0.5s;
+        transition: all linear 0.5s;
+        background: transparent;
+    }
+    .my-form.ng-invalid {
+
+        background: rgba(255, 0, 0, .2)
+    }
+    .my-form.ng-valid {
+        background: rgba(91, 192, 222, .2)
+    }
+    .my-form.ng-pristine {
+        background: rgba(240, 173, 78, .2)
+    }
+    /*.my-form.ng-dirty {*/
+    /*background: #d43f3a;*/
+    /*}*/
+    .my-form.ng-submitted {
+        background: rgba(32, 77, 116, .2)
+    }
+
+    /*ng-class*/
+    .strike {
+        text-decoration: line-through;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .red {
+        color: red;
+    }
+    /**/
+    .odd {
+        color: #fff;
+        background: #ccc;
+    }
+    .even {
+        color: #fff;
+        background: darkcyan;
+    }
+</style>
+<div class="bg">
+
+<form name="myForm" class="my-form">
+    <div>
+        <div>
+            <h1>input[text]</h1>
+            <table class="table theadBg">
+                <thead>
+                <tr>
+                    <th>参数名称</th>
+                    <th>参数类型</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="a in parameter">
+                    <td class="w25">{{a.name}}</td>
+                    <td class="w15">{{a.type}}</td>
+                    <td class="w60">{{a.describe}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        请输入内容: <input name="input" type="text" ng-model="userType" ng-pattern="word"    required ng-trim="false" >
+        <span class="error" ng-show="myForm.input.$error.required">必填项!</span>
+        <span class="error" ng-show="myForm.input.$error.pattern">有空格出现</span>
+        <button class="btn btn-success" ng-model="button"  ng-disabled="myForm.$error.required || myForm.input.$invalid ">点击按钮</button>
+        <div>
+            <p>输入的内容： {{userType}}</p>
+
+            <p> 修改过:{{myForm.input.$dirty}}</p>
+
+            <p> 验证失败：myForm.input.$invalid = {{myForm.input.$invalid}}</p>
+
+            <p>验证通过表单 myForm.input.$valid = {{myForm.input.$valid}}</p>
+
+            <p>$error对象。它包含当前表单的所有验证内容，以及它们是否合法的信息。用下面的语法访问这个属性 ，如果有空格pattern 就是true myForm.input.$error = {{myForm.input.$error}}</p>
+
+            <!--<tt> $invalid验证成功： myForm.$valid = {{myForm.$valid}}</tt><br />-->
+
+            <p>必填项目 myForm.$error.required = {{!!myForm.$error.required}}</p>
+        </div>
+        <h3>css</h3>
+        <p>ng-valid (有效的).<br/>
+            ng-invalid （无效的）.<br/>
+            ng-pristine （原始，简介）.<br/>
+            ng-dirty （脏的）.<br/>
+            ng-submitted （提交的）. </p>
+    </div>
+
+    <div>
+       <div>
+           <h1>input[number]</h1>
+       </div>
+        <table class="table theadBg">
+            <thead>
+            <tr>
+                <th>参数名称</th>
+                <th>参数类型</th>
+                <th>描述</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="a in number">
+                <td class="w25">{{a.name}}</td>
+                <td class="w15">{{a.type}}</td>
+                <td class="w60">{{a.describe}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+            输入数字: <input type="number" name="inputNumber" ng-model="valueNumber" min="0" max="99" required>
+            <span class="error" ng-show="myForm.inputNumber.$error.required">必填!</span>
+            <span class="error" ng-show="myForm.inputNumber.$error.number">请输入数字!</span>
+            <br />
+            <p>value = {{valueNumber}}</p>
+            <p>myForm.input.$valid = {{myForm.inputNumber.$valid}}</p>
+            <p>myForm.input.$error = {{myForm.inputNumber.$error}}</p>
+            <p>myForm.$valid = {{myForm.$valid}}</p>
+            <p>myForm.$error.required = {{!!myForm.$error.required}}</p>
+        </div>
+    </div>
+
+    <div >
+       <div>
+           <h1>input[Checkbox]</h1>
+       </div>
+       <div>
+           <table class="table theadBg">
+               <thead>
+               <tr>
+                   <th>参数名称</th>
+                   <th>参数类型</th>
+                   <th>描述</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr ng-repeat="a in CheckBox">
+                   <td class="w25">{{a.name}}</td>
+                   <td class="w15">{{a.type}}</td>
+                   <td class="w60">{{a.describe}}</td>
+               </tr>
+               </tbody>
+           </table>
+       </div>
+        <div >
+            checkbox第一个 : <input type="checkbox" ng-model="value1"> <br />
+            checkbox第二个 : <input type="checkbox" ng-model="value2" ng-true-value="'true的时候显示 YES'" ng-false-value="'false显示 NO'"> <br />
+            上面改变下面: <input type="checkbox" ng-model="master"><br />
+            下面无法改变上面<input id="checkSlave" type="checkbox" ng-checked="master">
+            <p>value1 = {{value1}}</p>
+            <p>value2 = {{value2}}</p>
+        </div>
+        <div style="margin-top: 40px;">
+            <h3>ng-change()事件</h3>
+            <!-- 按钮1-->
+            <input type="checkbox" ng-model="confirmed" ng-change="change()" id="ng-change-example1" />
+            <!-- 按钮2  没有添加ngchange-->
+            <input type="checkbox" ng-model="confirmed" id="ng-change-example2" />
+
+            <label for="ng-change-example2">Confirmed</label><br />
+            <p>debug = {{confirmed}}</p>
+            <p>counter = {{counter}}</p>
+        </div>
+        <p>值改变时触发事件，这个事件是值改变就立即触发和JavaScript中的onchange的触发方式（在用户离开表单元素或按回车键时）不同。ngChange事件只在基于model的值改变时才触发。 </p>
+
+    </div>
+
+    <div>
+        <div>
+            <h1>input[radio]</h1>
+        </div>
+        <div>
+            <table class="table theadBg">
+                <thead>
+                <tr>
+                    <th>参数名称</th>
+                    <th>参数类型</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="a in radio">
+                    <td class="w25">{{a.name}}</td>
+                    <td class="w15">{{a.type}}</td>
+                    <td class="w60">{{a.describe}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div >
+            <label >
+                <input type="radio" ng-model="color" value="value红色">  红色 <br />
+            </label>
+            <label >
+                <input type="radio" ng-model="color" ng-value="specialValue"> 绿色 <br />
+            </label>
+            <label >
+                <input type="radio" ng-model="color" value="蓝色blue"> 蓝色 <br />
+            </label>
+            <p>color = {{color | json}}</p>
+        </div>
+    </div>
+
+    <div >
+
+        <div>
+            <h1>ng-class 或 ng-class-odd 或 ng-class-even</h1>
+        </div>
+        <div>
+            <table class="table theadBg">
+                <thead>
+                <tr>
+                    <th>参数名称</th>
+                    <th>参数类型</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="a in class">
+                    <td class="w25">{{a.name}}</td>
+                    <td class="w15">{{a.type}}</td>
+                    <td class="w60">{{a.describe}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding-left:100px; ">
+            <p ng-class="{strike: deleted, bold: important, red: error}" style="font-size:30px;">对象语法 给这行代码添加样式</p>
+            <label>
+                <input type="checkbox" ng-model="deleted"> 添加删除线<br>
+            </label>
+            <label>
+                <input type="checkbox" ng-model="important"> 加粗样式<br>
+            </label>
+            <label >
+                <input type="checkbox" ng-model="error"> 报错提示样式
+            </label>
+
+
+            <p ng-class="style" style="font-size:30px;">字符串的语法 输入内容的class样式，给内容加样式 </p>
+            <input style="width: 300px;" type="text" ng-model="style" placeholder="在这里输入 red strike bold">
+
+
+            <p ng-class="[style1, style2, style3]"  style="font-size:30px;">使用数组语法，添加样式</p>
+
+            <input style="width: 300px;" ng-model="style1" placeholder="请输入 red  bold strike"><br>
+            <input style="width: 300px;margin-top: 8px;" ng-model="style2" placeholder="请输入 red  bold strike"><br>
+            <input style="width: 300px;margin-top: 8px;" ng-model="style3" placeholder="请输入 red  bold strike"><br><br>
+
+            <!--ng-class-odd和ng-class-even-->
+            <ol  class="list-group"style="width: 300px;" ng-init="names=['1111', '222', '333', '444', '555', '666', '777',]">
+                <li  class="list-group-item"  ng-repeat="name in names" ng-class-odd="'odd'" ng-class-even="'even'">
+                    <!-- 循环li 里面的span ，在css里面奇数和偶数分开-->
+                    <span >{{name}}</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div >
+        <div>
+            <h1>ng-list</h1>
+        </div>
+        <div>
+            <p>
+                在分隔的字符串和一个字符串数组之间转换的文本输入。默认的分隔符是一个逗号后面的空间相当于ng-list=", "。你可以指定一个自定义分隔符的nglist属性值例如，ng-list=" | "。该指令的行为是由ngtrim属性的影响。 如果ngtrim设置为“false”然后空格在分离器和每个列表项的有效。这意味着，该指令的用户负责处理空白，但也允许你使用空格作为分隔符，如制表符或换行符。 否则，周围的空白分隔符时忽视了在每个列表项空白才加入模型之前。</p>
+            <table class="table theadBg">
+                <thead>
+                <tr>
+                    <th>参数名称</th>
+                    <th>参数类型</th>
+                    <th>描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="a in ngList">
+                    <td class="w25">{{a.name}}</td>
+                    <td class="w15">{{a.type}}</td>
+                    <td class="w60">{{a.describe}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+           <div class="row">
+               <div class="col-md-3">
+                   <span>回车 进行下一行 </span>
+                   <textarea style="width: 300px; " ng-model="list" ng-list="&#10;" ng-trim="false"></textarea>
+               </div>
+               <div  class="col-md-3">
+                   <span>逗号加空格 </span>
+                   <textarea style="width: 300px;" ng-model="list" ng-list ng-trim="false"></textarea>
+               </div>
+
+           </div>
+            <pre>{{ list | json }}</pre>
+        </div>
+    </div>
+</form>
+
+</div>

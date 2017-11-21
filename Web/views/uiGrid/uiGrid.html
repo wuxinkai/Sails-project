@@ -1,5 +1,5 @@
 <div  ui-i18n="{{lang}}">
-    <div class="">
+    <div id="topBtn">
         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">查询条件</button>
         <button class="btn btn-warning " ng-click="btnPrompt(1)">success提示</button>
         <button class="btn btn-warning " ng-click="btnPrompt(2)">delay: 5000提示2</button>
@@ -13,7 +13,7 @@
         <span>自定义提示的结果是---- {{result}}</span>
     </div>
 <!--表格-->
-    <div id="grid" ui-grid="gridOptions" class="grid gridHeight grid-border "  ui-grid-selection ui-grid-auto-resize ui-grid-resize-columns  ui-grid-pinning></div>
+    <div id="grid"  data-ng-init="windowSize()" ui-grid="gridOptions" class="grid gridHeight grid-border "  ui-grid-selection ui-grid-auto-resize ui-grid-resize-columns  ui-grid-pinning></div>
 <!--分页-->
     <index-footer-pagination></index-footer-pagination>
 </div>

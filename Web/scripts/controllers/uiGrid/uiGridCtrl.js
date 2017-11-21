@@ -93,17 +93,31 @@ define([
             }
         };
 
-        $scope.gridOptions.data=[
-            {
-                name1:'',
-                name2:'',
-                name3:'',
-                name4:'',
-                name5:'',
-                name6:'',
-                name7:'',
-            }
-        ];
+//页面在这的时候 高度自适应
+        $scope.windowSize = function () {
+            var newHeight = $('#alarmConRight ').height() - $('#topBtn').height()-60;
+            angular.element(document.getElementsByClassName('grid')).css({
+                height: newHeight + 'px',
+                background: "#fff"
+            });
+        };
+//屏幕大小变化时候执行
+
+        $(window).resize(function () {
+            $scope.windowSize();
+        });
+
+        // $scope.gridOptions.data=[
+        //     {
+        //         name1:'',
+        //         name2:'',
+        //         name3:'',
+        //         name4:'',
+        //         name5:'',
+        //         name6:'',
+        //         name7:'',
+        //     }
+        // ];
 
  //获取列表数据
      $scope.dataAll=function (type) {
@@ -205,17 +219,17 @@ define([
             $scope.error.area = $scope.condition.a6 ? false : true;
         };
 
-        // $scope.condition={
-        //     a1:'',
-        //     a2:'',
-        //     a3:'',
-        //     a4:'',
-        //     a5:'',
-        //     a6:'',
-        //     a7:'',
-        //     a8:'',
-        //     a9:''
-        // }
+        $scope.condition={
+            a1:'',
+            a2:'',
+            a3:'',
+            a4:'',
+            a5:'',
+            a6:'',
+            a7:'',
+            a8:'',
+            a9:''
+        }
 
         $scope.Query = function () {
             //判断是否为空

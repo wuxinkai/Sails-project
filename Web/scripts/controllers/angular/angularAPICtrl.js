@@ -19,6 +19,19 @@ define([
         $scope.userType = 'guest';
         $scope.word = /^\s*\w*\s*$/; //匹配是否有空格
 
+
+//textarea 获取内容
+        $scope.ReasonFail={
+            value:''
+        };
+        $scope.changeFail=function(){
+            if($scope.ReasonFail.value!=null){
+                console.log('1'+$scope.ReasonFail.value)
+            }else{
+                console.log('2')
+            }
+        };
+
 //(2)input[number]
         $scope.number=[
             {name:'ngModel',type:'string',describe:'绑定的数据'},
@@ -129,5 +142,61 @@ define([
 //ng-value
         $scope.names2 = ['选项1', '选项2', '选项3'];
         $scope.my = { favorite: '---默认项' };
+
+
+//selecte的 ng-options
+        $scope.sites = {
+            //对象名： 输入出对象值
+            site01 : "Google",
+            site02 : "Runoob",
+            site03 : "Taobao"
+        };
+        //默认显示
+        $scope.selectedSite=$scope.sites.site01;
+
+        //循环第一个的对象值：显示后面的对象值
+        $scope.cars = {
+            car01 : {brand : "Ford", model : "Mustang", color : "red"},
+            car02 : {brand : "Fiat", model : "500", color : "white"},
+            car03 : {brand : "Volvo", model : "XC90", color : "black"}
+        }
+
+        $scope.cars2 = {
+            //对象名循环:  显示对象值
+            car01 : {brand : "Ford", model : "222", color : "23333"},
+            car02 : {brand : "Fiat", model : "4444", color : "5555"},
+            car03 : {brand : "Volvo", model : "6666", color : "7777"}
+        };
+
+        $scope.names2 = [{ Name: "年", ID: 3 }, { Name: "月", ID: 2 }, { Name: "日", ID: 1 }, { Name: "时", ID: 0 }];
+        $scope.datetype = $scope.names2[0].ID;
+
+//获取值
+        $scope.timeChanges=function (datetype) {
+            console.log(datetype);
+        };
+//获取所有值
+        $scope.timeChanges2=function (datetype2) {
+            console.log(datetype2);
+        };
+
+//select的插入内容
+        $scope.colors = [
+            { name: 'black', shade: 'dark' },
+            { name: 'white', shade: 'light' },
+            { name: 'red', shade: 'dark' },
+            { name: 'blue', shade: 'dark' },
+            { name: 'yellow', shade: 'light' }
+        ];
+        $scope.myColor = $scope.colors[2]; // red
+
+
+// ng-repeat
+        $scope.phones=[{name:'苹果',age:5},{name:'华为',age:6},{name:'htc',age:7}];
+        $scope.phones1={age:7,sex:2,name:'zfpx'};
+        $scope.phones2=[{name:'苹果',type:['白色','金色','玫瑰金']},{name:'华为',type:['白色','金色']},{name:'htc',type:['玫瑰金']}];
+        $scope.phones3=['苹果','苹果','苹果'];
+
+
     }];
 });

@@ -109,9 +109,12 @@
     <br>
     <br>
     <div>
-        textarea
-
-
+        <p>textarea获取内容的方式应该用对象的方式  数组 和 字符串都获取不到</p>
+        <textarea name="" id="" cols="30" rows="10" class="failTextArea" maxlength="255"
+                  ng-model="ReasonFail.value" placeholder="请输入失败原因(限255个汉字)"
+                  ng-change="changeFail()">
+          </textarea>
+        <p>{{ReasonFail.value}}</p>
     </div>
     <div>
        <div>
@@ -486,6 +489,62 @@
                     </li>
                 </ul>
             </div>
+
+            <div>
+                <!--遍历数组-->
+
+                <h3>遍历数组</h3>
+                <div  ng-init="" ng-repeat="phone in phones">
+                    <span>{{phone.name}}</span>
+                    <span>{{phone.age}}</span>
+                </div>
+                <!--遍历对象-->
+                <h3>遍历对象</h3>
+                <div>
+                    <div ng-repeat="value in phones1">
+                        {{value}}
+                    </div>
+                </div>
+                <!--嵌套循环数组-->
+
+                <h3>嵌套循环数组</h3>
+                <div >
+                    <!--方法2-->
+                    <div ng-repeat="phone in phones2">
+                        <div style="color: blue;font-size: 18px;">
+                            {{phone.name}}
+                        </div>
+                        <div style="margin-left: 20px;" ng-repeat="type in phone.type">
+                            {{type}}
+                        </div>
+                    </div>
+
+                    <!--方法1-->
+                    <h1>嵌套循环数组方法2</h1>
+                    <div>
+                        <div ng-repeat="phone in phones2" ng-init="key=$index">
+                            <div style="color: red">
+                                {{phone.name}}
+                            </div>
+                            <div style="margin-left: 20px;" ng-repeat="type in phone.type">
+                                <span> 父索引 <a style="color: red" >{{key}}</a></span> ------
+                                <i>子索引 <a style="color: red" >{{$index}}</a></i> ------
+                                {{type}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--遍历数组有多个相同 用 track by $index-->
+                <h6>遍历数组需注意track by $index</h6>
+                <h6>Error: [ngRepeat:dupes]这个出错提示具体到题主的情况，意思是指数组中有2个以上的相同数字。ngRepeat不允许collection中存在两个相同Id的对象</h6>
+                <h6>track by $index 就不会报错</h6>
+                <div>
+                    <div ng-repeat="phone in phones3 track by $index" >
+                        {{phone}}
+                    </div>
+                </div>
+                <!--报错内容Error: [ngRepeat:dupes] Duplicates in a repeater are not allowed. Use 'track by' expression to specify unique keys. Repeater: phone in phones3, Duplicate key: string:苹果-->
+            </div>
         </div>
     </div>
 
@@ -556,6 +615,65 @@
         </div>
         <div>
 
+        </div>
+    </div>
+
+
+    <div >
+        <div>
+            <h1> select 的 ng-options 对象 数组  字符串 绑定方式</h1>
+        </div>
+            <p>1对象方式的 ng-options:</p>
+            <select ng-model="selectedSite" ng-options="x for (x, y) in sites"></select>
+            <h3>你选择的值是: {{selectedSite}}</h3>
+
+            <p>2对象的属性中和属性名方式 ng-options:</p>
+            <select ng-model="selectedCar" ng-init="selectedCar = cars.car01" ng-options="y.brand for (x, y) in cars"></select>
+            <h3>你选择的是: {{selectedCar.brand}}</h3>
+            <h3>模型: {{selectedCar.model}}</h3>
+            <h3>颜色: {{selectedCar.color}}</h3>
+            <p>下拉列表中的选项也可以是对象的属性。</p>
+
+
+            <p>3选择一辆车:</p>
+            <select ng-model="selectedCar2" ng-init="selectedCar2 = cars2.car01"  ng-options="x for (x, y) in cars2"></select>
+            <h3>你选择的是: {{selectedCar2.brand}}</h3>
+            <h3>模型: {{selectedCar2.model}}</h3>
+            <h3>颜色: {{selectedCar2.color}}</h3>
+
+            <p>4公司项目:</p>
+            <select class="form-control" ng-model="datetype"  ng-change="timeChanges(datetype)"    ng-options="obj.ID as obj.Name for obj in names2" > </select>
+            <div>{{datetype}}</div>
+            <select class="form-control" ng-model="datetype2"  ng-change="timeChanges2(datetype2)"    ng-options="obj as obj.Name for obj in names2" > </select>
+            <div>{{datetype2}}</div>
+        </div>
+    
+
+    <div>
+        <ul>
+            <li ng-repeat="color in colors">
+                Name: <input ng-model="color.name">
+                [<a href ng-click="colors.splice($index, 1)">X</a>]
+            </li>
+            <li>
+                [<a href ng-click="colors.push({})">add</a>]
+            </li>
+        </ul>
+        <hr />
+        Color (null not allowed):
+        <select ng-model="myColor" ng-options="color.name for color in colors"></select><br>
+        Color (null allowed):
+        <span class="nullable">
+        <select ng-model="myColor" ng-options="color.name for color in colors">
+        <option value="">-- choose color --</option>
+        </select>
+        </span><br />
+        Color grouped by shade:
+        <select ng-model="myColor" ng-options="color.name group by color.shade for color in colors"></select><br />
+        Select <a href ng-click="myColor = { name:'not in list', shade: 'other' }">bogus</a>.<br>
+        <hr />
+        <div style="border:solid 1px black; height:20px"
+             ng-style="{'background-color':myColor.name}">
         </div>
     </div>
 </form>

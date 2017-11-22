@@ -24,7 +24,8 @@ a,a:hover, a:focus{text-decoration: none}
 .main-dropdown{  position: absolute;  padding: 5px 0;  margin: 2px 0 0;  font-size: 14px;  text-align: left;  list-style: none;  background-color: #fff;  -webkit-background-clip: padding-box;  background-clip: padding-box;  border: 1px solid #ccc;  border: 1px solid rgba(0,0,0,.15);  border-radius: 4px;  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);  box-shadow: 0 6px 12px rgba(0,0,0,.175);;left: inherit;right: 0 !important;z-index: 2000;width: 330px;top:55px}
 .dropdown-box{margin-right: 8px;border-radius: 0;border: none;background: #1f253d;color: #fff;width: 350px;}
 .main-query{margin: 14px 15px 0 0;}
-
+.breadcrumb-color{border: none}
+.breadcrumb-color span{color: #fff}
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar

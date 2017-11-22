@@ -45,7 +45,8 @@ require.config({
         'kendo-czh': "bower_components/om-kendo/cultures/kendo.culture.zh-CN.min",
         'kendo-mzh': "bower_components/om-kendo/messages/kendo.messages.zh-CN.min",
         'ui-notification': 'bower_components/angular-ui-notification/dist/angular-ui-notification.min',
-        'angular-confirm': 'bower_components/om-angular-confirm/angular-confirm',
+
+        "angular-confirm":"bower_components/angular-confirm/angular-confirm", //确认弹出窗
         'leaflet': 'bower_components/leaflet/dist/leaflet-src',
         'leaflet-directive': 'bower_components/angular-leaflet/dist/angular-leaflet-directive.min',
         'leaflet.draw': 'bower_components/leaflet-draw/dist/leaflet.draw',
@@ -65,9 +66,9 @@ require.config({
         'bootstrap-datetimepicker.zh-CN':'bower_components/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN',
         "daterangepicker":"bower_components/daterangepicker/lib/daterangepicker/daterangepicker",
         "bootstrap-multiselect":"bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect",
+        "angular-breadcrumb":"bower_components/angular-breadcrumb/dist/angular-breadcrumb",
 
 
-        'angular-confirm': 'bower_components/angular-confirm/angular-confirm', //确认弹出窗
     },
 
     map: {
@@ -174,6 +175,9 @@ require.config({
             deps:['bootstrap-daterangepicker']
         },
         'angular-confirm':{
+            deps: ['angular',"ui-bootstrap"]
+        },
+        'angular-breadcrumb':{
             deps: ['angular',"ui-bootstrap"]
         }
 

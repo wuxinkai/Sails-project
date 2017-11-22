@@ -40,3 +40,4 @@
         <span style="color: #0d7fdd" id="sessionUser"></span>
         <span style="color: brown" id="cookieUser"></span>
 ```
+(3)表格的 增加 删除 修改 查询   批量删除  

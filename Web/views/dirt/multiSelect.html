@@ -1,0 +1,25 @@
+
+<div class="col-md-4 mc-content">
+    <input type="text" class="form-control form-bg bg-select"  ng-model="showText"  readonly="readonly" ng-blur="" ng-click="showDropDown()" ng-disabled="nedisable" title="{{showText}}" >
+    <i class="mc-icon"></i>
+    <div class="mc-select " ng-show="isDown"  ng-mouseleave="InputBlur()">
+        <div class="mc-Search" ng-show="searchShow">
+            <input type="text" ng-model="inputText" ng-change="vagueSearch()">
+            <i class="Magnifier" ></i>
+        </div>
+        <div class="mc-quan">
+            <input type="checkbox" ng-model="isChecked" ng-click="mulCheckAll(isChecked)" id="check">
+            <span>全部</span>
+        </div>
+        <ul class="mc-ul">
+            <li title="{{item.Name}}" ng-repeat="item in data">
+                <input type="checkbox" ng-model="item.Checked" ng-click="childCheck()">
+                <span>{{item.Name}}</span>
+            </li>
+        </ul>
+        <div class="mc-sub">
+            <button class="btn  mc-sub01" ng-click="clear()">清除</button>
+            <button class="btn  mc-sub02" ng-click="sure()">确定</button>
+        </div>
+    </div>
+</div>

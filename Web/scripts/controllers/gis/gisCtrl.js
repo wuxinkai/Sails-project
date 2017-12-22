@@ -4,22 +4,13 @@ define(['bootstrap',
         'scripts/services/httpService',
         'scripts/requireHelper/requireNotification',
         'scripts/requireHelper/requireLeaflet',
-    ]
-    , function () {
-        return ['$scope','httpService','Notification', '$stateParams','$state','leafletData' ,
-            function ($scope,httpService,Notification, $stateParams,$state,leafletData) {
-                // $scope.$on('repeatFinished', function (repeatFinishedEvent, element) {
-                //     function initStyleAmMonitoring() {
-                //         $('#ceGis').css("height", ($('#alarmConRight').height() -5) + 'px');
-                //     }
-                //     initStyleAmMonitoring();
-                //     $(window).resize(function () {
-                //         initStyleAmMonitoring();
-                //     });
-                // });
+    ], function () {
+        'use strict';
+        return ['$scope','$http','httpService','Notification', '$stateParams','$state','leafletData' ,
+            function ($scope,$http,httpService,Notification, $stateParams,$state,leafletData) {
+
                 function initStyleAmMonitoring() {
-                    $('#ceGis').css("height", ($('#alarmConRight').height() - 5) + 'px');
-                    $('#map').css("height", ($('#alarmConRight').height() - 40) + 'px');
+                    $('#map').css("height", ($('#alarmConRight').height()) + 'px');
                 }
                 initStyleAmMonitoring();
                 $(window).resize(function () {
@@ -27,19 +18,10 @@ define(['bootstrap',
                 });
 
 
-                var linelist = [];
-                var defaultLayer=[];
-                $scope.rangeList=[];//颜色区间范围
-                $scope.dicts=[];
-                $scope.london = {lat: 33.42, lng: 104.21, zoom: 5};
-                $scope.searchmarker=null;
-                $scope.$on('to-togis', function (event, data) {
-                    $scope.map.invalidateSize();
-                });
-                $scope.neLocationlist=[];
-                $scope.neToneList = [];
-                $scope.neRadioList=[];
-                //设置Leaflet图层
+                //初始化地图 大小{lat，lng}和位置{zoom}
+                $scope.london = {lat: 33.42, lng: 104.21, zoom: 5, };
+
+                //切换地图背景
                 $scope.layers = {
                     baselayers: {
                         baseMap: {
@@ -47,11 +29,18 @@ define(['bootstrap',
                             url: 'http://{s}.google.cn/vt/lyrs=m@167000000&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}',
                             layerOptions: {
                                 subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-                                showOnSelector: false
+                                // showOnSelector: false  //是否显示多种地图
                             },
                             type: 'xyz'
-                        }
+                        },
+                        satellite: {
+                            name: 'osm图',
+                            url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png', //osm 地图种类 一个八种
+                            type: 'xyz'
+                        },
+
                     },
+
                     overlays: {
                         draw: {
                             name: '画布',
@@ -62,7 +51,25 @@ define(['bootstrap',
                             }
                         }
                     }
+                };
+
+
+                //绘制区域
+                $scope.editarea = ""; //存储 区域值
+                var currentPolygonDrawer;
+                $scope.drawArea = function () {
+
+                    if ($scope.editarea != "") {
+                        Notification.error({ message: "请先将正在编辑的区域保存", delay: 5000 })
+                        return;
+                    }
+
+                    currentPolygonDrawer = new L.Draw.Polygon($scope.map);
+                    currentPolygonDrawer.enable();
+                    $scope.canedit = false;
+
                 }
+
                 //设置Leaflet.Draw初始化参数
                 $scope.controls = {
                     draw: {
@@ -82,410 +89,198 @@ define(['bootstrap',
                 });
 
 
+                //获取代码
+                $scope.motorlist='';
+                $scope.linelist='';
+                    $http({
+                        url: 'json/line.json',
+                        method: 'GET',
+                        contentType: "application/json; charset=utf-8"
+                    }).success(function (data, header, config, status) {
+                      var motorlist = data.result.roomlist.model;
+                      var  linelist = data.result.roomtoroomlist.model;
 
+                        drawroom(motorlist,linelist);
+                        drawdline(linelist);
+                    }).error(function (data, header, config, status) {
+                        //处理响应失败
+                    });
 
-
-
-                //画网元
-                function  drawroom(list) {
+                //画机房
+                function  drawroom(list,linelist) {
+                    console.log()
+                    $scope.HOUSE_ID="";
                     leafletData.getLayers("map").then(function (baselayers) {
                         var drawnItems = baselayers.overlays.draw;
                         for (var i = 0; i < list.length; i++) {
-                            var lat = list[i].LAT;
-                            var lng = list[i].LON;
+                            var lat = list[i].GEO_LAT;
+                            var lng = list[i].GEO_LNG;
                             if (lat == null || lng == null)
                                 continue;
-                            var typeName = '';
-                            switch (list[i].NE_TYPE) {
-                                case '102':
-                                    typeName = "oadm0";
-                                    break;
-                                case '105':
-                                    typeName = "otm0";
-                                    break;
-                                case '106':
-                                    typeName = "osn75000";
-                                    break;
-                                case '103':
-                                    typeName = "ola0";
-                                    // list[i].NE_NAME='';
-                                    break;
-                                case '104':
-                                    typeName = "oreg0";
-                                    break;
-                                case '101':
-                                    typeName = "oeq0";
-                                    break;
-                            }
-                            var path='imgs/'+typeName+'.png';
+
+                            var path='imgs/room2.png';
 
                             var myIcon = L.icon({
                                 iconUrl: '',
-                                iconSize: [15, 15]
+                                iconSize: [10, 10]
                             });
                             myIcon.options.iconUrl = path;
-                            if(list[i].NE_TYPE=='103')
-                            {
-                                myIcon.options.iconSize=[0,0];
-                            }
-
-
                             var marker = new L.marker([lat, lng], {
                                 icon: myIcon,
-                                title: list[i].NE_NAME
+                                title: list[i].HOUSE_NAME,
+                                house_id:list[i].HOUSE_ID
                             });
+
+                            L.DomEvent.addListener(marker, 'click', function (e) {
+                                console.log('点击一个某个点');
+
+                                $scope.newHouseID=e.target.options.house_id;
+                                var mypop = L.popup();
+
+                                function cb() {
+                                    var content = '<div  >';
+                                    content += ' <div id="popup" class="ol-popup">\n' +
+                                        '        <div class="mapTitle">\n' +
+                                        "            <div class=\"titleContent\">"+ e.target.options.title+" </div>\n" +
+                                        '        </div>\n' +
+                                        '        <div id="popup-content">\n' +
+                                        '            <ul id="mapTempInfo_Tab"  class="nav nav-tabs" >\n' +
+                                        '                <li class="current"><a >基本信息</a></li>\n' +
+                                        '                <li><a >客户信息</a></li>\n' +
+                                        '                <li><a >告警监控</a></li>\n' +
+                                        '                <li><a >故障抢修</a></li>\n' +
+                                        '                <li><a >线路巡检</a></li>\n' +
+                                        '            </ul>\n' +
+                                        '            <div id="mapTempInfo_Content" class="tab-content">\n' +
+                                        '                <div class="tab-pane-map " id="map1">\n' +
+                                        '                    <table>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>网元数量:</h5></td><td class='tabRight'>"+ $scope.NE_COUNT+"个</td>\n" +
+                                        // "                            <td><h5>网元数量:</h5></td><td>{{"+DEVICE_COUNT+"}}个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>设备数量:</h5></td><td class='tabRight'>"+ $scope.DEVICE_COUNT+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>板件数量:</h5></td><td class='tabRight'>"+$scope.PLATE_COUNT+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                           <td><h5>交接设施数量:</h5></td><td class='tabRight'>"+$scope.TRANS_COUNT+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                    </table>\n' +
+                                        '                </div>\n' +
+                                        '                <div class="tab-pane-map " id="map2" >\n' +
+                                        '                    <table>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>重要客户:</h5></td><td class='tabRight'>"+$scope.IMPORTANT_COUNT+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>普通客户:</h5></td><td class='tabRight'> "+$scope.ORDINARY_COUNT+"个 </td>\n" +
+                                        '                        </tr>\n' +
+                                        '                    </table>\n' +
+                                        '                </div>\n' +
+                                        '                <div class="tab-pane-map  "  id="map3">\n' +
+                                        '                    <table>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>紧急告警:</h5></td><td class='tabRight'>"+$scope.CRITICAL_COUNT+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>重要告警:</h5></td><td class='tabRight'> "+$scope.MAJOR_COUNT+"个 </td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>次要告警:</h5></td><td class='tabRight'>"+$scope.MINOR_COUNT+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>提示告警:</h5></td><td class='tabRight'> "+$scope.WANING_COUNT+"个 </td>\n" +
+                                        '                        </tr>\n' +
+                                        '                    </table>\n' +
+                                        '                </div>\n' +
+                                        '                <div class="tab-pane-map  "  id="map4">\n' +
+                                        '                    <table>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>运行工单:</h5></td><td class='tabRight'>"+$scope.count+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>维护公司:</h5></td><td class='tabRight'> "+$scope.MAU_NAME+" </td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                           <td><h5>维护人员:</h5></td><td class='tabRight'  title="+$scope.REAL_NAME+">"+$scope.REAL_NAME+"</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>联系方式:</h5></td><td class='tabRight' title="+$scope.PHONE+">"+$scope.PHONE+"</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                    </table>\n' +
+                                        '                </div>\n' +
+                                        '                <div class="tab-pane-map"  id="map5"    >\n' +
+                                        '                    <table>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>运行工单:</h5></td><td class='tabRight'>"+$scope.num+"个</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>巡检公司:</h5></td><td class='tabRight'> "+$scope.RECEIVER_UNIT+" </td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>专业:</h5></td><td class='tabRight'>"+$scope.PROFESSION+"</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>巡检人员:</h5></td><td class='tabRight' title="+$scope.RECEIVER+"><a href='#' id=\"mapclick\"  style=\"text-decoration:underline\">"+$scope.RECEIVER+"</a></td>\n" +
+                                        '                        </tr>\n' +
+                                        '                        <tr>\n' +
+                                        "                            <td><h5>联系方式:</h5></td><td class='tabRight' title="+$scope.TEL+">"+$scope.TEL+"</td>\n" +
+                                        '                        </tr>\n' +
+                                        '                    </table>\n' +
+                                        '                </div>\n' +
+                                        '            </div>\n' +
+                                        '        </div>\n' +
+                                        '    </div>';
+
+                                    content += '</div>';
+
+                                    mypop.setLatLng(e.latlng).setContent(content).openOn($scope.map);
+                                }
+                            });
+
+
+
                             drawnItems.addLayer(marker);
 
                         }
                     });
                 }
-
-                //划线
-                function drawdline(radioList,type) {
+                function drawdline(list) {
                     leafletData.getLayers("map").then(function (baselayers) {
                         var drawnItems = baselayers.overlays.draw;
-                        drawnItems.clearLayers();
-                        drawroom($scope.neLocationlist);
-
-                        defaultLayer=[];
-                        for (var i = 0; i < $scope.neToneList.length; i++) {
-                            var points1 = [];
-                            if ($scope.neToneList[i].sLAT != null && $scope.neToneList[i].sLON != null && $scope.neToneList[i].dLAT != null && $scope.neToneList[i].dLON != null) {
-                                points1.push([parseFloat($scope.neToneList[i].sLAT), parseFloat($scope.neToneList[i].sLON)]);
-                                points1.push([parseFloat($scope.neToneList[i].dLAT), parseFloat($scope.neToneList[i].dLON)]);
-                                var strcolor = "#000000";
-                                var pl = L.polyline(points1, {color: strcolor, weight: 1, fillOpacity: 0.2});
-                                pl.name=i;
-                                defaultLayer.push({layer: pl, points: points1});
-                            }
-                        }
-
-
-                        if(radioList.length>0)
-                        {
-                            radioList.forEach(function (item,index,arr) {
-
-                                var allList=[];
-                                var sNeID=item.aEndID;
-                                var list=[];
-                                //源头集合
-                                var sData= $scope.neToneList.filter(function (item1,index1,arr1) {
-                                    return item1.NE_ID==sNeID||item1.REL_NE_ID==sNeID;
-                                })
-                                if(sData.length>0){
-                                    sData.forEach(function (sitem,sindex,sarr) {
-                                        var alist=[];
-                                        alist.push(sitem);
-                                        if(sitem.NE_ID==sNeID)
-                                            getsPoint(sitem.REL_NE_ID,item.zEndID,alist);
-                                        else
-                                            getrPoint(sitem.NE_ID,item.zEndID,alist);
-                                        allList.push(alist);
-                                    });
-                                }
-
-
-                                if(allList.length>0&&allList.length==1)
-                                {
-                                    list=allList[0];
-                                    if(!(list[list.length-1].REL_NE_ID==item.zEndID||list[list.length-1].NE_ID==item.zEndID))
-                                        list=[];
-                                }
-                                else if(allList.length>0&&allList.length>1)
-                                {
-                                    var filterList=allList.filter(function (item1,index,arr) {
-                                        return item1[item1.length-1].REL_NE_ID==item.zEndID||item1[item1.length-1].NE_ID==item.zEndID||item1[0].REL_NE_ID==item.zEndID||item1[0].NE_ID==item.zEndID;
-
-                                    });
-                                    if(filterList.length==1)
-                                        list=filterList[0];
-                                    else if(filterList.length>1)
-                                    {
-                                        filterList.sort(function(a,b){return a.length-b.length});
-                                        list=filterList[0];
-                                    }
-                                    else
-                                        list=[];
-                                }
-                                if(list.length>0)
-                                {
-                                    for (var i = 0; i < list.length; i++) {
-                                        var points = [];
-                                        points.push([parseFloat(list[i].sLAT), parseFloat(list[i].sLON)]);
-                                        points.push([parseFloat(list[i].dLAT), parseFloat(list[i].dLON)]);
-                                        var strcolor = "";
-                                        switch (type)
-                                        {
-                                            case "channelAllNum"://波道总数量
-                                                strcolor=getColor(item.OccupyNum+item.IdleNuml);
-                                                break;
-                                            case "channelUseNum"://波道已使用数量
-                                                strcolor=getColor(item.OccupyNum);
-                                                break;
-                                            case "channelNotuseNum"://波道未使用数量
-                                                strcolor=getColor(item.IdleNuml);
-                                                break;
-                                            case "channelProNum"://波道占比
-                                                strcolor=getColor(item.OccupancyRatio);
-                                                break;
-
-                                        }
-                                        var pl = L.polyline(points, {color: strcolor, weight: 4, fillOpacity: 1,title:parseInt(item.OccupyNum)+parseInt(item.IdleNuml),useNum:parseInt(item.OccupyNum)});
-
-                                        var items=defaultLayer.filter(function (item,index,arr) {
-                                            return item.points[0][0]==points[0][0]&&item.points[0][1]==points[0][1]&&item.points[1][0]==points[1][0]&&item.points[1][1]==points[1][1];
-                                        })
-                                        if(items.length>0)
-                                            drawnItems.removeLayer(items[0].layer);
-                                        drawnItems.addLayer(pl);
-
-                                        var popup = L.popup();
-
-                                        L.DomEvent.on(pl, 'mouseover', function (e) {
-                                            $scope.popuptrain = popup.setLatLng([e.latlng.lat, e.latlng.lng]).setContent('<p>'+ "已开通数量："+ e.target.options.title + '</p ><p>'+ "已使用数量："+ e.target.options.useNum + '</p >').openOn($scope.map);
-                                            L.DomEvent.stop(e);
-                                        });
-
-                                        L.DomEvent.on(pl, 'mouseout', function (e) {
-                                            // if ($scope.popuptrain != null)
-                                            //     $scope.popuptrain._close();
-                                        });
-
-                                        L.DomEvent.on(pl, 'mousedown', function (e) {
-                                            L.DomEvent.preventDefault(e);
-                                        });
-                                    }
-                                }
-                            });
-                        }
-                    });
-                }
-
-                //获得着色颜色
-                function getColor(itemValue) {
-                    var color='#000000';
-                    // var color='';
-                    $scope.rangeList.forEach(function (item, index, arr) {
-                        if(parseFloat(itemValue)>parseFloat(item.min_value)&&parseFloat(itemValue)<=parseFloat(item.max_value))
-                        {
-                            color=item.colour;
-                            return color;
-                        }
-                    })
-                    return color;
-                }
-
-                function getsPoint(sNeID,dNeID,singleData)
-                {//源头集合
-                    var sData= $scope.neToneList.filter(function (item,index,arr) {
-                        return item.NE_ID==sNeID;
-                    })
-
-                    if(sData!=null&&sData.length>0)
-                    {
-                        sData.forEach(function (sitem,sindex,sarr) {
-                            if(singleData.filter(function (item,index,arr) {
-                                    return item.NE_ID==sitem.NE_ID&&item.REL_NE_ID==sitem.REL_NE_ID;
-                                }).length==0)
-                            {
-                                if(sitem.dNE_TYPE!='103')
-                                {
-                                    if(sitem.REL_NE_ID==dNeID)
-                                    {
-                                        singleData.push(sitem);
-                                        return;
-                                    }
-                                    else
-                                    {
-                                        return;
-                                    }
-                                }
-                                else
-                                {
-                                    singleData.push(sitem);
-                                    getsPoint(sitem.REL_NE_ID,dNeID,singleData);
-                                }
-                            }
-                            else
-                                return;
-
-                        })
-                    }
-                    else {
-
-                        getrPoint(sNeID,dNeID,singleData);
-                    }
-                }
-
-                function getrPoint(sNeID,dNeID,singleData)
-                {//源头集合
-                    var sData= $scope.neToneList.filter(function (item,index,arr) {
-                        return item.REL_NE_ID==sNeID;
-                    })
-
-                    if(sData!=null&&sData.length>0)
-                    {
-                        sData.forEach(function (sitem,sindex,sarr) {
-                            //    if(singleData.length>0)
-                            if(singleData.filter(function (item,index,arr) {
-                                    return item.NE_ID==sitem.NE_ID&&item.REL_NE_ID==sitem.REL_NE_ID;
-                                }).length==0)
-                            {
-                                if(sitem.sNE_TYPE!='103')
-                                {
-                                    if(sitem.NE_ID==dNeID)
-                                    {
-                                        singleData.push(sitem);
-                                        return;
-                                    }
-                                    else
-                                    {
-                                        //singleData=[];
-                                        return;
-                                    }
-                                }
-                                else
-                                {
-                                    singleData.push(sitem);
-                                    getrPoint(sitem.NE_ID,dNeID,singleData);
-                                }
-                            }
-                            else
-                                return;
-
-                        })
-                    }
-                    else {
-                        getsPoint(sNeID,dNeID,singleData);
-                    }
-                }
-
-                //画GIS拓扑结构
-                function drawtopo()
-                {
-                    leafletData.getLayers("map").then(function (baselayers) {
-                        var drawnItems = baselayers.overlays.draw;
-                        drawnItems.clearLayers();
-                        // $scope.getDrawList();
-
-                    });
-                }
-                drawtopo();
-
-
-
-                $scope.searchmarker=null;
-                function setselected(id) {
-                    leafletData.getLayers("map").then(function (baselayers) {
-                        var drawnItems = baselayers.overlays.draw;
-                        for (var i = 0; i < $scope.neLocationlist.length; i++) {
-                            if ($scope.neLocationlist[i].NE_ID == id) {
-                                var lat = parseFloat($scope.neLocationlist[i].LAT);
-                                var lng = parseFloat($scope.neLocationlist[i].LON);
-                                $scope.london = {lat: lat, lng: lng, zoom: 10};
-                                if ($scope.searchmarker != null)
-                                    drawnItems.removeLayer($scope.searchmarker);
-                                $scope.searchmarker = L.marker([lat, lng],{title:$scope.neLocationlist[i].NE_NAME});
-                                drawnItems.addLayer($scope.searchmarker);
-                            }
-                        }
-                    });
-                }
-
-                function getnubyname(nename) {
-                    var nell = [];
-                    for (var i = 0; i < $scope.neLocationlist.length; i++) {
-                        var n={};
-                        n.NAME = $scope.neLocationlist[i].NE_NAME;
-                        n.ID = $scope.neLocationlist[i].NE_ID;
-                        if (n.NAME.indexOf(nename) >= 0) {
-                            nell.push(n);
-                        }
-                        if (nell.length == 10)
-                            return nell;
-                    }
-                    return nell;
-                }
-
-                //获取选择指标范围
-                $scope.getRange=function (type) {
-                    httpService.get("LineConfigService", "LineConfig", "searchDetail", {user_type:type}).then(function (data) {
-                        if (data.success) {
-                            $scope.rangeList=data.data;
-                            if($scope.neRadioList.length>0)
-                            {
-                                drawdline($scope.neRadioList,type);
-                            }
-                        }
-                        else {
-                        }
-                    });
-                }
-                function getDicts() {
-                    httpService.get("IM", "Dict", "getItem", {dict_type_id:'channel'}).then(function (data) {
-                        if (data.success) {
-                            $scope.dicts=data.data;
-                            if($scope.dicts.length>0)
-                            {
-                                $scope.selectModel=$scope.dicts[0].DICT_ID;
-                                $scope.getRange($scope.selectModel);
-                            }
-                        }
-                        else {
-                        }
-                    });
-                }
-
-                //划线
-                function drawDefaultLine(list) {
-                    leafletData.getLayers("map").then(function (baselayers) {
-                        var drawnItems = baselayers.overlays.draw;
-                        defaultLayer=[];
                         for (var i = 0; i < list.length; i++) {
                             var points = [];
-                            if(list[i].sLAT!=null&&list[i].sLON!=null&&list[i].dLAT!=null&&list[i].dLON!=null)
-                            {
-                                points.push([parseFloat(list[i].sLAT), parseFloat(list[i].sLON)]);
-                                points.push([parseFloat(list[i].dLAT), parseFloat(list[i].dLON)]);
-                                var strcolor = "#000000";
-                                var pl = L.polyline(points, {color: strcolor, weight: 4, fillOpacity: 0.2});
-                                drawnItems.addLayer(pl);
-                                defaultLayer.push({layer:pl,points:points});
-                            }
+                            points.push([parseFloat(list[i].BLAT), parseFloat(list[i].BLNG)]);
+                            points.push([parseFloat(list[i].ELAT), parseFloat(list[i].ELNG)]);
+                            var strcolor = "";
+                            if (list[i].ISALARM == "1")
+                                strcolor = "#ff1818";
+                            else
+                                strcolor = "#00fa00";
+                            var pl = L.polyline(points, {color: strcolor, weight: 4, fillOpacity: 1,HOUSE_ID:list[i].HOUSE_ID,REL_HOUSE_ID:list[i].REL_HOUSE_ID});
+                            var popup = L.popup();
+                            L.DomEvent.on(pl, 'click', function (e) {
+                                console.log('点击事件')
+                            });
+                            L.DomEvent.on(pl, 'mouseout', function (e) {
+                               console.log('鼠标离开事件')
+                            });
+
+                            drawnItems.addLayer(pl);
                         }
-
-
                     });
                 }
 
-                var geojsonFeature = {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "Coors Field",
-                        "amenity": "Baseball Stadium",
-                        "popupContent": "This is where the Rockies play!"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [39.9, 116.3]
-                    }
-                };
 
-                // $scope.getDrawList=function () {
-                //     httpService.get("TactService", "Topology", "getneLinkLocation", {}).then(function (data) {
-                //         if (data.result.success) {
-                //             $scope.neLocationlist=data.result.neLocationlist;
-                //             $scope.neToneList = data.result.neToneList;
-                //             $scope.neRadioList=data.result.neRadioList;
-                //             drawroom($scope.neLocationlist);
-                //             getDicts();
-                //             // drawDefaultLine($scope.neToneList);
-                //             //  drawdline($scope.neRadioList,"channelProNum");
-                //         }
-                //         else {
-                //         }
-                //     });
-                // }
+
+
+
+
+
+
+
 
 
                 $(function() {

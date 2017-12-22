@@ -39,20 +39,23 @@ require.config({
         'bootstrap': 'bower_components/bootstrap/dist/js/bootstrap.min',
         //老版本ui-bootstrap
         'ui.bootstrap': 'bower_components/ui-bootstrap-tpls/ui-bootstrap-tpls-0.13.2.min',
-        //
         'ui-bootstrap': 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min',
+
         'kendo-angular': 'bower_components/om-kendo/kendo.all.min',
         'kendo-czh': "bower_components/om-kendo/cultures/kendo.culture.zh-CN.min",
         'kendo-mzh': "bower_components/om-kendo/messages/kendo.messages.zh-CN.min",
-        'ui-notification': 'bower_components/angular-ui-notification/dist/angular-ui-notification.min',
+
+        'ui-notification': 'bower_components/angular-ui-notification/dist/angular-ui-notification.min', //警告框
 
         "angular-confirm":"bower_components/angular-confirm/angular-confirm", //确认弹出窗
-        'leaflet': 'bower_components/leaflet/dist/leaflet-src',
+
+        'leaflet': 'bower_components/leaflet/dist/leaflet-src', //谷歌地图
         'leaflet-directive': 'bower_components/angular-leaflet/dist/angular-leaflet-directive.min',
         'leaflet.draw': 'bower_components/leaflet-draw/dist/leaflet.draw',
         'leaflet.Label': 'bower_components/Leaflet.label/src/Label',
         'leaflet.Marker.Label': 'bower_components/Leaflet.label/src/Marker.Label',
         'leaflet.BaseMarkerMethods': 'bower_components/Leaflet.label/src/BaseMarkerMethods',
+
         'threejs': 'bower_components/threejs/build/three.min',
         'threeCSG': 'bower_components/ThreeCSG/ThreeCSG',
         'trackballControls': 'bower_components/om-threejs/controls/TrackballControls',

@@ -10,7 +10,6 @@
 
 define(['cookie', //jquery cookie存储
     'scripts/services/authenticatedService',
-    'scripts/directives/radioBroadcastDirt',
     'scripts/directives/leftMenuDirt',
     'scripts/services/httpService',
     'ngload!scripts/requireHelper/requireNotification', //报错提示插件

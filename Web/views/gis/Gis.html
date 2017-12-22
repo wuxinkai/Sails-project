@@ -1,1 +1,9 @@
-<leaflet lf-center="london" layers="layers"  id="map" controls="controls"  style="height: 100%;width: 100%"></leaflet>
+<style type="text/css">
+    .leaflet-grid{position: relative}
+    .leaflet-grid .tes-button{position: absolute;top:20px;left: 50px;z-index: 100}
+</style>
+<div class="leaflet-grid">
+    <button type="button" class="btn btn-blue tes-button" ng-click="drawArea()">绘制区域</button>
+    <leaflet lf-center="london" layers="layers"  id="map" controls="controls"  style="height: 100%;width: 100%"></leaflet>
+
+</div>

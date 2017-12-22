@@ -1,0 +1,46 @@
+<style type="text/css">
+
+    .main-img{display: block;cursor: pointer}
+    .main-dropdown{  position: absolute;left: 0;top: 30px;  padding: 5px 0;}
+    .mc-label{font-size: 14px; line-height: 31px;padding-right: 0}
+    .mc-title p{text-align: center;color: #fff;font-size: 18px;line-height:40px;}
+    .cm-box-top{ margin-top: 8px;}
+    .mc-content{ padding-left: 0;position: relative}
+    .mc-content  .form-control{height: 31px;}
+    .btn-color-purple{background: #50597b !important;color: #fff !important;border-color: #50597b !important}
+    .mc-button-box{text-align: right}
+
+</style>
+<a  style="font-size: 22px;font-weight: bold;color: #ff0000" target="view_window" href="http://www.kuitao8.com/demo/20140224/1/bootstrap-multiselect-master/index.html">插件地址</a>
+
+<div>
+    Bootstrap Multiselect 插件的应用
+</div>
+<div style="position: relative;width: 800px;margin: 100px auto">
+    <img class="main-img" src="./imgs/am1.png" style="margin-top: 4px;" ng-click="amDropdownShow()" id="searchIcon">
+    <div class="main-dropdown " ng-hide="amDropdown" role="menu" id="searchBomb">
+        <div class=" mc-title">
+            <p>Bootstrap Multiselect</p>
+        </div>
+        <div class="cm-box-top clearfix">
+            <div class="col-md-4 mc-label">选择范围:</div>
+            <div class="col-md-8 mc-content" >
+                <multi-select data="sRing" class="selectWidth selectHeight ringlist" search-show="false" data-value="mulSEntity.selRing"  column-name='selRing'></multi-select>
+            </div>
+        </div>
+        <div class="cm-box-top clearfix">
+            <div class="col-md-4 mc-label">选择范围:</div>
+            <div class="col-md-8 mc-content" >
+                <select class="form-control bg-select" readonly style="line-height: 31px;padding: 0;border: none"
+                        ng-model="kpi"
+                        ng-options="d.id as d.name for d in kpiList">
+                </select>
+            </div>
+        </div>
+        <div class="mc-button-box" style="margin: 15px ">
+            <button type="button" class="btn  btn-bg-blue mc-button " ng-click="getData()">查询</button>
+            <button type="button" class="btn btn-default mc-button btn-color-purple" ng-click="resetScreen()">重置</button>
+            <button type="button" class="btn btn-default mc-button btn-color-purple"  ng-click="amDropdownShow()">关闭</button>
+        </div>
+    </div>
+</div>

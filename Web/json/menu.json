@@ -153,6 +153,21 @@
       "Url":"#/main/angularCommon"
     }
   ]},
-  {"Name":"常用组件","Url":"#/main/entrust","Icon":"fa fa-users"},
+  {"Name":"常用组件",
+    "Url":"#/main/entrust",
+    "Icon":"fa fa-users",
+    "Children":[
+      {
+      "Name": "模糊搜索",
+      "Icon": "fa fa-users",
+      "Url":"#/main/vague"
+    },
+      {
+        "Name": "loading加载",
+        "Icon": "fa fa-users",
+        "Url":"#/main/loading"
+      }
+    ]
+  },
   {"Name":"angular事件委托和jquery事件委托","Url":"#/main/entrust","Icon":"fa fa-users"}
 ]

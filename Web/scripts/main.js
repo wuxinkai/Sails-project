@@ -67,7 +67,7 @@ require.config({
         'cookie':'bower_components/jquery.cookie/jquery.cookie',
         'bootstrap-daterangepicker':'bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min',
         'bootstrap-datetimepicker.zh-CN':'bower_components/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN',
-        "daterangepicker":"bower_components/daterangepicker/lib/daterangepicker/daterangepicker",
+        // "daterangepicker":"bower_components/daterangepicker/lib/daterangepicker/daterangepicker",
         "bootstrap-multiselect":"bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect",
         "angular-breadcrumb":"bower_components/angular-breadcrumb/dist/angular-breadcrumb",
 
@@ -168,9 +168,9 @@ require.config({
         'cookie':{
             deps: ['jquery']
         },
-        'daterangepicker':{
-            deps: ['jquery',]
-        },
+        // 'daterangepicker':{
+        //     deps: ['jquery',]
+        // },
         'bootstrap-daterangepicker':{
             deps: ['jquery','bootstrap']
         },

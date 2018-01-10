@@ -67,6 +67,7 @@ define([
             $scope.counter++;
         };
 
+
 //(4)input[radio]
         $scope.radio=[
             {name:'ngModel',type:'string',describe:'绑定的数据'},
@@ -79,7 +80,7 @@ define([
         $scope.specialValue = {
             "id": "12345",
             "value": "green"
-        };
+        }
 
 //(5) ng-class 或 ng-class-odd 或 ng-class-even
         $scope.CheckBox=[

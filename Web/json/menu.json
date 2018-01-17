@@ -169,5 +169,48 @@
       }
     ]
   },
-  {"Name":"angular事件委托和jquery事件委托","Url":"#/main/entrust","Icon":"fa fa-users"}
+  {"Name":"angular事件委托和jquery事件委托","Url":"#/main/entrust","Icon":"fa fa-users"},
+  {"Name":"jquery和js循环应用","Url":"#/main/each","Icon":"fa fa-users"},
+  {"Name":"bootstrap步骤","Url":"#/main/step","Icon":"fa fa-users"},
+  {"Name":"ajax常见问题","Url":"#/main/ajax","Icon":"fa fa-users"},
+  {"Name":"分页","Url":"#","Icon":"fa fa-users","Children":[
+    {
+      "Name": "省略号分页",
+      "Icon": "fa fa-users",
+      "Url":"#/main/ellipsisPaging"
+    },
+    {
+      "Name": "ui-bootstrap分页",
+      "Icon": "fa fa-users",
+      "Url":"#/main/bootstrapPaging"
+    },
+    {
+      "Name": "输入页码分页",
+      "Icon": "fa fa-users",
+      "Url":"#/main/inputPaging"
+    }
+
+  ]},
+  {"Name":"css3","Url":"#","Icon":"fa fa-users","Children":[
+    {
+      "Name": "固定背景图",
+      "Icon": "fa fa-users",
+      "Url":"#/main/fixedBg"
+    }
+  ]},
+  {"Name":"javascript常用属性","Url":"#","Icon":"fa fa-users","Children":[
+    {
+      "Name": "获取自定义属性",
+      "Icon": "fa fa-users",
+      "Url":"#/main/getAttribute"
+    }
+  ]},
+  {"Name":"jquery常用知识点","Url":"#","Icon":"fa fa-users","Children":[
+    {
+      "Name": "设置颜色刷新后颜色不变cookie",
+      "Icon": "fa fa-users",
+      "Url":"#/main/skin"
+    }
+
+  ]}
 ]

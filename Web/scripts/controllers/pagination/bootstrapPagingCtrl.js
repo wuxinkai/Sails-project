@@ -19,7 +19,14 @@ define([
         $scope.currentPage = 4;     //当前页
         $scope.setPage = function (pageNo) {
             $scope.currentPage = pageNo;
+
         };
         $scope.maxSize = 5;
+
+
+
+//分页上一页下一页
+        $scope.totalItems2 = 64;
+        $scope.currentPage2 = 4;
     }];
 });

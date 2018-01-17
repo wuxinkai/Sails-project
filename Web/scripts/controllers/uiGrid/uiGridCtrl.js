@@ -3,7 +3,6 @@ define([
     'ui.bootstrap',
     'scripts/requireHelper/requireNotification',//插件消息提示
     'bower_components/angular-confirm/angular-confirm', //确认消息提示框
-
     'css!bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min',
     'ngload!bootstrap-datetimepicker.zh-CN',
 

@@ -1,1 +1,91 @@
-我
+<style type="text/css">
+    *{ margin: 0;padding: 0;list-style: none}
+    /*���β�Ʒ����*/
+    .product_sort{border:solid 2px #5fbbf3;position:relative; z-index:90;width: 300px;left: 150px;top: 200px;}
+    .product_sort .bd{background-color: rgba(30, 85, 114, 0.6);}
+    .product_sort .bd .item{height:32px;position:relative;}
+    .product_sort .bd .item .title{width:226px;text-indent:43px;height:30px;overflow:hidden;line-height:42px;font-size:14px;font-weight:bold;color:#292929;}
+    .product_sort .bd .item .title a{color:#3299fd;position:relative}
+    .product_sort .bd .item .list{height:30px;line-height:30px;overflow:hidden;}
+    .product_sort .bd .item .list a{color:#fff; margin-left: 5%;font-size:16px}
+    .product_sort .bd .item .list a:hover{text-decoration:underline;}
+    .product_sort .bd .item .arrow{font-size:20px; color:#c0d7f9;position:absolute;right:10px;top:0px;}
+    .product_sort .bd .item .line{position:absolute;right:-2px;top:0px;width:2px;height:32px;background-color:#fff;z-index:95;display:none;}
+    .product_sort .bd .item .subitem{display:none;}
+    .product_sort .bd .layer .line{display:block;}
+    .product_sort .bd .layer .arrow{display:none   ;}
+    .product_sort .bd .layer .subitem{width:600px;background: #1e5572;border:solid 2px #4eafff;border-left:none;position:absolute;left:100%;top:0px;z-index:95;padding:5px 0px 0px 10px;display:block;}
+    .product_sort .bd .layer .subitem .inner .tit{font-size:12px; text-align:left; border-top:1px dashed #d7d7d7}
+    .product_sort .bd .layer .subitem .inner .tit1{border-top:none;}
+    .product_sort .bd .layer .subitem .inner .tit .name{text-indent: 1em;font-size: 18px;font-weight: bold;color: #333;display:block;color:#3299fd;cursor:pointer;float:left;padding-top:3px;}
+    .product_sort .bd .layer .subitem .inner ul{list-style: none;overflow:hidden;zoom:1;display:block;margin-left:90px;width:630px;}
+    .product_sort .bd .layer .subitem .inner ul li{float:left;padding:0 8px;height:20px;line-height:20px;color:#fff;}
+    .product_sort .bd .layer .subitem .inner ul li a{color:#fff;display:block;list-style: none;font-size:16px}
+    .product_sort .bd .layer .subitem .inner ul li a:hover{color:#f60;text-decoration:underline;}
+    .product_sort .bd .item:hover{background: #8cb5cd}
+    .product_sort .title{height: 30px;color: #fff;font-size: 18px;line-height: 30px;text-indent:1em;font-weight: bold;background: #36baff;border-bottom: 2px solid #4eafff; margin: 0;padding: 0 }
+
+    /*���*/
+    .IsSelect{background: #4eafff;  width: 500px; height:auto;border: 2px solid #4eafff;position: absolute;left: 200px;top:50px;overflow: hidden}
+    .IsSelectIn{ position: absolute; height: 82px; background: #275875;opacity: 0.5;width: 100%}
+    .IsSelectone  div{float: left;border: 1px solid #2a7fcf;background: #155e9d; padding:5px 16px;  margin:5px 0 0 10px; }
+    .IsSelectone  div i{color: #ff5858; margin-left: 5px;cursor: pointer  }
+    .IsSelectone  div span{color: #fff }
+    /*�Ҳ�*/
+    .active {
+        border:1px solid #1A9439 !important;
+        background:red !important;
+    }
+    .otselect{border: 1px solid #4eafff;width: 500px;background: #ffe484;position: absolute;right: 300px;top: 50px;}
+    .otseIn{ height: 40px;width: 100%;}
+    .otseInleft{float: left;width:20%;text-align: center;  line-height: 40px;color: #2871bb}
+    .otseInRiht{float: left;width: 80%;}
+    .otseInRiht a{display: inline-block; padding: 5px 12px; margin:5px 0 0 10px;color: #fff;border: 1px solid #2871bb; background: #134b82}
+    .panel{background: transparent}
+    .panel-default>.panel-heading{ background-color: rgba(40, 94, 124, 0.6);color: #fff; }
+</style>
+<div>
+    <div class="product_sort fl">
+        <h4 class="title">
+            总分类标签
+        </h4>
+        <div class="bd">
+            <div class="item " ng-repeat="ct in category">
+                <div class="list">
+                    <a >{{ct.expression_category}}</a>
+                </div>
+                <div class="arrow">&gt;</div>
+                <div class="line"></div>
+                <div class="subitem">
+                    <div class="inner">
+                        <div class="tit tit1" style="height:auto;clear:both;">
+                            <div style="height:100%;display:inline-block;width:20%;font-size:20px;color:#fff;">{{ct.expression_category}}</div>
+                            <div style="height:100%;display:inline-block;width:5%;text-align:left;font-size:20px;color:#fff;">></div>
+                            <ul style="height:auto;width:74%;display:inline-block;margin-left:0;padding-left:0; float:right;">
+                                <li ng-repeat="sc in ct.subData"> <a  style="cursor:pointer;" ng-click="subDataClick(sc.expression_subcategory)">{{sc.expression_subcategory}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--添加或者删除-->
+    <div class="IsSelect">
+        <div class="IsSelectone" >
+            <!-- 添加内容                                                                                                                                                                                                             点击删除当前的标签-->
+            <div ng-repeat="ccd in checkCateData" style="width:100px;"><span style="width:50px;display:block;float:left;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;">{{ccd}}</span><i ng-click="deleteCheckData(ccd)">×</i></div>
+        </div>
+    </div>
+    <!--可选的内容-->
+    <div class="otselect">
+        <div class="otseIn">
+            <div class="otseInleft">
+                <span>Select Label</span>
+            </div>
+            <div class="otseInRiht" style="overflow:hidden">
+                <a ng-class="{'active': $index==0}" ng-click="checkcateClick(ccd,$event)" style="width:70px;cursor:pointer;display:block;float:left;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;" class="active{{$index}}" ng-repeat="ccd in checkCateData">{{ccd}}</a>
+            </div>
+        </div>
+    </div>
+</div>

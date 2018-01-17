@@ -1,1 +1,29 @@
-9
+<h4>分页</h4>
+<div class="col-sm-12">
+    <footer class="panel-footer">
+        <div class="row">
+            <div class="col-sm-3 hidden-xs">
+                <select
+                        class="input-sm form-control w-sm inline v-middle"
+                        ng-model="placement.selected"
+                        ng-options="o as o for o in placement.options"
+                        ng-change="placement.changeFn()"
+                >
+                </select>
+                <!--</div>-->
+                <div class="col-sm-12 text-right text-center-xs">
+                    <div class="pagination pagination-sm m-t-none m-b-none">
+                        <ul uib-pagination boundary-links="true" total-items="totalItems"
+                            ng-model="currentPage" class="pagination-sm"
+                            max-size="maxSize"
+                            previous-text="&lsaquo;" next-text="&rsaquo;"
+                            first-text="&laquo;" last-text="&raquo;"></ul>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <br><br>
+    当前在第{{currentPage}}页，页面有{{placement.selected}}个元素。
+    <br><br>
+    <button type="button" class="btn btn-info" ng-click="setPage(3)">跳转到: 3</button>
+</div>

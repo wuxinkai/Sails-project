@@ -1,0 +1,150 @@
+<h4>分页</h4>
+<div class="col-sm-12">
+    <footer class="panel-footer">
+        <div class="row">
+            <div class="col-sm-3 hidden-xs">
+                <select
+                        class="input-sm form-control w-sm inline v-middle"
+                        ng-model="placement.selected"
+                        ng-options="o as o for o in placement.options"
+                        ng-change="placement.changeFn()"
+                >
+                </select>
+                <!--</div>-->
+                <div class="col-sm-12 text-right text-center-xs">
+                    <div class="pagination pagination-sm m-t-none m-b-none">
+                        <ul uib-pagination  class="pagination-sm"
+                            boundary-links="true"
+                            total-items="totalItems"
+                            ng-model="currentPage"
+                            max-size="maxSize"
+                            previous-text="&lsaquo;"
+                            next-text="&rsaquo;"
+                            first-text="&laquo;"
+                            last-text="&raquo;">
+                        </ul>
+                    </div>
+                    <br><br>当前在第{{currentPage}}页，页面有{{placement.selected}}个元素。
+                    <br><br>
+                    <button type="button" class="btn btn-info" ng-click="setPage(3)">跳转到: 3</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <table border="1">
+                    <tbody>
+                    <tr>
+                        <td><span style="font-size: 14px;">属性名</span></td>
+                        <td><span style="font-size: 14px;">默认值</span></td>
+                        <td><span style="font-size: 14px;">备注</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">boundary-links</span></td>
+                        <td><span style="font-size: 14px;">false</span></td>
+                        <td><span style="font-size: 14px;">是否显示第一页和最后一页的按钮</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">boundary-link-numbers</span></td>
+                        <td><span style="font-size: 14px;">false</span></td>
+                        <td><span style="font-size: 14px;">是否显示第一页和最后一页的页数,并在页数过多时用…表示被隐藏的页数</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">direction-links</span></td>
+                        <td><span style="font-size: 14px;">true</span></td>
+                        <td><span style="font-size: 14px;">是否显示上一页和下一页的按钮</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">first-text</span></td>
+                        <td><span style="font-size: 14px;">first</span></td>
+                        <td><span style="font-size: 14px;">第一页的按钮的名字</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">last-text</span></td>
+                        <td><span style="font-size: 14px;">last</span></td>
+                        <td><span style="font-size: 14px;">最后一页的按钮名字</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">previous-text</span></td>
+                        <td><span style="font-size: 14px;">Previous</span></td>
+                        <td><span style="font-size: 14px;">上一页的按钮名字</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">next-text</span></td>
+                        <td><span style="font-size: 14px;">Next</span></td>
+                        <td><span style="font-size: 14px;">下一页的按钮名字</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">force-ellipses</span></td>
+                        <td><span style="font-size: 14px;">false</span></td>
+                        <td><span style="font-size: 14px;">是否在rotate被设置为true并且页数过多时显示为"…"</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">rotate</span></td>
+                        <td><span style="font-size: 14px;">true</span></td>
+                        <td><span style="font-size: 14px;">是否保持当前在可视范围的中间</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">items-per-page</span></td>
+                        <td><span style="font-size: 14px;">10</span></td>
+                        <td><span style="font-size: 14px;">每页显示的数量.设置值小于1表示显示所有项</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">max-size</span></td>
+                        <td><span style="font-size: 14px;">null</span></td>
+                        <td><span style="font-size: 14px;">可选择的页数范围(如果设置为5,当前页为10,总页数为100,那么可选择第8,9,10,11,12页)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">ng-change</span></td>
+                        <td><span style="font-size: 14px;">&nbsp;</span></td>
+                        <td><span style="font-size: 14px;">页数变化时调用的函数</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">ng-disabled</span></td>
+                        <td><span style="font-size: 14px;">false</span></td>
+                        <td><span style="font-size: 14px;">是否禁用</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">ng-model</span></td>
+                        <td><span style="font-size: 14px;">&nbsp;</span></td>
+                        <td><span style="font-size: 14px;">当前页数</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">num-pages</span></td>
+                        <td><span style="font-size: 14px;">angular.noop</span></td>
+                        <td><span style="font-size: 14px;">只读属性，表示总页数</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">page-label</span></td>
+                        <td><span style="font-size: 14px;">angular.identity</span></td>
+                        <td><span style="font-size: 14px;">设置页数标签的表达式</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">template-url</span></td>
+                        <td><span style="font-size: 14px;">uib/template/pagination/pagination.html</span></td>
+                        <td><span style="font-size: 14px;">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="font-size: 14px;">total-items</span></td>
+                        <td><span style="font-size: 14px;">&nbsp;</span></td>
+                        <td><span style="font-size: 14px;">总共有多少条数据</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>页面没有显示出来</h4>
+
+                <div class="col-sm-12" style="margin-top: 30px;">
+                    <uib-pager total-items="totalItems" ng-model="currentPage" next-text="下一页" previous-text="上一页" num-pages="totalPage"></uib-pager>
+                    <pre>当前页：4,总页数：100</pre>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+</div>

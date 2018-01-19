@@ -1,0 +1,147 @@
+
+<!--<style type="text/css" >-->
+    <!--.isinde{-->
+        <!--background: url("./imgs/welcome.png");-->
+        <!--position: fixed;-->
+        <!--_position: absolute;-->
+        <!--top: 0;-->
+        <!--left: 0;-->
+        <!--height: 100%;-->
+        <!--width: 100%;-->
+        <!--min-width: 1000px;-->
+        <!--z-index: -10;-->
+        <!--background-position: center 0;-->
+        <!--background-repeat: no-repeat;-->
+        <!--background-size: cover;-->
+        <!-- -webkit-background-size: cover;-->
+        <!-- -o-background-size: cover;-->
+        <!--zoom: 9999;-->
+    <!--}-->
+<!--</style>-->
+<!--<div>-->
+    <!--<div class=" isinde" >-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div>
+    <style type="text/css">
+        .arrow{
+            width: 30px;
+            height: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-width: 1px 1px 0 0;
+            border-color: blue;
+            border-style: solid;
+            background: linear-gradient(225deg,#fff 50%, transparent 50%);
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 50%;
+            top:50%
+        }
+        .arrowIn{width: 300px;height: 300px; margin: 100px auto}
+        .arrowIn:after{
+            width: 30px;
+            height: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-width: 1px 1px 0 0;
+            border-color: blue;
+            border-style: solid;
+            background: linear-gradient(225deg,#fff 50%, transparent 50%);
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 40%;
+            top:40%
+        }
+    </style>
+    <div class="arrow"></div>
+    <div class="arrowIn"></div>
+</div>
+
+<div>
+    <style type="text/css">
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff6a00;
+            border-width: 6px;
+            margin: 0 auto;
+        }
+        .div2 {
+            position: relative;
+            width: 0;
+            height: 0;
+            border: 20px solid black;
+            border-color:transparent  #ffd800 #ffd800 transparent ;
+            background-color:#fff;
+            font-size:xx-small;
+            text-align:left;
+        }
+
+    </style>
+    <div class="div1">
+        <div class="div2">
+            折角
+        </div>
+    </div>
+</div>
+
+<div>
+    <style type="text/css">
+        #hexagon {
+            width: 100px;
+            height: 55px;
+            background: #fc5e5e;
+            position: relative;
+            margin: 100px auto;
+        }
+        #hexagon:before {
+            content: "";
+            width:80px;
+            height: 0;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            border-left:20px solid transparent;
+            /*border-right: 50px solid transparent;*/
+            border-bottom: 25px solid #fc5e5e;
+        }
+
+        #hexagon:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 25px solid #fc5e5e;
+        }
+
+        /*圆形*/
+        #circle {
+            margin: 100px  auto;
+            width: 120px;
+            height: 120px;
+            background: #7fee1d;
+            -moz-border-radius: 60px;
+            -webkit-border-radius: 60px;
+            border-radius: 60px;
+        }
+        /*三角形*/
+        #triangle {
+            margin: 100px  auto;
+            width: 0;
+            height: 0;
+            border-bottom: 140px solid #fcf921;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+        }
+    </style>
+    <div id="hexagon"></div>
+    <div id="circle"></div>
+    <div id="triangle"></div>
+</div>

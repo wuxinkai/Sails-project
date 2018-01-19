@@ -10,6 +10,11 @@ define(['angularAMD','scripts/services/httpService'], function (angularAMD) {
                 templateUrl: './views/dirt/indexPagination.html',
                 replace: true,
                 link: function (scope, element, attr) {
+                    /*
+                    scope.page 是当前点击的页码；
+                    scope.Allcount；是总共页码数；
+
+                    */
                     //跳转
                     scope.skipClick = function(){
                         if(!scope.inputCurrentPage)return ;
@@ -24,6 +29,7 @@ define(['angularAMD','scripts/services/httpService'], function (angularAMD) {
                     }
                     //下一页
                     scope.nextClick= function(){
+
                         if(scope.page<scope.Allcount){
                             scope.page = scope.page +1;
                             scope.getData();

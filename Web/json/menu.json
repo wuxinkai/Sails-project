@@ -196,6 +196,11 @@
       "Name": "固定背景图",
       "Icon": "fa fa-users",
       "Url":"#/main/fixedBg"
+    },
+    {
+      "Name": "固定背景图 大小缩放",
+      "Icon": "fa fa-users",
+      "Url":"#/main/fixedMinMax"
     }
   ]},
   {"Name":"javascript常用属性","Url":"#","Icon":"fa fa-users","Children":[
@@ -211,6 +216,6 @@
       "Icon": "fa fa-users",
       "Url":"#/main/skin"
     }
-
-  ]}
+  ]},
+  {"Name":"页面外结构","Url":"#/main/bracket","Icon":"fa fa-users"}
 ]

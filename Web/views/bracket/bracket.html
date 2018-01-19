@@ -1,0 +1,407 @@
+<style type="text/css">
+    body, html {
+        font-family: 'Microsoft YaHei';
+    }
+
+    #breadcrumb {
+        background-color: #fff;
+        border-bottom: 1px solid #e3ebed;
+        text-align: left;
+    }
+
+    #breadcrumb a {
+        padding: 8px 20px 8px 10px;
+        display: inline-block;
+        background-image: url('../images/breadcrumb.png');
+        background-position: center right;
+        background-repeat: no-repeat;
+        font-size: 12px;
+        color: #333;
+    }
+
+    #containerHeight {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 0;
+    }
+
+    .tabLeft {
+        width: 40px;
+        background: #d7d7d7;
+        list-style: none;
+        padding: 0;
+        margin: 0
+    }
+
+    .tabLeft li {
+        width: 40px;
+        text-align: center;
+        margin: 1px 0;
+        cursor: pointer;
+        border-bottom: 1px solid #fff
+    }
+
+    .tabLeft li a {
+        color: #333;
+        text-decoration: none;
+        width: 40px;
+        padding: 20px 0;
+        display: block
+    }
+
+    .tabLeft li:hover {
+        color: #fff;
+        background: #dd0000
+    }
+
+    .tabLeft li:hover a {
+        color: #fff
+    }
+
+    .tabLeft .active {
+        background: #dd0000;
+    }
+
+    .tabLeft .active a {
+        color: #fff;
+    }
+
+    .conLeft {
+        float: left
+    }
+
+    .hideBtnLeft {
+        float: left;
+        margin-left: 2px;
+    }
+
+    .hideBtnRight {
+        float: right;
+        margin-right: 2px;
+    }
+
+    .hideBtn {
+        width: 6px;
+        background: #f4e3e1;
+        position: relative
+    }
+
+    .hideBtnIn {
+        width: 6px;
+        background: #D61718;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        cursor: pointer
+    }
+
+    .clCenter {
+        width: 260px;
+        float: left;
+        border: 1px solid #cccccc;
+        border-top: none;
+        border-bottom: none;
+        overflow: hidden;
+    }
+
+    .centRight {
+        float: right;
+        width: 280px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .tabanimate {
+        display: none;
+    }
+
+    .core {
+        float: left
+    }
+
+    .crTop {
+        background: #f5f5f5
+    }
+
+    .tabRight {
+        list-style: none;
+        height: 30px;
+        background: -webkit-linear-gradient(top, #fff, #e4e4e4);
+    -mo-linear-gradient(top, #fff, #e4e4e4);
+    -ms-linear-gradient(top, #fff, #e4e4e4);
+    linear-gradient(top, #fff, #e4e4e4);
+        padding: 0;
+        margin: 0;
+    }
+
+    .tabRight li {
+        float: left;
+        line-height: 30px;
+    }
+
+    .tabRight li a {
+        padding: 0 5px;
+        color: #01A2FD;
+        font-weight: bold;
+        text-decoration: none
+    }
+
+    .tabcenters {
+
+    }
+
+    .crTop {
+        height: 39%;
+        overflow: hidden;
+        -moz-box-shadow: 3px 3px 5px #888888;
+        box-shadow: 3px 3px 5px #888888;
+    }
+
+    .crBottom {
+        height: 59%;
+        margin-top: 5px;
+    }
+
+    .conTops {
+        padding-top: 3px;
+        height: 30px;
+        background: #fff;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .works {
+        margin: 5px;
+        border: 1px solid #ccc
+    }
+
+    .workbench .tonsa {
+        background: #fff;
+        border: none;
+        height: 200px
+    }
+
+    .workbenchIn {
+        list-style: none;
+        height: 30px;
+        background: -webkit-linear-gradient(top, #fff, #e4e4e4);
+        padding: 0;
+        margin: 0;
+        color: #01A2FD;
+        line-height: 30px;
+        text-indent: 5px;
+        font-weight: bold
+    }
+
+    .wibom {
+        height: 100px;
+        border: 1px solid #ccc;
+        border-left: 0;
+        border-right: 0
+    }
+
+    .wibombot {
+        height: 240px
+    }
+
+    .worksIn {
+        margin-top: 20px;
+    }
+
+    .build {
+        height: 160px;
+        background: #f7f7f7;
+        margin: 5px;
+        border: 1px solid #cccccc;
+        margin-bottom: 10px
+    }
+
+    .network, .contrastTime {
+        list-style: none;
+        margin: 10px 15px;
+        padding: 0
+    }
+
+    .network li, .contrastTime li {
+        line-height: 30px;
+        height: 30px;
+        width: 100%
+    }
+
+    .network li a {
+        float: left;
+        color: #333;
+        text-decoration: none
+    }
+
+    .network li span {
+        color: #D61718;
+        float: right
+    }
+
+    .contrastTime li a {
+        float: right;
+        color: #FF9900
+    }
+
+    .contrastTime li span {
+        float: left
+    }
+
+    .conTops select {
+        margin-left: 20px
+    }
+
+
+    .content-header{padding: 0 !important;}
+</style>
+<div class="col-md-12">
+    <!--头部导航-->
+    <div class="row">
+        <section class="content-header">
+            <div id="breadcrumb">
+                <a href="#" class="tip-bottom" data-original-title="Go to Home"><i class="fa fa-home fa-fw"></i>主页</a>
+                <a href="#" class="tip-bottom">校园网络</a>
+                <a href="#" class="tip-bottom">校园用户消费</a>
+            </div>
+        </section>
+    </div>
+    <div class="row">
+        <section class="container-fluid" id="containerHeight" >
+            <div>
+                <!-- 这里要获取高度，索引内容都在这里-->
+                <div class="conLeft">
+                    <ul class="tabLeft">
+                        <li class="active" ng-click="openLefts()"><a href="#workbench" data-toggle="tab">工<br/>作<br/>台</a></li>
+                        <li><a href="#special"  ng-click="openLefts()" data-toggle="tab">专<br/>题</a></li>
+                        <li><a href="#progress"  ng-click="openLefts()" data-toggle="tab">工<br/>作<br/>进<br/>度</a></li>
+                    </ul>
+                </div>
+                <div class="middle">
+                    <!-- 要切换的地方-->
+                    <div class="clCenter"  ng-class="{'tabanimate': pcleftstatue}">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="workbench">
+                                <div class="workbench">
+                                    <div class="workbenchIn">工作台</div>
+                                    <div class="wibom">1111</div>
+                                </div>
+                                <div class="workbench">
+                                    <div class="workbenchIn">通知</div>
+                                    <div class="wibom wibombot">222</div>
+                                </div>
+                                <div class="workbench">
+                                    <div class="workbenchIn">新闻
+                                    </div>
+                                    <div class="wibom wibombot">3333</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="special">
+                                <div class="workbench works">
+                                    <div class="workbenchIn">竞争力分析</div>
+                                    <div class="wibom tonsa">444</div>
+                                </div>
+                                <div class="workbench works worksIn">
+                                    <div class="workbenchIn">用户渗透率分析</div>
+                                    <div class="wibom tonsa">555</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="progress">
+                                <div class="workbench build">
+                                    <div class="workbenchIn">建设类进度</div>
+                                    <div class=" ">5555</div>
+                                </div>
+                                <div class="workbench build">
+                                    <div class="workbenchIn">维护类进度</div>
+                                    <div class=" ">666</div>
+                                </div>
+                                <div class="workbench build">
+                                    <div class="workbenchIn">优化类进度</div>
+                                    <div class=" ">777</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 按钮-->
+                    <div class="hideBtn hideBtnLeft"   ng-click="hidecallbackleft()">
+                        <div class="hideBtnIn"></div>
+                    </div>
+                    <!--中间部分-->
+                    <div class="core">
+                        <div class="conTops">
+                            <select>
+                                <option ng-repeat="x in nationals">{{x}}</option>
+                            </select>
+                            <select>
+                                <option ng-repeat="x in quarters">{{x}}</option>
+                            </select>
+                            <select>
+                                <option ng-repeat="x in covers">{{x}}</option>
+                            </select>
+                            <select style="width: 100px">
+                                <option ng-repeat="x in networks">{{x}}</option>
+                            </select>
+                        </div>
+                        <div class="conBootm">
+                            xxxxxxxxxx
+                        </div>
+                    </div>
+                    <!--右侧信息 -->
+
+                    <div class="centRight"  ng-class="{'tabanimate': pcrightstatue}">
+                        <div class="crTop">
+                            <ul class="tabRight">
+                                <li class="active"><a href="#network" data-toggle="tab">网络规模 </a>/</li>
+                                <li><a href="#quota"  data-toggle="tab">性能指标 </a>/</li>
+                                <li><a href="#problem"  data-toggle="tab">网络问题</a></li>
+                            </ul>
+                            <div class="tab-content  tabcenters">
+                                <div class="tab-pane fade in active" id="network">
+                                    <ul class="network">
+                                        <li><a href="javascript:;">站点数量</a><span>86.7%</span></li>
+                                        <li><a href="javascript:;">站点数量</a><span>86.7%</span></li>
+                                        <li><a href="javascript:;">站点数量</a><span>86.7%</span></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="quota">
+                                    <ul class="network">
+                                        <li><a href="javascript:;">覆盖质量良好比例</a><span>86.7%</span></li>
+                                        <li><a href="javascript:;">覆盖质量良好比例</a><span>86.7%</span></li>
+                                        <li><a href="javascript:;">覆盖质量良好比例</a><span>86.7%</span></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="problem">333</div>
+                            </div>
+                        </div>
+                        <div class="crBottom">
+                            <ul class="tabRight">
+                                <li class="active"><a href="#CompareTime" data-toggle="tab">时间对比</a>/</li>
+                                <li><a href="#same" data-toggle="tab">同级对比</a></li>
+                            </ul>
+                            <div class="tab-content  tabcenters">
+                                <div class="tab-pane fade in active" id="CompareTime">1111111111111111111111</div>
+                                <div class="tab-pane fade" id="same">
+                                    <ul class="contrastTime">
+                                        <li><span>1 江苏</span><a href="javascript:;">详情</a></li>
+                                        <li><span>1 江苏</span><a href="javascript:;">详情</a></li>
+                                        <li><span>1 江苏</span><a href="javascript:;">详情</a></li>
+                                        <li><span>1 江苏</span><a href="javascript:;">详情</a></li>
+                                        <li><span>1 江苏</span><a href="javascript:;">详情</a></li>
+                                        <li><span>1 江苏</span><a href="javascript:;">详情</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 按钮-->
+                    <div class="hideBtn hideBtnRight" ng-click="hidecallbackright()">
+                        <div class="hideBtnIn"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--中间内容-->
+
+</div>

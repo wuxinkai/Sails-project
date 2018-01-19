@@ -1,16 +1,22 @@
 define([
     'cookie',  //
     'ui.bootstrap',
+
+    'css!bower_components/om-custom-ui/css/pagination',
+    'scripts/requireHelper/pagination.min',
+
     'scripts/requireHelper/requireNotification',//插件消息提示
     'bower_components/angular-confirm/angular-confirm', //确认消息提示框
     'css!bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min',
     'ngload!bootstrap-datetimepicker.zh-CN',
+
 
     //分页指令
     'ngload!scripts/directives/indexPaginationDirt',
 ], function () {
     return ['$scope','$http','$confirm','Notification','httpService','i18nService', function ($scope,$http,$confirm,Notification,httpService,i18nService) {
         $scope.deletes={};//删除数据初始化
+        $scope.conditionP={}; //传递参数
 
 //初始化日期
         function initDate() {
@@ -71,27 +77,23 @@ define([
 
             },
             rowDelete: function(data) {
-                $confirm({ text: '确定要删除吗？' })
-                    .then(function () {
-                        $scope.deletes.id = data.id;
-                        httpService.post("biaogeFolder","Biaoge","biaogeDelete",{condition:$scope.deletes}).then(function (data) {
-                            if (data.success == true) { //请求成功
-                                $scope.dataAll(); //调用一下查询方法
-                                Notification.error({message: '删除成功', delay: 5000});
-                            }else {
-                                Notification({message: '删除失败'}, 'warning');
-                            }
-                        });
+                $confirm({ text: '确定要删除吗？' }).then(function () {
+                    $scope.deletes.id = data.id;
+                    httpService.post("biaogeFolder","Biaoge","biaogeDelete",{condition:$scope.deletes}).then(function (data) {
+                        if (data.success == true) { //请求成功
+                            $scope.dataAll(); //调用一下查询方法
+                            Notification.error({message: '删除成功', delay: 5000});
+                        }else {
+                            Notification({message: '删除失败'}, 'warning');
+                        }
+                    });
                         $scope.result = "确认";
                     }, function () {
                         Notification({message: '取消删除'}, 'warning');
                         $scope.result = "取消";
                     });
-
-
-            }
-        };
-
+                }
+            };
 //页面在这的时候 高度自适应
         $scope.windowSize = function () {
             var newHeight = $('#alarmConRight ').height() - $('#topBtn').height()-60;
@@ -106,41 +108,53 @@ define([
             $scope.windowSize();
         });
 
-        // $scope.gridOptions.data=[
-        //     {
-        //         name1:'',
-        //         name2:'',
-        //         name3:'',
-        //         name4:'',
-        //         name5:'',
-        //         name6:'',
-        //         name7:'',
-        //     }
-        // ];
+//分页
+//         $scope.conditionP.index=1; //当前是第几页
+//         $scope.conditionP.total=3 ; //每页显示多少条
+//         Math.ceil(data.result.count[0].totalCount/$scope.conditionP.total) ; //后台返回来的总条数 除以 每页显示多少条向上取整；
 
+
+        $scope.conditionP.index=1; //当前是第几页
+        $scope.conditionP.total=3 ; //每页显示多少条
  //获取列表数据
-     $scope.dataAll=function (type) {
-         if(type == 1){
-             $scope.condition.a1='1';
-         };
+        $scope.dataAll=function (type) {
+             if(type == 1){
+                 $scope.conditionP.a1='1';
+             };
+
+         searchData=$scope.conditionP; //传递后天的参数$scope.conditionP{index:1,total:4} //传递给后台
          httpService.post("biaogeFolder","Biaoge","biaogeData",{condition: searchData}).then(function (data) {
-             if (data.success == true) { //请求成功
-                 if (data.data != null && data.data.length > 0) {
-                     $scope.gridOptions.data=data.data;
+             if (data.result.success == true) { //请求成功
+                 if (data.result.list != null && data.result.list.length > 0) {
+                     $scope.gridOptions.data=data.result.list;
                  }else {
                      Notification({message: '没有数据'}, 'warning');
                  }
+                 //分页
+                 $("#pagination_10").pagination({
+                     pageSizeOpt: [
+                         {'value': $scope.conditionP.total, 'text':'每页显示'+ $scope.conditionP.total+'条', 'selected': true},
+                     ],
+                     css: 'css-2',
+                     //data.result.count[0].totalCount 是从后台获取的总参数；
+                     //totalPage 是总共有多少页；
+                     totalPage: Math.ceil(data.result.count[0].totalCount/$scope.conditionP.total),// Math.ceil向上取整，
+                     callBack: function (currPage, pageSize) {
+                         $scope.conditionP.index=currPage; //传给后台$scope.conditionP.index的值；
+                         console.log('当前点击的页面:' + currPage + '     每页显示多少条:' + pageSize);
+                         $scope.dataAll();
+
+                     }
+                 });
              }
          });
      };
-     $scope.dataAll();
+        $scope.dataAll();
 
         //插入内容
         var searchData = {};  //查询的条件
         function InsertTable() {
-
             httpService.post("biaogeFolder","Biaoge","biaogeInsert",{condition: searchData}).then(function (data) {
-
                 if (data.success) { //请求成功
                     $scope.dataAll();
                 }
@@ -265,7 +279,7 @@ define([
         }
         $scope.reset = function () {  //点击重置
             reset();
-        }
+        };
 
 
     }]

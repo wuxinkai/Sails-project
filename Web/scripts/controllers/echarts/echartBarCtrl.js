@@ -17,7 +17,6 @@ define([
                 effect: 'whirling',
                 textStyle: {
                     fontSize: 20,
-
                 }
             },
             // 数据装载状态, false未加载,true已加载完毕

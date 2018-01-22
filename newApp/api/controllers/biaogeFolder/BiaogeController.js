@@ -12,6 +12,11 @@ function getBiaoge(params) {
 
   var defer = Q.defer(); //两个sql同时查询 返回到一个对象里
   //查询数据  分页查询sql
+                                        //     页码     每页显示几条
+                                       //     0*4 =0    4
+                                       //     1*4 =4    4
+                                       //     2*4 =8    4
+                                       //     3*4 =12   4
   var sql = "SELECT * FROM biaoge LIMIT "+(params.condition.index-1)*params.condition.total+","+params.condition.total;
   Biaoge.query(sql, [], function (err, data) {
     if (err) {

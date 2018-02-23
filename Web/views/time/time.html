@@ -1,9 +1,10 @@
 <style type="text/css">
-    .datetime{position: relative;}
-    .datetime .add-on{  position: absolute; right: 20px;top: 5px;}
+    .topDatetime .datetime{position: relative;}
+    .topDatetime .datetime .add-on{  position: absolute; right: 20px;top: 5px;}
+    table{background: #fff}
 </style>
 
-<div style="width: 800px;margin: 100px auto;">
+<div class="topDatetime" style="width: 800px;margin: 100px auto;">
     <div >
         <label class="col-md-2 control-label">开始时间:</label>
         <div id="startDate" class="col-md-4 marginBottom date datetime ">
@@ -16,6 +17,96 @@
         <div id="endDate" class="col-md-4 marginBottom date datetime ">
             <input class="form-control input-sm "  id="END_TIME" ng-model="condition.a8">
             <span class="add-on"><i class="fa fa-calendar " data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
+        </div>
+    </div>
+</div>
+<div class="">
+    <div class="col-md-12">
+        <div class="row-width row-spacing">
+            <button type="button" class="btn btn-primary " data-toggle="selectRange" data-target="#selectRange" ng-click="selectRange()">
+                请选择
+            </button>
+        </div>
+        <div class="row-width">
+            <table class="table table-bordered" style="margin-bottom: 0">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>巡检段落</th>
+                    <th>巡检开始时间</th>
+                    <th>巡检结束时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="insertTr">
+
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-danger  " ng-disabled="isClick" ng-click="submit()"><i class="glyphicon glyphicon-arrow-up"></i>&nbsp;提交</button>
+        <!--<span class=" pull-left mark"></span>-->
+    </div>
+</div>
+
+
+<div class="modal fade" id="selectRange" tabindex="-1" role="dialog"  data-backdrop=false aria-labelledby="myModalLabel" >
+    <div class="modal-dialog">
+        <div class="modal-content "style=" background: #eceff3;width: 630px;">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close closeColor" data-dismiss="modal" ></button>
+                <h4 class="modal-title">选择巡检范围</h4>
+            </div>
+            <div class="clearfix" style="margin: 15px;" >
+                <div  class="col-md-12" style="background: #fff;padding: 15px;">
+                    <div class="pull-left" style="width: 87%">
+                        <input type="text" class="form-control  input-sm " placeholder="请输入巡检段落" ng-model="PartName" style="height: 36px;line-height: 36px;">
+                    </div>
+                    <button class="btn btnBlue pull-left" style="margin-top: 1px;margin-left: 5px" ng-click="queryRange()">查询</button>
+                </div>
+                <div  class="col-md-12" style="background: #fff">
+                    <div class="tab-pane">
+                        <div  ui-i18n="{{lang}}">
+                            <div id="grid1"  ui-grid="gridOptions"  ui-grid-auto-resize ui-grid-resize-columns  ui-grid-pinning></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 " style="background: #fff;margin-bottom: 15px;">
+                    <div class="checkAll om-footer-div om-btns" style="margin-top: 5px">
+                        <div class="checkAll om-footer-div"   style="margin-right: 10px;">
+                            <input  type="checkbox" value="true" ng-model="checkAll" ng-click="checkClick()" >全选
+                        </div>
+                    </div>
+                    <div class="Pagination paginationBtn ">
+                        <ul>
+                            <li>
+                                <button class="btn btn-default" ng-click="pageChanged(0,false)">首页</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-default" ng-click="pageChanged(1,false)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-default" ng-click="pageChanged(2,false)">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                            </li>
+                            <li>
+                                <button class="btn btn-default" ng-click="pageChanged(3,false)">尾页</button>
+                            </li>
+                            <li>
+                                <input type="text" class="om-input-page ng-pristine ng-untouched ng-valid" ng-model="pageNum" ng-keyup="keyUp(page)" ng-blur="keyUp(page)">
+                            </li>
+                            <li>
+                                <button class="btn btn-default" ng-click="pageChanged(pageNum,true,page)">跳转</button>
+                            </li>
+                            <li>
+                                <span class="ng-binding">第 <span style="color: #72b4fd">{{pageIndex}}</span> 页／共<span class="ng-binding">{{NumOfPage}}</span>页</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div  style="text-align: right;margin-top: 20px;padding-bottom:15px " >
+                    <button class="btn btn-default" ng-click="modalCancle()">取消</button>
+                    <button class="btn btnBlue" ng-click="modalSubmit()">确定</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

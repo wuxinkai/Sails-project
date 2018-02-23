@@ -48,7 +48,7 @@
     }
   ]},
   {"Name":"谷歌地图","Url":"#/main/gis","Icon":"fa fa-users"},
-  {"Name":"bootstrap事件控件","Url":"#/main/time","Icon":"fa fa-users"},
+  {"Name":"时间控件和表格插入控件","Url":"#/main/time","Icon":"fa fa-users"},
   {"Name":"ui-bootstrap","Url":"#/main/uiBootstrap","Icon":"fa fa-users","Children":[
     {
       "Name": "手风琴",

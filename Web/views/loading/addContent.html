@@ -1,0 +1,70 @@
+<style type="text/css">
+    /*.fault-table-0 .table-condensed thead tr th,.table-condensed  tbody tr td{border-bottom: 1px solid #6b81ac !important;}*/
+    .as-table-alarmscroll td {text-align: center !important;}
+    .main-condition{padding: 0;border: 0;top: 50px;  right: -15px;}
+    .input-group-route-delete .glyphicon{
+        position: absolute;
+        right: -15px;
+        width: 30px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 99;
+    }
+    .markLine{margin: 15px;width: 18px;height: 3px;background: #e4ecf3;display: inline-block;}
+    .addUser{margin-left: 15px;width: 30px;height: 30px;border: none;margin-top: 2px;background: url("./imgs/add.png") no-repeat;display: inline-block; cursor: pointer}
+    .input-group-route{
+        width: 33.333333333%;float:left;margin-bottom: 10px;height: 34px;
+    }
+    .input-group-route-delete{
+        position: relative;
+        /*padding-left:0 ;*/
+        /*padding-right:20px ;*/
+    }
+    .input-group-route-delete-line{
+        padding-left: 0;
+    }
+    .input-group-route-add{
+        width: 50px;
+    }
+    .input-group-route-delete-A{
+        height: 34px;
+        border: 1px solid #cfdbe6;
+        line-height: 34px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .input-group-route-delete-parent>.input-group-route-delete{
+        padding-right: 0;
+    }
+    .input-group-route-delete-parent>.col-sm-2{
+        padding-left: 0;
+    }
+</style>
+
+<div style="width: 80%">
+    <div class="row mt-15" >
+        <div  class="col-sm-10" style="padding: 0;min-height: 300px;">
+            <div class="input-group-route input-group-route-delete-parent">
+                <div  class="input-group-route-delete col-sm-10">
+                    <div class="input-group-route-delete-A">A</div>
+                </div>
+                <div  class="input-group-route-delete col-sm-2">
+                    <div class=" pull-left markLine markdist"></div>
+                </div>
+            </div>
+            <div id="inputRoute">
+                <!--新增详情路由盒子-->
+            </div>
+            <div class="input-group-route input-group-route-delete-parent">
+                <div  class="input-group-route-delete col-sm-10">
+                    <div class="input-group-route-delete-A">Z</div>
+                </div>
+            </div>
+            <div class="input-group-route input-group-route-add" ng-show="isFirstAdd">
+                <span ng-click="addSelect(1)" class="addUser pull-left inputGroupRouteClick"></span>
+            </div>
+        </div>
+    </div>
+</div>

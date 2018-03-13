@@ -166,6 +166,11 @@
         "Name": "loading加载",
         "Icon": "fa fa-users",
         "Url":"#/main/loading"
+      },
+      {
+        "Name": "增加选择内容",
+        "Icon": "fa fa-users",
+        "Url":"#/main/addContent"
       }
     ]
   },

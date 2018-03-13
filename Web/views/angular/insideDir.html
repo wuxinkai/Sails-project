@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<style type="text/css">
+    .addUser{    border: none;
+        margin-left: 15px;
+        width: 30px;
+        height: 30px;
+        background: url(./imgs/add.png) no-repeat;
+        display: inline-block;
+        cursor: pointer;}
+</style>
 
-</body>
-</html>
+<div class="container">
+    <input-received-dirt   label-model="label" title-model="roleName" model="operator" roie-id="roleId"></input-received-dirt>
+</div>
+
+<div style="font-size: 18px">{{ReceiverData}}</div>
+<button class="btn  btn-default" ng-click="btn()">打印内容</button>

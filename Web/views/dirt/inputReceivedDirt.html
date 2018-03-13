@@ -1,0 +1,50 @@
+<div>
+    <div class="row-spacing" style="overflow: hidden">
+        <label class="col-md-2 col-lg-1 control-label" >{{labelModel}}:</label>
+        <div class="col-md-9 col-lg-10" >
+           <div class="form-control">
+               <span class="add-text">{{cheRoleObj.org_name}}</span>
+               <span class="add-text">{{cheRoleObj.REAL_NAME}}</span>
+               <span class="add-text">{{cheRoleObj.MOBILE}}</span>
+           </div>
+        </div>
+        <button class="addUser pull-left" data-toggle="modal" data-target="#model" style="margin-top: 1px;margin-left:0" ng-disabled="selectRole" ng-click="reLoadData()"></button>
+        <span class=" pull-left mark" ></span>
+    </div>
+    <div class="modal fade " id="model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog myAdd">
+            <div class="modal-content ">
+                <div class="modal-header modalHeader">
+                    <button type="button" class="close closeColor" data-dismiss="modal"></button>
+                    <h4 class="modal-title">选择接单人</h4>
+                </div>
+                <div class="white modal-body modal-bg">
+                    <div class="">
+                        <div class="radios-s">{{titleModel}}</div>
+                        <div style="background-color: #f5f8fb;height: 36px;line-height: 36px;margin-bottom: 5px;margin-top:5px;">
+                            <input type="text" class="form-control" autocomplete="off" placeholder="请输入搜索内容" style="width:100%;height:34px;line-height:34px;" ng-change="changeText(peopleText)" ng-model="peopleText">
+                        </div>
+                        <ul class="list-group mb pd w220">
+                            <li ng-repeat="dl in dataList" class="radio-group-item">
+                                <div class="radio radios-radio">
+                                    <label class="radioTop nowrap ellipsis">
+                                        <input type="radio"  name="optionsRadios1" ng-click="checkRole(dl)" >
+                                        <span>{{dl.org_name}}</span>&nbsp;&nbsp;
+                                        <span>{{dl.REAL_NAME}}</span>&nbsp;&nbsp;
+                                        <span>{{dl.MOBILE}}</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div style="text-align: right">
+                            <button class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button ng-click="sureContent()" data-dismiss="modal" class="btn btn-default btnBlue">确定</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

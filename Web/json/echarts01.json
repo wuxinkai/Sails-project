@@ -1,0 +1,38 @@
+[
+  {
+    "PROVINCE_ID": 102,
+    "PROVINCE_NAME": "上海市",
+    "ressonCount1": 0,
+    "ressonCount2": 10,
+    "ressonCount3": 30,
+    "ressonCount4": 50,
+    "ressonCount5": 60,
+    "ressonCount6": 30,
+    "ressonCount7": 20,
+    "ressonCount8": 90
+  },
+  {
+    "PROVINCE_ID": 126,
+    "PROVINCE_NAME": "四川省",
+    "ressonCount1": 17,
+    "ressonCount2": 30,
+    "ressonCount3": 40,
+    "ressonCount4": 40,
+    "ressonCount5": 30,
+    "ressonCount6": 80,
+    "ressonCount7": 30,
+    "ressonCount8": 60
+  }
+  ,{
+  "PROVINCE_ID": 127,
+  "PROVINCE_NAME": "河北",
+  "ressonCount1": 37,
+  "ressonCount2": 50,
+  "ressonCount3": 60,
+  "ressonCount4": 40,
+  "ressonCount5": 80,
+  "ressonCount6": 80,
+  "ressonCount7": 20,
+  "ressonCount8": 60
+}
+]

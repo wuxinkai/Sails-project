@@ -12,6 +12,11 @@
       "Url":"#/main/echartBar"
     },
     {
+      "Name": "柱状图",
+      "Icon": "fa fa-users",
+      "Url":"#/main/echartManyBar"
+    },
+    {
       "Name": "散点图",
       "Icon": "fa fa-users",
       "Url":"#/main/echartScatter"

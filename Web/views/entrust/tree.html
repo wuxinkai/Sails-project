@@ -1,0 +1,18 @@
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <h3>{{TO_1}}{{TO_2}}</h3>
+        <button class="btn btn-danger" ng-click="getAllUserList()" ng-disabled="canUse">确定</button>
+        <div class=" leftHeight "  style="overflow-y: scroll;margin-top: 4px;padding:1px 0;height: 300px;">
+            <ul id="tree2" class="ztree " style="padding-left: 15px;"></ul>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <button class="btn btn-danger" ng-click="zTreeCheck()" >确定</button>
+        <h2>{{ProvinceID}} --- {{ProvinceName}}</h2>
+        <div class=" leftHeight "  style="overflow-y: scroll;margin-top: 4px;padding:1px 0;">
+            <ul id="tree" class="ztree " style="padding-left: 15px;"></ul>
+        </div>
+    </div>
+</div>

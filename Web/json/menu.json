@@ -1,5 +1,5 @@
 [
-  {"Name":"uiGrid表格和弹出确认框框","Url":"#/main/uiGrid","Icon":"fa fa-users"},
+  {"Name":"uiGrid表格和弹出确认框框","Url":"#/main/uiGrid","Icon":"fa fa-users","Children":null},
   {"Name":"ECHARTS图","Url":"#","Icon":"fa fa-users","Children":[
     {
       "Name": "折线图",
@@ -176,6 +176,11 @@
         "Name": "增加选择内容",
         "Icon": "fa fa-users",
         "Url":"#/main/addContent"
+      },
+      {
+        "Name": "树插件",
+        "Icon": "fa fa-users",
+        "Url":"#/main/tree"
       }
     ]
   },

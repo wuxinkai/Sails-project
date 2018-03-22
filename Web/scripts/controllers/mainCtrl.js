@@ -77,12 +77,44 @@ define(['cookie', //jquery cookie存储
         var mb = myBrowser();
 
 //请求的左侧菜单 此方法是异步的，所以会后面加载
+//        {"Name":"uiGrid表格和弹出确认框框","Url":"#/main/uiGrid","Icon":"fa fa-users"},
+
         $http({
             url: 'json/menu.json',
             method: 'GET',
             contentType: "application/json; charset=utf-8"
         }).success(function (data, header, config, status) {
-            $scope.userlists=data
+            $scope.userlists=data;
+        //通过菜单配置动态路径
+            if (data.length > 0) {
+
+                initialMenu($scope.userlists); //在这一行的时候把url路径处理了
+                $scope.menuChildren = $scope.userlists[0].Children
+                $scope.menuUrl = $scope.userlists[0].Url.split("main/");  //获取菜单内的路径，把菜单内的路径给url
+
+                var newUrl=window.location.href;
+                $scope.menuPath = newUrl.split("main");
+                $scope.curPath = newUrl.split("main/");
+                if( $scope.menuPath[1] == ""){ //第一次进来看看是不是 有路径
+                    if( $scope.menuUrl !="javascript:;" && $scope.menuUrl !="#" &&$scope.menuUrl !=undefined) { //判断当前有没有子菜单，这里是没有的
+                        $state.go('main.'+$scope.menuUrl[1], {neid: null});
+                    }else {
+                        //有子菜单的
+                        $state.go('main.welcome');
+                    }
+                }else {//页面刷新执行的方法
+                    $state.go('main.'+$scope.curPath[1]);
+                }
+
+            }
+            else
+            {
+                $state.go('main.welcome');
+            }
+
+
+
+
         }).error(function (data, header, config, status) {
             //处理响应失败
         });
@@ -112,13 +144,6 @@ define(['cookie', //jquery cookie存储
             if (menuList != null && menuList.length > 0) {
                 for (var i = 0; i < menuList.length; i++) {
                     var item = menuList[i];
-                    if(item.Url!=null) {
-                        var urlTow = item.Url.split("/");
-                        var pathUrl = urlTow[urlTow.length - 1];
-                        if (pathUrl == 'topology') {
-                            $scope.count++;
-                        }
-                    }
                     if ("Chrome" == mb) {
                         if (item.Url == '#' || item.Url == '' || item.Url == null) {
                             item.Url = 'javascript:;';

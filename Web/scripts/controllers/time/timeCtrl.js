@@ -168,6 +168,7 @@ define([
 
 //（二）点击确定
         $scope.modalSubmit = function () {
+
             $scope.filterList = $scope.gridOptions.data.filter(function (item, index, arr) {
                 return item.ISCHECKED == true; //获取的是item.ISCHECKED的数据
             });
@@ -290,5 +291,11 @@ define([
                 item.ISCHECKED = $scope.checkAll;
             });
         };
+        
+        
+//打印内容
+//         $scope.submit=function () {
+//
+//         }
     }];
 })

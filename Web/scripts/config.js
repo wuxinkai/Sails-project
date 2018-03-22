@@ -13,7 +13,8 @@
 
     tescomm.config.app = {
         Id:'InMonitor',
-        IndexHref:'main.uiGrid'
+        // IndexHref:'main.uiGrid'
+        IndexHref:'main'
     }
 
     window.tescomm = tescomm;

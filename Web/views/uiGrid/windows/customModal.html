@@ -2,6 +2,7 @@
     .so{padding: 15px}
     .so li{list-style: none;height: 28px;line-height: 28px;}
     .so li label{width: 100%;}
+    .curren{ background: #E9EEF3;color: #f60}
 </style>
 <div id="window-title" class="modal-header">
     订制可见项
@@ -11,7 +12,7 @@
     <div class="container-fluid">
         <div class="row">
             <ul class="so">
-                <li class="clearfix"  ng-repeat="a in dataModel">
+                <li class="clearfix"  ng-repeat="a in dataModel" ng-class="{'curren':!a.visible}">
                     <label> <span class="pull-left">{{a.name}}</span><input ng-disabled="$first"  class="pull-right" type="checkbox" ng-model="a.visible"> </label>
                 </li>
             </ul>

@@ -1,0 +1,24 @@
+<style>
+    .so{padding: 15px}
+    .so li{list-style: none;height: 28px;line-height: 28px;}
+    .so li label{width: 100%;}
+</style>
+<div id="window-title" class="modal-header">
+    订制可见项
+    <div class="detail-close pull-right" ng-click="cancel()"><i class="fa fa-times"></i></div>
+</div>
+<div id="window-body" class="modal-body">
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="so">
+                <li class="clearfix"  ng-repeat="a in dataModel">
+                    <label> <span class="pull-left">{{a.name}}</span><input ng-disabled="$first"  class="pull-right" type="checkbox" ng-model="a.visible"> </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal-footer" style="text-align:center">
+    <button class="btn btn-danger" ng-click="ok()">保存</button>
+    <button class="btn btn-default btn-rounded" ng-click="cancel()">取消</button>
+</div>

@@ -1,5 +1,6 @@
 [
   {"Name":"uiGrid表格和弹出确认框框","Url":"#/main/uiGrid","Icon":"fa fa-users","Children":null},
+  {"Name":"uiGrid表格","Url":"#/main/uiGridIn","Icon":"fa fa-users","Children":null},
   {"Name":"ECHARTS图","Url":"#","Icon":"fa fa-users","Children":[
     {
       "Name": "折线图",
@@ -156,6 +157,11 @@
       "Name": "常用案例",
       "Icon": "fa fa-users",
       "Url":"#/main/angularCommon"
+    },
+    {
+      "Name": "循环表格",
+      "Icon": "fa fa-users",
+      "Url":"#/main/angularRepeat"
     }
   ]},
   {"Name":"常用组件",

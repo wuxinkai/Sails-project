@@ -1,0 +1,31 @@
+<div style="width: 60%;margin: 100px auto">
+    <div ng-repeat="item in formData"
+         ng-if="item.field !== 'MATERIAL_CODE'&& item.field !== 'MATERIAL_SPECIFICATION' && item.field !== 'HOUSE_ID' && item.field !== 'HOUSE_NAME'
+                          && item.field != 'DEVICE_IMAGE' && item.field !== 'SITE_TYPE'">
+        <label class="col-md-2  control-label" style="white-space: nowrap">{{item.name}}：</label>
+        <div class="col-md-4" style="margin-bottom:10px">
+            <input type="text"
+                   class="form-control  input-sm"
+                   ng-model="item.value"
+                   ng-if="item.formType === 'input' && item.field != 'SLOT_INFO'"
+                   ng-disabled="item.field === 'CREATE_USER'|| item.field === 'UPDATE_USER' || item.field== 'LENGTH_UNIT'"
+                   ng-change="inputChange(item)"/>
+            <select class="form-control input-sm"
+                    ng-if="item.formType === 'select'"
+                    ng-options="obj as obj.name for obj in item.selectOptions"
+                    ng-disabled="(item.field === 'PROJ_TYPE' && currentProjType == '1')|| item.field === 'MATERIAL_STATUS'|| item.field === 'STATUS'"
+                    ng-model="item.value"
+            ></select>
+            <input type="date"
+                   class="form-control  input-sm editInputData"
+                   ng-model="item.value"
+                   ng-if="item.formType === 'datetime'&& item.field !== 'CREATEDAT' && item.field !== 'UPDATEDAT'"
+                   disabled/>
+            <input type="date"
+                   class="form-control  input-sm"
+                   ng-model="item.value"
+                   ng-disabled="item.field === 'CREATEDAT'|| item.field === 'UPDATEDAT'"
+                   ng-if="item.formType === 'datetime'"/>
+        </div>
+    </div>
+</div>

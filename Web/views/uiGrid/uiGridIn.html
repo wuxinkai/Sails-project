@@ -1,0 +1,92 @@
+
+    <style type="text/css">
+
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+        ::-webkit-scrollbar
+        {
+            width: 10px;
+            height: 10px;
+            background-color: #F5F5F5;
+        }
+
+        /*定义滚动条轨道 内阴影+圆角*/
+        ::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+
+        /*定义滑块 内阴影+圆角*/
+        ::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #555;
+        }
+
+        .ui-grid-cell-contents{outline: none !important}
+        /*表头样式*/
+        .headerAdd{padding: 3px 0;background:#34495e; color:#fff;font-weight: normal;}
+        /*头部边线*/
+        .ui-grid-header-cell{border-right:0 }
+        /*body行高*/
+        .bodyBluy{background: #fff !important; color: red;border-bottom:1px solid #E9EEF3; height: 36px !important;line-height: 28px !important;border-right:0 !important; }
+
+        /*头部点击样式*/
+        .ui-grid-header{border-bottom: none}
+        /*鼠标移入样式*/
+        .your-hover-class {  color: #333;  background: #E9EEF3 !important;  }
+        .ruleStatus3{color:blue}
+
+
+
+        /*自适应 高度*/
+        .gridHeight, .gridHeight  .ui-grid-render-container-body .ui-grid-viewport{height: auto !important}
+
+    </style>
+
+    <div  ui-i18n="{{lang}}">
+        <div id="grid1"  data-ng-init="windowSize()" ui-grid="gridOptions" class="grid" ui-grid-resize-columns ui-grid-move-columns  ui-grid-auto-resize ui-grid-pinning></div>
+    </div>
+
+
+    <div class="col-md-12 om-footer">
+        <div class="checkAll om-footer-div">
+            <input type="checkbox" ng-model="checkAll" class="ng-pristine ng-untouched ng-valid" ng-click="CheckAll()">全选
+        </div>
+        <div class="om-footer-div om-btns">
+            <button class="btn btn-default" ng-click="export()" ><span class="glyphicon glyphicon-export" aria-hidden="true"> </span>导出</button>
+            <button class="btn btn-default" ng-click="leadingIn()" ><span class="glyphicon glyphicon glyphicon-import" aria-hidden="true"> </span>导入</button>
+            <button class="btn btn-default" ng-click="btnDownloadCG()"><span class="glyphicon glyphicon-save" aria-hidden="true"> </span>下载模板</button>
+            <button class="btn btn-default btnBlue" ng-click="add()"><span class="glyphicon glyphicon-plus" aria-hidden="true"> </span>新增用户</button>
+            <button class="btn btn-default btnBlue" ng-click="customs()"><span class="glyphicon glyphicon-plus" aria-hidden="true"> </span>定制可见列</button>
+        </div>
+        <div class="Pagination">
+            <ul>
+                <li>
+                    <button class="btn btn-default" ng-click="shadoweClick(1)">首页</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" ng-click="prevClick()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>上一页</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" ng-click="nextClick()">下一页<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                </li>
+                <li>
+                    <button class="btn btn-default" ng-click="shadoweClick(Allcount)">尾页</button>
+                </li>
+                <li>
+                    <input type="text" class="om-input-page ng-pristine ng-untouched ng-valid" ng-model="inputCurrentPage">
+                </li>
+                <li>
+                    <button class="btn btn-default" ng-click="skipClick()">跳转</button>
+                </li>
+                <li>
+                    <span class="ng-binding">第 <span style="color: #72b4fd">{{prossingData.currentPage}}</span> 页／共<span class="ng-binding">{{Allcount}}</span>页</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+

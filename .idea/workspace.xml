@@ -2,6 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa30686a-dd98-4b89-9cf3-d88af8f7441f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/controllers/entrust/charactersCtrl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/directives/angularUiSwitch.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Web/scripts/requireHelper/truncate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Web/views/entrust/characters.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Web/imgs/loading.gif" afterPath="$PROJECT_DIR$/Web/imgs/loading.gif" />
+      <change beforePath="$PROJECT_DIR$/Web/json/menu.json" afterPath="$PROJECT_DIR$/Web/json/menu.json" />
+      <change beforePath="$PROJECT_DIR$/Web/scripts/app.js" afterPath="$PROJECT_DIR$/Web/scripts/app.js" />
+      <change beforePath="$PROJECT_DIR$/Web/scripts/controllers/time/timeCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/time/timeCtrl.js" />
+      <change beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
+      <change beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js" />
+      <change beforePath="$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js" afterPath="$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js" />
+      <change beforePath="$PROJECT_DIR$/Web/views/time/time.html" afterPath="$PROJECT_DIR$/Web/views/time/time.html" />
+      <change beforePath="$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html" afterPath="$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html" />
+      <change beforePath="$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html" afterPath="$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html" />
       <change beforePath="$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html" afterPath="$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,12 +31,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/index.html">
+      <file leaf-file-name="time.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/views/time/time.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="430">
+              <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/time/timeCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="301" column="87" lean-forward="false" selection-start-line="301" selection-start-column="87" selection-end-line="301" selection-end-column="87" />
+              <folding>
+                <element signature="e#9773#9781#0" expanded="false" />
+                <element signature="e#9821#9858#0" expanded="false" />
+                <element signature="e#9904#9952#0" expanded="false" />
+                <element signature="e#10003#10059#0" expanded="false" />
+                <element signature="e#10118#11551#0" expanded="false" />
+                <element signature="e#11595#11793#0" expanded="false" />
+                <element signature="e#11841#11992#0" expanded="false" />
+                <marker date="1525249450056" expanded="true" signature="7920:7931" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="7959:7976" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8028:8038" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8164:8228" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8312:8338" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8414:8454" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8521:8531" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8654:8718" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8800:8826" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="8902:8942" ph="..." />
+                <marker date="1525249450056" expanded="true" signature="9008:9030" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,83 +76,29 @@
       <file leaf-file-name="menu.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            <state relative-caret-position="5211">
+              <caret line="193" column="32" lean-forward="false" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uiGrid.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGrid.html">
+      <file leaf-file-name="characters.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/views/entrust/characters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="72" lean-forward="true" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
-              <folding>
-                <element signature="n#div#1;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="683">
+              <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="41" />
+            <state relative-caret-position="-2170">
+              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uiGridIn.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="38" column="62" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uiGridInCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customModalCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customModal.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,8 +108,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -134,6 +127,21 @@
       <find>n.min.css</find>
       <find>uiGrid</find>
       <find>console.log( $scope.gridApi)</find>
+      <find>modal-header</find>
+      <find>getParlListByName</find>
+      <find>PartName</find>
+      <find>PREPARATION</find>
+      <find>startValue</find>
+      <find>a in dataModel</find>
+      <find>setTimeout</find>
+      <find>initDate</find>
+      <find>tree</find>
+      <find>submit</find>
+      <find>m dolor sit amet, cons</find>
+      <find>startDate</find>
+      <find>taskReList</find>
+      <find>filterList</find>
+      <find>PART_NAME</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,13 +151,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Web/views/uiGrid/uiGrid.html" />
-        <option value="$PROJECT_DIR$/Web/views/time/time.html" />
-        <option value="$PROJECT_DIR$/Web/scripts/app.js" />
-        <option value="$PROJECT_DIR$/Web/json/menu.json" />
-        <option value="$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html" />
+        <option value="$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html" />
         <option value="$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js" />
         <option value="$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js" />
-        <option value="$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html" />
+        <option value="$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html" />
+        <option value="$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html" />
+        <option value="$PROJECT_DIR$/Web/scripts/directives/angularUiSwitch.js" />
+        <option value="$PROJECT_DIR$/Web/views/time/time.html" />
+        <option value="$PROJECT_DIR$/Web/json/menu.json" />
+        <option value="$PROJECT_DIR$/Web/scripts/app.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/entrust/charactersCtrl.js" />
+        <option value="$PROJECT_DIR$/Web/views/entrust/characters.html" />
+        <option value="$PROJECT_DIR$/Web/scripts/controllers/time/timeCtrl.js" />
       </list>
     </option>
   </component>
@@ -165,9 +179,10 @@
     <handled-path value="$PROJECT_DIR$/newApp/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="810" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -184,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -201,22 +217,13 @@
               <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="bower_components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="uiGrid" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
@@ -224,35 +231,11 @@
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="uiGrid" type="462c0819:PsiDirectoryNode" />
-              <item name="windows" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="uiGrid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sails-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sails-project" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="uiGrid" type="462c0819:PsiDirectoryNode" />
-              <item name="windows" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,6 +246,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A学习盘\Sails-project\Web\scripts\requireHelper" />
+      <recent name="D:\A学习盘\Sails-project\Web\imgs" />
       <recent name="D:\A学习盘\Sails-project\Web\json" />
     </key>
   </component>
@@ -293,18 +278,19 @@
       <updated>1522136609634</updated>
       <workItem from="1522136610920" duration="1223000" />
       <workItem from="1522140716308" duration="1082000" />
-      <workItem from="1523860769189" duration="4072000" />
+      <workItem from="1523860769189" duration="4130000" />
+      <workItem from="1524792159434" duration="13014000" />
+      <workItem from="1525245586781" duration="3798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6377000" />
+    <option name="totallyTimeSpent" value="23247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13900635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23044397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -334,6 +320,107 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Web/views/time/time.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5211">
+          <caret line="193" column="32" lean-forward="false" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/entrust/characters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGrid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="72" lean-forward="true" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" column="62" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -346,9 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -357,7 +441,8 @@
         <state relative-caret-position="189">
           <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -366,7 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -374,7 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2025">
           <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -390,9 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4185">
           <caret line="155" column="97" lean-forward="false" selection-start-line="155" selection-start-column="87" selection-end-line="155" selection-end-column="97" />
-          <folding>
-            <element signature="n#div#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -400,7 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,108 +487,224 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2025">
           <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/time/time.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
+        <state relative-caret-position="2025">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/json/a.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/json/a.json" />
     <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="177" column="161" lean-forward="false" selection-start-line="177" selection-start-column="139" selection-end-line="177" selection-end-column="161" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGrid.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
-          <caret line="3" column="72" lean-forward="true" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
-          <folding>
-            <element signature="n#div#1;n#!!top" expanded="false" />
-          </folding>
+          <caret line="3" column="72" lean-forward="false" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="145" lean-forward="false" selection-start-line="15" selection-start-column="136" selection-end-line="15" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/views/uiBootstrap/buttons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/directives/23PanelDirt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="220" column="53" lean-forward="false" selection-start-line="220" selection-start-column="53" selection-end-line="220" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/directives/angularUiSwitch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/assembly/assemblyCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularHttpsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/angular/angularAPICtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/ajax/ajaxCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/typeaheadCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/uiBootstrapCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newApp/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-976">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/json/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5211">
+          <caret line="193" column="32" lean-forward="false" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/requireHelper/truncate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
-          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="41" />
+          <caret line="203" column="78" lean-forward="false" selection-start-line="203" selection-start-column="64" selection-end-line="203" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/entrust/charactersCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiBootstrap/buttonsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/uiGridIn.html">
+    <entry file="file://$PROJECT_DIR$/Web/views/entrust/characters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="62" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="62" />
+        <state relative-caret-position="683">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/uiGridInCtrl.js">
+    <entry file="file://$PROJECT_DIR$/Web/views/time/time.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/uiGrid/windows/customModalCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/views/uiGrid/windows/customModal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="430">
+          <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2170">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/scripts/controllers/time/timeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="301" column="87" lean-forward="false" selection-start-line="301" selection-start-column="87" selection-end-line="301" selection-end-column="87" />
+          <folding>
+            <element signature="e#9773#9781#0" expanded="false" />
+            <element signature="e#9821#9858#0" expanded="false" />
+            <element signature="e#9904#9952#0" expanded="false" />
+            <element signature="e#10003#10059#0" expanded="false" />
+            <element signature="e#10118#11551#0" expanded="false" />
+            <element signature="e#11595#11793#0" expanded="false" />
+            <element signature="e#11841#11992#0" expanded="false" />
+            <marker date="1525249450056" expanded="true" signature="7920:7931" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="7959:7976" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8028:8038" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8164:8228" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8312:8338" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8414:8454" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8521:8531" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8654:8718" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8800:8826" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="8902:8942" ph="..." />
+            <marker date="1525249450056" expanded="true" signature="9008:9030" ph="..." />
           </folding>
         </state>
       </provider>

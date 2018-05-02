@@ -1,5 +1,4 @@
 define([
-
     'ngload!ui-notification',
     'ngload!ui.bootstrap',
 ], function () {
@@ -15,6 +14,12 @@ define([
             $scope.cancel = function () {
                 $uibModalInstance.dismiss('cancel');
             };
-
+//全选
+            $scope.menuCheckbox=true
+            $scope.menuClick = function () {
+                for (var i = 0; i <  $scope.dataModel.length; i++) {
+                    $scope.dataModel[i].visible = $scope.menuCheckbox;
+                }
+            }
         }]
 })

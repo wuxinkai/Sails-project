@@ -1,0 +1,40 @@
+<div class="container">
+
+    <h2>Angular Truncate Demo</h2>
+
+    <div class="hero-unit">
+        <h4>Example Text</h4>
+        <textarea ng-model="text" rows="3" placeholder="Enter test text"></textarea>
+        <br><br>
+        <strong>Truncate by characters（截断的字符）</strong>
+        <label>个数:<input ng-model="numChars" type="number"/></label>
+        <label>空白符算不算 <input type="checkbox" ng-model="breakOnWord"/></label>
+
+        <h4>Output</h4>
+
+        <div class="well text-info">
+            <p>
+                <!--numChars个数  空白符算不算：true或者false breakOnWord-->
+                {{ text | characters:numChars : breakOnWord }}
+            </p>
+        </div>
+
+        <h4>Code</h4>
+        <pre>characters 限制多少字数；false:不删除空白符，true是删除空白符</pre>
+        <pre>{<span></span>{ text | characters:{{ numChars }}: {{ breakOnWord }}<span></span>}</pre>
+    </div>
+    <div class="hero-unit">
+        <strong>以单词为单位</strong>
+        <label>Number of words:
+            <input ng-model="numWords" type="number"/>
+        </label>
+        <h4>Code</h4>
+        <pre>{<span></span>{ text | words:{{ numWords }}:ignoreSpaces }<span></span>}</pre>
+        <h4>Output</h4>
+
+        <div class="well text-info">
+            <p>{{ text | words:numWords }}</p>
+        </div>
+    </div>
+
+</div>

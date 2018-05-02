@@ -187,6 +187,11 @@
         "Name": "树插件",
         "Icon": "fa fa-users",
         "Url":"#/main/tree"
+      },
+      {
+        "Name": "省略字符",
+        "Icon": "fa fa-users",
+        "Url":"#/main/characters"
       }
     ]
   },

@@ -46,7 +46,13 @@
 
     </style>
 
-    <div  ui-i18n="{{lang}}">
+    <div  ui-i18n="{{lang}}" style="position: relative">
+        <div  ng-hide="showLoading" style="width: 100%; height: 100%; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1030;">
+            <div style="width: 100%; height: 100%; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: #000; opacity: 0.5;"></div>
+            <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; width: 66px; height: 66px;margin:auto;">
+                <img src="./imgs/loading.gif" alt="加载中" />
+            </div>
+        </div>
         <div id="grid1"  data-ng-init="windowSize()" ui-grid="gridOptions" class="grid" ui-grid-resize-columns ui-grid-move-columns  ui-grid-auto-resize ui-grid-pinning></div>
     </div>
 

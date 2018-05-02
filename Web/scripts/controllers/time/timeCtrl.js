@@ -51,7 +51,7 @@ define([
                 maxView: 2,
                 autoclose: true
             });
-        }
+        };
 
         $scope.checkStatus = false; //默认不是全选
         //分页JSON
@@ -220,7 +220,7 @@ define([
 
 //查询
     $scope.queryRange=function () {
-        $scope.getParlListByName();
+
     };
 //清空查询
     $scope.empty = function () {
@@ -291,11 +291,17 @@ define([
                 item.ISCHECKED = $scope.checkAll;
             });
         };
-        
-        
+
+
+
+
 //打印内容
-//         $scope.submit=function () {
-//
-//         }
+        $scope.submit=function () {
+            for (var i=0; i<$scope.taskReList.length;i++){
+                $scope.taskReList[i].START_TIME =  $('#startDate'+(i+1)+' .startValue').val();
+                $scope.taskReList[i].END_TIME =  $('#endDate'+(i+1)+' .endValue').val()
+            }
+            console.log( $scope.taskReList)
+        }
     }];
 })

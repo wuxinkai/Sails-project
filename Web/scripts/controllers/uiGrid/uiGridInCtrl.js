@@ -216,32 +216,41 @@ define([
 
         $scope.getData=function(){
             $http.get('./json/uiGriddata.json').then(function onSuccess(response) {
-//一共多少条数据
-                $scope.totalCount = response.data.data.data.length;
+
+                if (response != null && response.data.data.data.length > 0) {
+                    $scope.showLoading = true;//隐藏加载条页面
+                    //一共多少条数据
+                    $scope.totalCount = response.data.data.data.length;
 //显示多少页
-                $scope.Allcount =($scope.totalCount % $scope.pageSize==0) ? $scope.totalCount/$scope.pageSize : parseInt($scope.totalCount/$scope.pageSize)+1;
+                    $scope.Allcount =($scope.totalCount % $scope.pageSize==0) ? $scope.totalCount/$scope.pageSize : parseInt($scope.totalCount/$scope.pageSize)+1;
 //当前是第几页
-                $scope.prossingData.currentPage =  $scope.page;
+                    $scope.prossingData.currentPage =  $scope.page;
 //点击下一页
-                $scope.gridOptions.data = response.data.data.data;
+                    $scope.gridOptions.data = response.data.data.data;
 
 
 //获取编号  底部模板求和  不过的  注释 $scope.gridOptions.appScopeProvider 这一行 否则出不来内容
-                var all=0;
-                var all2=0;
-                $scope.gridOptions.data.forEach(function (item, index, attr) {
-                    item.INDEX=index+1;
+                    var all=0;
+                    var all2=0;
+                    $scope.gridOptions.data.forEach(function (item, index, attr) {
+                        item.INDEX=index+1;
 
-                    all=Number(item.SOURCE_HOUSE_ID)+all;
-                    all2=Number(item.USER_ID)+all2;
-                });
-                $scope.number= all; //求和
-                $scope.ALL_ADDED_TAX= all2; //求和
+                        all=Number(item.SOURCE_HOUSE_ID)+all;
+                        all2=Number(item.USER_ID)+all2;
+                    });
+                    $scope.number= all; //求和
+                    $scope.ALL_ADDED_TAX= all2; //求和
+                }
+
+
 //
 // 统计总数保留两位
             });
         }
-        $scope.getData();
+        // $scope.getData();
+
+
+        setTimeout(function(){ $scope.getData(); }, 3000);
 
 //全选
         $scope.CheckAll=function(){

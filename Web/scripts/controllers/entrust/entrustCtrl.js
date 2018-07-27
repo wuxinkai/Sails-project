@@ -39,5 +39,23 @@ define([
                 }
             });
         });
+
+
+
+
+    //    事件委托执行的事件
+        $('body').click(function (event) {
+
+            var target = event.target;
+            if(target.className == "look-content-one ng-scope" || target.nodeName == "nodeName" ||target.id == "lists"){
+                $('.look-info').css('display','block')
+            }else {
+                $('.look-info').css('display','none');
+            }
+        });
+        //点击下拉元素 让下来不关闭
+        $('.look-info').click(function (event) {
+            event.stopPropagation();
+        })
     }];
 });

@@ -169,7 +169,7 @@
     "Icon":"fa fa-users",
     "Children":[
       {
-      "Name": "模糊搜索",
+      "Name": "模糊搜索和事件委托",
       "Icon": "fa fa-users",
       "Url":"#/main/vague"
     },
@@ -244,5 +244,6 @@
     }
   ]},
   {"Name":"页面外结构","Url":"#/main/bracket","Icon":"fa fa-users"},
-  {"Name":"图片上传插件","Url":"#/main/uploader","Icon":"fa fa-users"}
+  {"Name":"图片上传插件","Url":"#/main/uploader","Icon":"fa fa-users"},
+  {"Name":"angular显示全部","Url":"#/main/tooltips","Icon":"fa fa-users"}
 ]

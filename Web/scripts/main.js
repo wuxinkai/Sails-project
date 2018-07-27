@@ -19,6 +19,12 @@ require.config({
             location: 'bower_components/echarts/build/dist',
             main: 'bower_components',
             lib: '.'
+        },
+        {
+            name: 'echarts3',
+            location: 'bower_components/echartsCommon',
+            main: 'bower_components',
+            lib: '.'
         }
     ],
 
@@ -70,6 +76,7 @@ require.config({
         // "daterangepicker":"bower_components/daterangepicker/lib/daterangepicker/daterangepicker",
         "bootstrap-multiselect":"bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect",
         "angular-breadcrumb":"bower_components/angular-breadcrumb/dist/angular-breadcrumb",
+
 
 
     },

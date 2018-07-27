@@ -34,7 +34,7 @@ define([
         function IniTree() {
             var t = $("#tree2");  //11111111111111通过id 获取内容
             t = $.fn.zTree.init(t, setting2, zNodes);
-            t.expandAll(true);
+            t.expandAll(true); //是否展开页面
         };
         //图标
         function showIconForTree(treeId, treeNode) {
@@ -45,15 +45,17 @@ define([
 
         function GetTree2(data) {
             $.each(data, function (index, value) {
+
                 var node = {
-                    "pId": value.Pid,
+                    "pId": value.Pid, //修改成和插件相对应的名字
                     "id": value.Id,
                     "org_no": value.Org_No,
-                    "name": value.Org_Name,
+                    "name": value.Org_Name, //name
                     "IsUser": value.IsUser,
-                    checked: false,
-                    open: false
+                    checked: false, //是否选中
+                    open: false //是否打开
                 };
+
                 zNodes.push(node);
                 if (value.Children && value.Children.length > 0) {
                     GetTree2(value.Children);
@@ -70,9 +72,12 @@ define([
                 async:false,
                 url: "json/tree2.json",
                 success: function (jsonData) {
+
                     var index = relIndexOf(jsonData, "Org_No", 'zjxtjt');
                     var newData = [];
+
                     newData.push(jsonData[index]);
+
                     GetTree2(newData);
                     IniTree();
                 }
@@ -88,14 +93,14 @@ define([
         });
         function zTreeCheck2(event, treeId, treeNode) {
             var treeObj=$.fn.zTree.getZTreeObj("tree2"), //222222222222通过id 获取内容
-                nodes=treeObj.getCheckedNodes(true);
+                nodes=treeObj.getCheckedNodes(true); //获取那些样式被勾选
             var v = [];
             for(var i=0; i<nodes.length ; i++){
                 if(nodes[i].IsUser) {
                     v.push(nodes[i].id); //获取id
                 }
             }
-            console.log(v)
+
 
             if(v.length > 0) { //大于0  按钮是否可以点击
                 $scope.$apply(function () {
@@ -111,7 +116,7 @@ define([
 
         function relIndexOf(data,key, val) {
             for (var i = 0; i < data.length; i++) {
-                if (data[i][key] == val) return i;
+                if (data[i][key] == val)return i;
             }
             return -1;
         }
@@ -122,7 +127,7 @@ define([
             var v = [];
             var m = [];
             for(var i=0; i<nodes.length ; i++){
-                if(nodes[i].IsUser) {
+                if(nodes[i].IsUser ) {
                     v.push(nodes[i].id);
                     m.push(nodes[i].name);
                 }

@@ -3,6 +3,7 @@ define([
     'scripts/requireHelper/requireNotification',//插件消息提示
     'bower_components/om-echarts/ng-echarts',
     'bower_components/om-echarts/src/util/mapData/params',
+
 ], function () {
     return ['$scope','Notification','httpService', function ($scope,Notification,httpService) {
         // 1.配置图表参数:样式,加载效果,事件
